@@ -62,6 +62,31 @@ footer {
     color: var(--brown);
 }
 
+.floaty{
+    filter: invert(100%);
+    -webkit-animation-direction:alternate;
+    animation-direction:alternate;
+    -webkit-animation-name:floaty-ticket;
+    animation-name:floaty-ticket;
+    -webkit-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    animation-timing-function:ease-in-out;
+}
+
+@-webkit-keyframes floaty-ticket {
+    0% {
+     transform:translateY(10px)
+    }
+}
+@keyframes floaty-ticket {
+    0% {
+     transform:translateY(10px)
+    }
+}
+
 @media (min-width: 1280px) {
     $width: 1280px;
     $sidebar: 240px;
