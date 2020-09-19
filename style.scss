@@ -1,0 +1,106 @@
+---
+---
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --blue: #112441;
+    --red: #d11d43;
+    --brown: #9a7d7f;
+
+    --twitter: #1da1f2;
+    --discord: #7289da;
+}
+
+body {
+    font-family: Lora, serif;
+    font-size: 16pt;
+    line-height: 1.5;
+}
+
+nav {
+    font-size: 2rem;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav-icon {
+        display: inline-block;
+        height: 1.5em;
+        line-height: 1;
+
+        img {
+            vertical-align: middle;
+            height: 1.5em;
+        }
+    }
+}
+
+.mission {
+    font-size: 1.5em;
+}
+
+.major-projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    list-style: none;
+    padding: 0;
+
+    li img {
+        width: 100%;
+    }
+}
+
+footer {
+    font-size: 10pt;
+    text-align: center;
+    color: var(--brown);
+}
+
+@media (min-width: 1280px) {
+    $width: 1280px;
+    $sidebar: 240px;
+    $gutter: 64px;
+    $main: $width - $sidebar - (3 * $gutter);
+
+    body {
+        width: $width;
+        margin: $gutter auto;
+        display: grid;
+        grid-template-columns: $sidebar $main;
+        grid-column-gap: $gutter;
+    }
+
+    header {
+        grid-column: 1;
+
+        .logo img {
+            width: 100%;
+        }
+    }
+
+    main {
+        grid-column: 2;
+
+        :first-child {
+            margin-top: 0;
+        }
+    }
+
+    $project-gutter: $gutter / 2;
+    $project-width: ($main - $project-gutter) / 2;
+
+    .major-projects li {
+        width: $project-width;
+        margin-bottom: 1em;
+    }
+
+    footer {
+        grid-column: 1;
+    }
+}

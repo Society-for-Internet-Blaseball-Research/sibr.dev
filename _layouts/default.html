@@ -1,0 +1,30 @@
+<!DoCtYpE hTmL>
+<html>
+    <head>
+        <title>{% if page.title %}{{ page.title | escape }} &mdash; {% endif %}Society for Internet Blaseball Research</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <header>
+            <a class="logo" href="/"><img src="/assets/logo.svg" alt="Society for Internet Blaseball Research"></a>
+            <nav>
+                <ul>
+                    <li><a href="/faq/">FAQ</a></li>
+                    <li><a href="/projects/">Projects</a></li>
+                    <li><a href="/research/">Research</a></li>
+                    <li><a href="/resources/">Resources</a></li>
+                    <li><a href="/merch/">Merch</a></li>
+                    <li class="nav-icon"><a href="https://discord.gg/F8YSJE6"><img src="/assets/discord.svg" alt="Join our Discord"></a></li>
+                    <li class="nav-icon"><a href="https://twitter.com/SIBROfficial"><img src="/assets/twitter.svg" alt="Follow us on Twitter"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+            {{ content }}
+        </main>
+        <footer>
+            <p>SIBR is neither endorsed by or directly affiliated with The Game Band.</p>
+        </footer>
+    </body>
+</html>
