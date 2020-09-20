@@ -1,33 +1,53 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+    font-family: 'D-DIN Condensed';
+    font-weight: bold;
+    font-display: swap;
+    src: url('/assets/D-DINCondensed-Bold.woff2') format('woff2');
+}
 
-:root {
-    --blue: #112441;
-    --red: #d11d43;
-    --brown: #9a7d7f;
+$blue: #112441;
+$red: #d11d43;
+$brown: #9a7d7f;
 
-    --twitter: #1da1f2;
-    --discord: #7289da;
+* {
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Lora, serif;
+    font-family: 'Crimson Pro', serif;
     font-size: 16pt;
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+    color: lighten($blue, 20%);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1, h2, h3, h4, nav {
+    font-family: 'D-DIN Condensed';
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $blue;
+}
+
 nav {
-    font-size: 2rem;
     text-align: center;
 
     ul {
         list-style: none;
         padding: 0;
+        margin: 0;
     }
 
-    .nav-icon {
+    ul.icons li {
         display: inline-block;
         height: 1.5em;
         line-height: 1;
@@ -37,10 +57,6 @@ nav {
             height: 1.5em;
         }
     }
-}
-
-.mission {
-    font-size: 1.5em;
 }
 
 .major-projects {
@@ -53,39 +69,117 @@ nav {
 
     li img {
         width: 100%;
+
+        &:hover {
+            filter: brightness(90%);
+            transition: 0.2s;
+        }
     }
 }
 
 footer {
     font-size: 10pt;
     text-align: center;
-    color: var(--brown);
+    color: var($brown);
 }
-.center{
+
+.center {
     text-align: center;
 }
-.floaty{
+
+.floaty {
     filter: invert(100%);
-    -webkit-animation-direction:alternate;
-    animation-direction:alternate;
-    -webkit-animation-name:floaty-ticket;
-    animation-name:floaty-ticket;
-    -webkit-animation-duration:2s;
-    animation-duration:2s;
-    -webkit-animation-iteration-count:infinite;
-    animation-iteration-count:infinite;
-    -webkit-animation-timing-function:ease-in-out;
-    animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-name: floaty-ticket;
+    animation-name: floaty-ticket;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
 }
 
 @-webkit-keyframes floaty-ticket {
     0% {
-     transform:translateY(10px)
+        transform: translateY(10px);
     }
 }
+
 @keyframes floaty-ticket {
     0% {
-     transform:translateY(10px)
+        transform: translateY(10px);
+    }
+}
+
+@media (max-width: 1279px) {
+    $gutter: 40px;
+
+    body {
+        margin: $gutter;
+        grid-gap: $gutter;
+        font-size: 16pt;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+
+        .logo img {
+            width: 180px;
+            margin-right: $gutter;
+        }
+    }
+
+    nav {
+        font-size: 1.25em;
+        line-height: 1.25;
+
+        .nav-icon {
+            img {
+                line-height: 1.25;
+            }
+        }
+
+        ul {
+            display: flex;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        ul.links li {
+            padding-right: 1ch;
+        }
+    }
+
+    .major-projects {
+        justify-content: center;
+
+        li {
+            width: 100%;
+            max-width: 480px;
+            margin: 0 1.5em 1.5em 1.5em;
+        }
+    }
+
+    .mission {
+        font-size: 1.25em;
+    }
+}
+
+@media (max-width: 768px) {
+    $gutter: 20px;
+
+    body {
+        margin: $gutter;
+        grid-gap: $gutter;
+        font-size: 14pt;
+    }
+
+    header .logo img {
+        width: 90px;
+        margin-right: $gutter;
     }
 }
 
@@ -111,6 +205,11 @@ footer {
         }
     }
 
+    nav {
+        margin-top: 1em;
+        font-size: 2rem;
+    }
+
     main {
         grid-column: 2;
 
@@ -122,12 +221,16 @@ footer {
     $project-gutter: $gutter / 2;
     $project-width: ($main - $project-gutter) / 2;
 
+    .mission {
+        font-size: 1.5em;
+    }
+
     .major-projects li {
         width: $project-width;
-        margin-bottom: 1em;
+        margin-bottom: 1.5em;
     }
 
     footer {
-        grid-column: 1;
+        grid-column: 2;
     }
 }
