@@ -67,12 +67,16 @@ nav {
     list-style: none;
     padding: 0;
 
-    li img {
-        width: 100%;
+    li {
+        margin-bottom: 1.5em;
 
-        &:hover {
-            filter: brightness(90%);
-            transition: 0.2s;
+        img {
+            width: 100%;
+
+            &:hover {
+                filter: brightness(90%);
+                transition: 0.2s;
+            }
         }
     }
 }
@@ -157,9 +161,15 @@ footer {
         justify-content: center;
 
         li {
-            width: 100%;
-            max-width: 480px;
-            margin: 0 1.5em 1.5em 1.5em;
+            width: 50%;
+
+            &:nth-child(2n+1) {
+                padding-right: $gutter / 2;
+            }
+
+            &:nth-child(2n) {
+                padding-left: $gutter / 2;
+            }
         }
     }
 
@@ -180,6 +190,11 @@ footer {
     header .logo img {
         width: 90px;
         margin-right: $gutter;
+    }
+
+    .major-projects li {
+        width: 100%;
+        padding: 0;
     }
 }
 
