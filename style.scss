@@ -184,10 +184,10 @@ footer {
 }
 
 @media (min-width: 1280px) {
-    $width: 1280px;
     $sidebar: 240px;
     $gutter: 64px;
-    $main: $width - $sidebar - (3 * $gutter);
+    $width: 1280px - (2 * $gutter);
+    $main: $width - $sidebar - $gutter;
 
     body {
         width: $width;
