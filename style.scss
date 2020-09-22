@@ -117,6 +117,10 @@ footer {
     }
 }
 
+.falsehoods li:nth-child(even){
+    font-weight: bold;
+}
+
 @media (max-width: 1279px) {
     $gutter: 40px;
 
