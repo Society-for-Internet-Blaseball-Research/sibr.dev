@@ -198,6 +198,9 @@ footer {
 
     .major-projects li {
         width: 100%;
+    }
+
+    .major-projects li:nth-child(2n+1), .major-projects li:nth-child(2n) {
         padding: 0;
     }
 }
