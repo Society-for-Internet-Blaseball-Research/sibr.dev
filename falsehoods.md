@@ -3,6 +3,7 @@ permalink: /falsehoods
 title: Falsehoods Programmers Believe about Blaseball
 ---
 {:.falsehoods}
+
 1. There are four bases.
 2. A strikeout is three strikes.
 3. A walk is four balls.
@@ -32,10 +33,10 @@ title: Falsehoods Programmers Believe about Blaseball
 27. A player name will consist of at least two words.
 28. A giant peanut shell can't field the ball.
 29. A pitcher will never hit the batter with a pitch.
-30. A player's OPS cannot possibly be higher than, like, 4.
-31. A game's pitcher can be determined by rotation[day % 5].
-32. A game's pitcher can be determined by rotation[(day % 5) + 1] beginning in Season 7.
-33. A game has a maximum of one win and one loss
-34. A game has a maximum of one win and one loss per team
-35. A game has an equal quantity of wins and losses
-36. A half-inning ends after the third out.
+30. [A player's OPS cannot possibly be higher than, like, 4.](https://twitter.com/SIBROfficial/status/1306063199217659904)
+31. A game's pitcher can be determined by `rotation[day % 5]`.
+32. A game's pitcher can be determined by `rotation[(day % 5) + 1]` beginning in Season 7.
+33. Teams must score at least one run to win.
+34. A pitcher is awarded with a shutout when the opposing team scores 0 runs.
+35. There are 5 pitchers in a pitching rotation.
+36. Each team gets 3 outs in an inning.

@@ -38,6 +38,29 @@ h1, h2, h3, h4, nav {
     color: $blue;
 }
 
+code, pre {
+    font-family:
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+}
+
+code {
+    font-size: 13pt;
+    background-color: #eee;
+    padding: 0.125rem 0.25rem;
+    letter-spacing: -0.02em;
+}
+
+ol li::marker {
+    color: #222;
+    padding-right: 1rem;
+}
+
 nav {
     text-align: center;
 
@@ -115,10 +138,6 @@ footer {
     0% {
         transform: translateY(10px);
     }
-}
-
-.falsehoods li:nth-child(even){
-    font-weight: bold;
 }
 
 @media (max-width: 1279px) {
