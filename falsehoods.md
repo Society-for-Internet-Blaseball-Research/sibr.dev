@@ -38,3 +38,4 @@ title: Falsehoods Programmers Believe about Blaseball
 33. A game has a maximum of one win and one loss
 34. A game has a maximum of one win and one loss per team
 35. A game has an equal quantity of wins and losses
+36. A half-inning ends after the third out.
