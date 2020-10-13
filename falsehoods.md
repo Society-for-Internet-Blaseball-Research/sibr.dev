@@ -40,3 +40,6 @@ title: Falsehoods Programmers Believe about Blaseball
 34. A pitcher is awarded with a shutout when the opposing team scores 0 runs.
 35. There are 5 pitchers in a pitching rotation.
 36. Each team gets 3 outs in an inning.
+37. A batter or runner must leave play when an out is called.
+38. A batter will swing once per pitch.
+39. Only one baserunner can be on a base at once.
