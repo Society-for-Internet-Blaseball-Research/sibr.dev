@@ -1,0 +1,17 @@
+---
+layout: default
+permalink: /falsehoods
+title: Falsehoods Programmers Believe about Blaseball
+---
+<p>Submit another falsehood at <a href='https://airtable.com/shrFx0AoU7CJfxSP6'>our Airtable form</a>.</p>
+
+<div id="output"></div>
+
+<script>
+    getAirtableData({
+        table_name: 'Falsehoods',
+        'view': 'Approved',
+    }).then((records) => {
+        document.getElementById('output').appendChild(processRecords(records, 'Falsehoods'));
+    });
+</script>
