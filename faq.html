@@ -1,0 +1,17 @@
+---
+layout: default
+permalink: /faq
+title: SIBR FAQ
+---
+<p>If you have an idea for another FAQ, please submit it via <a href='https://airtable.com/shrLmFrd7JCC7BZb1'>this form</a>.</p>
+
+<div id="output"></div>
+
+<script>
+    getAirtableData({
+        table_name: 'FAQ',
+        'view': 'Approved',
+    }).then((records) => {
+        document.getElementById('output').appendChild(processRecords(records, 'FAQ'));
+    });
+</script>

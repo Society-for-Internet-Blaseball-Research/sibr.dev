@@ -14,6 +14,7 @@ $brown: #9a7d7f;
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
@@ -33,6 +34,7 @@ a {
 
 h1, h2, h3, h4, nav {
     font-family: 'D-DIN Condensed';
+    letter-spacing: 1px;
     font-weight: bold;
     text-transform: uppercase;
     color: $blue;
@@ -126,6 +128,57 @@ footer {
     animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
+}
+
+.project {
+    margin-bottom: 1em;
+
+    .project-title, .properties {
+        display: flex;
+        align-items: center;
+    }
+
+    .category, .role {
+        background-color: #000;
+        color: #fff;
+        padding: 0.25em 0.4em;
+        border-radius: 0.25em;
+        margin: 0 0.25em;
+        font-size: 0.75em;
+        line-height: 1em;
+        display: inline-block;
+        font-family: 'D-DIN Condensed';
+        &.role-backend, &.category-archivism {
+            background-color: #e74c3c;
+        }
+        &.role-frontend, &.category-view {
+            background-color: #dba520;
+        }
+        &.role-math, &.category-analysis {
+            background-color: #358cdb;
+        }
+        &.role-devops, &.category-betting {
+            background-color: #000;
+        }
+        &.role-misc, &.category-misc {
+            background-color: #50acce;
+        }
+        &.category-past-games {
+            background-color: #9370db;
+        }
+        &.category-datablase {
+            background-color: #9d7c61;
+        }
+        &.category-api {
+            background-color: #83bb17;
+        }
+        &.category-paper {
+            background-color: #3d918b;
+        }
+        &.category-scripts {
+            background-color: #fca3b7;
+        }
+    }
 }
 
 @-webkit-keyframes floaty-ticket {

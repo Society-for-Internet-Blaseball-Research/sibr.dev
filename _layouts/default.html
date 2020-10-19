@@ -6,17 +6,20 @@
         <title>{% if page.title %}{{ page.title | escape }} &mdash; {% endif %}Society for Internet Blaseball Research</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap">
         <link rel="stylesheet" href="/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="/airtable.js"></script>
     </head>
     <body>
         <header>
             <a class="logo" href="/"><img src="/assets/logo.svg" alt="Society for Internet Blaseball Research"></a>
             <nav>
                 <ul class="links">
-                    <li><a href="https://github.com/Society-for-Internet-Blaseball-Research/sibr-faq/blob/master/README.md">FAQ</a></li>
-                    <li><a href="https://github.com/Society-for-Internet-Blaseball-Research/sibr-faq/blob/master/projects.md">Projects</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/get-involved">Get Involved</a></li>
                     <li><a href="https://research.blaseball-reference.com/">Research</a></li>
                     <li><a href="/falsehoods">Falsehoods</a></li>
-                    <li><a href="https://github.com/Society-for-Internet-Blaseball-Research/blaseball-api-spec">Resources</a></li>
                     <li><a href="https://sibr.bigcartel.com/">Merch</a></li>
                 </ul>
                 <ul class="icons">
