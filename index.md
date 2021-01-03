@@ -16,6 +16,10 @@ The **Society for Internet Blaseball Research** is a community devoted to unrave
   [**Research papers**][research] published by SIBR dive into data analysis and "what if?" scenarios.
 * [![](/assets/api.png)][api]
   [**Blaseball API documentation**][api] gives developers a starting point for fan works built on Blaseball data.
+* [![](/assets/onomancer.png)][onomancer]
+  [**Onomancer**][onomancer] is a webapp for people to submit and rate Blaseball names and form teams to share with friends.
+* [![](/assets/simsim.png)][simsim]
+  [**Simsim**][simsim]. \[puts on tin foil hat\] SIBR was invited to the Coffee Cup so that we would do something during the siesta other than recreate the blaseball simulator from first principles.
 {: .major-projects}
 
 [reference]: https://blaseball-reference.com
@@ -24,3 +28,5 @@ The **Society for Internet Blaseball Research** is a community devoted to unrave
 [blases-loaded]: https://github.com/RangerRick/blobile
 [research]: https://research.blaseball-reference.com
 [api]: https://github.com/Society-for-Internet-Blaseball-Research/blaseball-api-spec
+[onomancer]: https://onomancer.sibr.dev
+[simsim]: https://simsim.sibr.dev
