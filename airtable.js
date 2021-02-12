@@ -42,7 +42,7 @@ function getField(record, field_name) {
         switch(field_name) {
             case 'Project Name':
             case 'Question':
-            case 'Name'
+            case 'Name':
                 return `<h2>${record[field_name]}</h2>`;
             case 'Iddea':
                 return `<div>${record[field_name]}</div>`;
