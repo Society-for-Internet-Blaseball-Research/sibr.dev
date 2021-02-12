@@ -42,11 +42,14 @@ function getField(record, field_name) {
         switch(field_name) {
             case 'Project Name':
             case 'Question':
+            case 'Name'
                 return `<h2>${record[field_name]}</h2>`;
             case 'Iddea':
                 return `<div>${record[field_name]}</div>`;
             case 'Site':
             case 'Code':
+            case:'Link':
+            case:'Docs Link':
             case 'Project Board / Tasks':
                 return `<li><a href='${record[field_name]}'>${field_name}</a></li>`;
             case 'Answer':
@@ -109,6 +112,12 @@ function processRecords(records, type) {
             case 'FAQ':
                 recordOutput.push(getField(record, 'Question'));
                 recordOutput.push(getField(record, 'Answer'));
+                break;
+            case 'APIs':
+                recordOutput.push(getField(record, 'Name'));
+                recordOutput.push(getField(record, 'Description'));
+                recordOutput.push(getField(record, 'Link'));
+                recordOutput.push(getField(record, 'Docs Link'));
                 break;
             case 'Projects':
                 recordDiv.className = record['Major Project'] ? 'project project-major' : 'project';
