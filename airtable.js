@@ -48,8 +48,6 @@ function getField(record, field_name) {
                 return `<div>${record[field_name]}</div>`;
             case 'Site':
             case 'Code':
-            case 'Link':
-            case 'Docs Link':
             case 'Project Board / Tasks':
                 return `<li><a href='${record[field_name]}'>${field_name}</a></li>`;
             case 'Link':
