@@ -9,9 +9,7 @@ title: SIBR APIs
 
 <script>
     getAirtableData({
-        table_name: 'APIs',
-        'sort[0][field]': 'Name',
-        'sort[0][direction]': 'asc'
+        table_name: 'APIs'
     }).then((records) => {
         document.getElementById('output').appendChild(processRecords(records, 'APIs'));
     });
