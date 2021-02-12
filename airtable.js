@@ -52,7 +52,7 @@ function getField(record, field_name) {
                 return `<li><a href='${record[field_name]}'>${field_name}</a></li>`;
             case 'Link':
             case 'Docs Link':
-                return `<li>${field_name}: <a href='${record[field_name]}'>${record[field_name]}</a></li>`;
+                return `${field_name}: <a href='${record[field_name]}'>${record[field_name]}</a>`;
             case 'Answer':
             case 'Description':
                 return marked(record[field_name]);
