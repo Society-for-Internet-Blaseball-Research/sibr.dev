@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /apis
+title: SIBR APIs
+---
+<p>OUr current APIs</p>
+
+<div id="output"></div>
+
+<script>
+    getAirtableData({
+        table_name: 'APIs',
+        'sort[0][field]': 'Name',
+        'sort[0][direction]': 'asc'
+    }).then((records) => {
+        document.getElementById('output').appendChild(processRecords(records, 'APIs'));
+    });
+</script>
