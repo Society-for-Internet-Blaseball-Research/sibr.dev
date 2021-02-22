@@ -51,6 +51,7 @@ function getField(record, field_name) {
             case 'Project Board / Tasks':
                 return `<li><a href='${record[field_name]}'>${field_name}</a></li>`;
             case 'Link':
+            case 'Base URL':
             case 'Docs Link':
                 return `<div>${field_name}: <a href='${record[field_name]}'>${record[field_name]}</a></div>`;
             case 'Answer':
@@ -118,7 +119,7 @@ function processRecords(records, type) {
             case 'APIs':
                 recordOutput.push(getField(record, 'Name'));
                 recordOutput.push(getField(record, 'Description'));
-                recordOutput.push(getField(record, 'Link'));
+                recordOutput.push(getField(record, 'Base URL'));
                 recordOutput.push(getField(record, 'Docs Link'));
                 break;
             case 'Projects':
