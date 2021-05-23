@@ -12,6 +12,8 @@ The **Society for Internet Blaseball Research** is a community devoted to unrave
   [**Blasebot**][blasebot] is a Discord bot for following games and providing information on players and teams.
 * [![](/assets/blases-loaded.png)][blases-loaded]
   [**Blases Loaded**][blases-loaded] is a mobile app for live-viewing Blaseball games, available on [iOS](https://apps.apple.com/us/app/id1529695719) and [Android](https://play.google.com/store/apps/details?id=com.raccoonfink.blobile).
+* [![](/assets/whichtool.png)][whichtool]
+  [**whichtool**][whichtool] is an interactive tool picker that helps you find the right tools for your blaseball needs.
 * [![](/assets/research.png)][research]
   [**Research papers**][research] published by SIBR dive into data analysis and "what if?" scenarios.
 * [![](/assets/api.png)][api]
@@ -27,3 +29,4 @@ The **Society for Internet Blaseball Research** is a community devoted to unrave
 [research]: https://research.blaseball-reference.com
 [api]: https://github.com/Society-for-Internet-Blaseball-Research/blaseball-api-spec
 [onomancer]: https://onomancer.sibr.dev
+[whichtool]: https://whichtool.sibr.dev/
