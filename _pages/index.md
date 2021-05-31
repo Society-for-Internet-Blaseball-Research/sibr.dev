@@ -1,4 +1,8 @@
 ---
+permalink: /
+title: SIBR Homepage
+redirect_from:
+  - /index
 ---
 
 The **Society for Internet Blaseball Research** is a community devoted to unravelling [Blaseball](https://www.blaseball.com)'s deepest mysteries. We work together to make Blaseball data more accessible by creating tools, analyzing past games, and discovering new records. We are, in our own strange way, participating in the cultural event of Blaseball.

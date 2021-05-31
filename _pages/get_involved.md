@@ -1,5 +1,4 @@
 ---
-layout: default
 permalink: /get-involved
 title: Get Involved
 ---

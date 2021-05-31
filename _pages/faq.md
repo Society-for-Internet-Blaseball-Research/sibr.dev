@@ -1,0 +1,64 @@
+---
+title: SIBR FAQ
+---
+
+## What does SIBR do?
+
+The Society peeks behind the curtain of Blaseball. We archive game data and work on projects to display and analyze that data. Often, as part of our work, we dive deeper into how Blaseball works and try to analyze what consequences our actions will have.
+
+## How do I join SIBR?
+
+You can join the [SIBR discord server](https://discord.gg/FfnScUn) to discuss the work SIBR is doing, new work you'd like to start or anything else relating to the investigation of the secrets of Blaseball. 
+
+## ... What's Blaseball, exactly?
+
+We recommend reading [the unofficial but semi-official Blaseball FAQ](https://docs.google.com/document/d/1hmTbrINnfRoM62KoJNKk6lLxbAMRr3auTNQneNbOCoQ/edit) to answer that question and many more outside SIBR's scope. Further questions can find a serious answer in #beginner-help on the official Blaseball Discord.
+
+## How do I pronounce SIBR?
+
+It's pronounced "SIBR".
+
+## Okay, but what *exactly* does SIBR do?
+
+It's a complicated multi-step plan:
+
+1. Harvest lots of raw data from games as they happen (done!)
+2. Process that data and store it in a database (done and done!)
+3. Calculate typical [reality-league](https://www.mlb.com/) statistics from that data, as well as new statistics unique to [ILB](https://blaseball.com/)
+4. Build a [site](https://blaseball-reference.com/) where fans can view and explore these statistics
+5. Use all of this data to publish [research](https://research.blaseball-reference.com/) into the underlying algorithms of Blaseball, and how its unique rules impact play
+
+Currently 1 and 2 are done (although improvement is ongoing) and 3, 4, and 5 are in progress!
+
+More detailed info is available about [the specific projects involved](./projects.md).
+
+## Is there a script to vote/bet/etc? Can you help me write one?
+
+No and no. SIBR focuses on read-only data and unauthenticated endpoints, and we ask that others respect the Blaseball community and do the same.
+
+However, we understand that itch. Our advice, if you must: build something for your own self development, but don't share it or brag about it. Most importantly:
+
+> SO ABOUT THE PEANUTS<br>
+> THE BOOK WAS STRIKE ONE<br>
+> THE FRAUD IS STRIKE TWO<br>
+> YOU WILL LEARN DISCIPLINE<br>
+> GET YOUR PEANUTS<br>
+> WHILE YOU STILL CAN
+
+... don't commit the 🩸 ~~Third~~Fourth Strike 🩸.
+
+## Is anyone keeping track of game updates?
+
+[https://github.com/iliana/blaseball-archive-scripts](https://github.com/iliana/blaseball-archive-scripts)
+
+iliana is running this script locally, and we hope to have it productionized soon. Archives of game update logs can be found in the pinned messages of #archivism.
+
+
+## I'm new, what can I do to contribute?
+
+It depends on which kind of person you are. If you want to start a new project, we keep a list of potential #project-ideas on the Discord. If you want to contribute to existing projects, reach out in #volunteers. You don’t need to be particularly experienced as a programmer or statistician– the most important thing is that you want to contribute!
+
+## Where can I find blaseball tools/APIs/libraries for my specific use case?
+
+You should look at https://whichtool.sibr.dev, an interactive tool-picker built by Kawa#7680.
+

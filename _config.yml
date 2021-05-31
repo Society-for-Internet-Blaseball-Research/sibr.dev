@@ -1,1 +1,24 @@
 markdown: kramdown
+collections:
+  pages:
+    output: true
+    permalink: /:path
+  apis:
+    name: true
+    base_url: true
+    docs: true
+  projects:
+    name: true
+    site: true
+    code: true
+    contributors: true
+    tasks: true
+    types: true
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+plugins:
+  - jekyll-redirect-from
