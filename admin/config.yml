@@ -38,5 +38,5 @@ collections:
       - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
       - {label: "Tasks / Project Board (if applicable)", name: "tasks", widget: "string", required: false}
       - {label: "Contributors", name: "contributors", widget: "string", required: false}
-      - {label: "Categories", name: "types", widget: "list", required: false}
+      - {label: "Categories", name: "types", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
