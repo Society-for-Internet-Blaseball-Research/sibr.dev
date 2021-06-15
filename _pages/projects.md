@@ -43,10 +43,12 @@ The following projects are hosted on the SIBR servers or use other resources pro
 </span>
 </div>
 
-**Contributors**: {{ project.contributors }}
 
 {{ project.content }}
 
+{% if project.contributors %}
+* **Contributors**: {{ project.contributors }}
+{% endif %}
 {% if project.site %}
 * **Site**: [{{ project.site }}]({{ project.site }})
 {% endif %}
