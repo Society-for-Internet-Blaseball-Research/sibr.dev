@@ -16,7 +16,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Base URL", name: "base_url", widget: "string"}
-      - {label: "Docs Link", name: "docs", widget: "string", "required": false}
+      - {label: "Docs Link", name: "docs", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
@@ -25,7 +25,7 @@ collections:
     slug: "title.md" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Permalink", name: "permalink", widget: "string", "required": false}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
     label: "Projects" # Used in the UI
@@ -34,9 +34,9 @@ collections:
     slug: "title.md" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
-      - {label: "Site URL (if applicable)", name: "site", widget: "string", "required": false}
-      - {label: "Code URL (if applicable)", name: "code", widget: "string", "required": false}
-      - {label: "Tasks / Project Board (if applicable)", name: "tasks", widget: "string", "required": false}
-      - {label: "Contributors", name: "contributors", widget: "string", "required": false}
-      - {label: "Categories", name: "types", widget: "list", "field": { label: "Category", name: "category", widget: "select", options: ["Betting", "Blaseball.com API Clients", "Datablase and Clients", "Forbidden Knowledge", "Games Analysis", "Harvesting Data", "Miscellaneous", "Viewing Live Games", "Viewing Past Games"]}}
+      - {label: "Site URL (if applicable)", name: "site", widget: "string", required: false}
+      - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
+      - {label: "Tasks / Project Board (if applicable)", name: "tasks", widget: "string", required: false}
+      - {label: "Contributors", name: "contributors", widget: "string", required: false}
+      - {label: "Categories", name: "types", widget: "list", field: { label: "Category", name: "category", widget: "select", options: ["Betting", "Blaseball.com API Clients", "Datablase and Clients", "Forbidden Knowledge", "Games Analysis", "Harvesting Data", "Miscellaneous", "Viewing Live Games", "Viewing Past Games"]}}
       - {label: "Body", name: "body", widget: "markdown"}
