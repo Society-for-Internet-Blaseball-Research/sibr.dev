@@ -38,5 +38,5 @@ collections:
       - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
       - {label: "Tasks / Project Board (if applicable)", name: "tasks", widget: "string", required: false}
       - {label: "Contributors", name: "contributors", widget: "string", required: false}
-      - {label: "Categories", name: "types", widget: "list", field: { label: "Category", name: "category", widget: "select", options: ["Betting", "Blaseball.com API Clients", "Datablase and Clients", "Forbidden Knowledge", "Games Analysis", "Harvesting Data", "Miscellaneous", "Viewing Live Games", "Viewing Past Games"]}}
+      - {label: "Categories", name: "types", widget: "list", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
