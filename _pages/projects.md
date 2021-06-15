@@ -3,6 +3,7 @@ title: SIBR Projects
 permalink: /projects
 excerpt: The project directory for SIBR
 ---
+The following projects are hosted on the SIBR servers or use other resources provided by SIBR:
 
 {% assign projects = site.projects | sort: 'name' %}
 {% for project in projects %}
