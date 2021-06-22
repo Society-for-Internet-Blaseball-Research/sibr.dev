@@ -12,7 +12,7 @@ collections:
     label: "APIs" # Used in the UI
     folder: "_apis" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "name.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{name}}.md" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Base URL", name: "base_url", widget: "string"}
@@ -22,7 +22,7 @@ collections:
     label: "Pages" # Used in the UI
     folder: "_pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "title.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{title}}.md" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Permalink", name: "permalink", widget: "string", required: false}
@@ -31,7 +31,7 @@ collections:
     label: "Projects" # Used in the UI
     folder: "_projects" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "name.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{name}}.md" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Site URL (if applicable)", name: "site", widget: "string", required: false}
