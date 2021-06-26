@@ -24,6 +24,10 @@ permalink: /apis
 **Base URL**: [{{ api.base_url }}]({{ api.base_url }})
 {% endif %}
 
+{% if api.code %}
+**Code**: [{{ api.code }}]({{ api.code }})
+{% endif %}
+
 {% if api.docs %}
 **Documentation**: [{{ api.docs }}]({{ api.docs }})
 {% endif %}

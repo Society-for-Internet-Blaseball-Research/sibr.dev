@@ -20,15 +20,11 @@ It's pronounced "SIBR".
 
 ## Okay, but what *exactly* does SIBR do?
 
-It's a complicated multi-step plan:
-
-1. Harvest lots of raw data from games as they happen (done!)
-2. Process that data and store it in a database (done and done!)
+1. Harvest lots of raw data from games as they happen
+2. Process that data and store it in a database
 3. Calculate typical [reality-league](https://www.mlb.com/) statistics from that data, as well as new statistics unique to [ILB](https://blaseball.com/)
 4. Build a [site](https://blaseball-reference.com/) where fans can view and explore these statistics
 5. Use all of this data to publish [research](https://research.blaseball-reference.com/) into the underlying algorithms of Blaseball, and how its unique rules impact play
-
-Currently 1 and 2 are done (although improvement is ongoing) and 3, 4, and 5 are in progress!
 
 ## Is there a script to vote/bet/etc? Can you help me write one?
 
@@ -47,7 +43,7 @@ However, we understand that itch. Our advice, if you must: build something for y
 
 ## I'm new, what can I do to contribute?
 
-It depends on which kind of person you are. If you want to start a new project, we discuss some #project-ideas on the Discord. If you want to contribute to existing projects, reach out in #volunteers. You don’t need to be particularly experienced as a programmer or statistician– the most important thing is that you want to contribute!
+To start with, try [introducing yourself in our #introductions channel](https://discord.com/channels/738107179294523402/756562246548586597). If you want to start a new project, we discuss some [#project-ideas](https://discord.com/channels/738107179294523402/748343986678136953) on the Discord. If you want to contribute to existing projects, ask about it in [#projects](https://discord.com/channels/738107179294523402/748343986678136953). You don’t need to be particularly experienced in programming or stats– the most important thing is that you want to contribute!
 
 ## Where can I find blaseball tools/APIs/libraries for my specific use case?
 
