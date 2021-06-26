@@ -16,7 +16,10 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Base URL", name: "base_url", widget: "string"}
+      - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
+      - {label: "Tasks / Project Board (if applicable)", name: "tasks", widget: "string", required: false}
       - {label: "Docs Link", name: "docs", widget: "string", required: false}
+      - {label: "status.sibr.dev Slug", name: "      - {label: "Categories", name: "types", widget: "string", required: false}", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "pages" # Used in routes, e.g., /admin/collections/blog
     label: "Pages" # Used in the UI
@@ -37,6 +40,6 @@ collections:
       - {label: "Site URL (if applicable)", name: "site", widget: "string", required: false}
       - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
       - {label: "Tasks / Project Board (if applicable)", name: "tasks", widget: "string", required: false}
-      - {label: "Contributors", name: "contributors", widget: "string", required: false}
-      - {label: "Categories", name: "types", widget: "string", required: false}
+      - {label: "status.sibr.dev Slug", name: "status_slug", widget: "string", required: false}
+      - {label: "Categories", name: "categories", widget: "select", options: ["API Clients", "Archival Tools", "Discord Bots", "Miscellaneous", "Websites"], required: false}
       - {label: "Body", name: "body", widget: "markdown"}

@@ -30,8 +30,6 @@ It's a complicated multi-step plan:
 
 Currently 1 and 2 are done (although improvement is ongoing) and 3, 4, and 5 are in progress!
 
-More detailed info is available about [the specific projects involved](./projects.md).
-
 ## Is there a script to vote/bet/etc? Can you help me write one?
 
 No and no. SIBR focuses on read-only data and unauthenticated endpoints, and we ask that others respect the Blaseball community and do the same.
@@ -47,18 +45,11 @@ However, we understand that itch. Our advice, if you must: build something for y
 
 ... don't commit the 🩸 ~~Third~~Fourth Strike 🩸.
 
-## Is anyone keeping track of game updates?
-
-[https://github.com/iliana/blaseball-archive-scripts](https://github.com/iliana/blaseball-archive-scripts)
-
-iliana is running this script locally, and we hope to have it productionized soon. Archives of game update logs can be found in the pinned messages of #archivism.
-
-
 ## I'm new, what can I do to contribute?
 
-It depends on which kind of person you are. If you want to start a new project, we keep a list of potential #project-ideas on the Discord. If you want to contribute to existing projects, reach out in #volunteers. You don’t need to be particularly experienced as a programmer or statistician– the most important thing is that you want to contribute!
+It depends on which kind of person you are. If you want to start a new project, we discuss some #project-ideas on the Discord. If you want to contribute to existing projects, reach out in #volunteers. You don’t need to be particularly experienced as a programmer or statistician– the most important thing is that you want to contribute!
 
 ## Where can I find blaseball tools/APIs/libraries for my specific use case?
 
-You should look at https://whichtool.sibr.dev, an interactive tool-picker built by Kawa#7680.
+You should look at [Whichtool](https://whichtool.sibr.dev), an interactive tool-picker built by Kawa#7680.
 

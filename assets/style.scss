@@ -32,11 +32,18 @@ a {
     }
 }
 
-h1, h2, h3, h4, nav {
+h1, nav {
     font-family: 'D-DIN Condensed';
     letter-spacing: 1px;
     font-weight: bold;
     text-transform: uppercase;
+    color: $blue;
+}
+
+h2, h3, h4 {
+    font-family: 'Crimson Pro', serif;
+    letter-spacing: 1px;
+    font-weight: bold;
     color: $blue;
 }
 
@@ -130,10 +137,18 @@ footer {
     animation-timing-function: ease-in-out;
 }
 
+.project-title p, .project-title a {
+    line-height: 0;
+    img {
+        margin-left: 0.25em;
+    }
+}
+
 .project {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 
     .project-title, .properties {
+        margin-bottom: .25em;
         display: flex;
         align-items: center;
     }
@@ -148,28 +163,25 @@ footer {
         line-height: 1em;
         display: inline-block;
         font-family: 'D-DIN Condensed';
-        &.role-backend, &.category-archivism {
+        &.category-archival-tools {
             background-color: #e74c3c;
         }
-        &.role-frontend, &.category-view {
+        &.category-api-clients {
             background-color: #dba520;
         }
-        &.role-math, &.category-analysis {
+        &.category-websites {
             background-color: #358cdb;
         }
-        &.role-devops, &.category-betting {
-            background-color: #000;
-        }
-        &.role-misc, &.category-misc {
+        &.category-discord-bots {
             background-color: #50acce;
         }
-        &.category-past-games {
+        &.category-apps {
             background-color: #9370db;
         }
-        &.category-datablase {
+        &.category-miscellaneous {
             background-color: #9d7c61;
         }
-        &.category-api {
+        &.category-hosted {
             background-color: #83bb17;
         }
         &.category-paper {
@@ -177,6 +189,21 @@ footer {
         }
         &.category-scripts {
             background-color: #fca3b7;
+        }
+    }
+
+    .links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+        }
+        li:after {
+            content: " \2022 ";
+        }
+        li:last-child:after {
+            content: "";
         }
     }
 }

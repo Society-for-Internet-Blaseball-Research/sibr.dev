@@ -1,13 +1,22 @@
 ---
-title: SIBR APIs
+title: SIBR API Directory
 excerpt: The API directory for SIBR
 permalink: /apis
 ---
 
-{% assign apis = site.apis | sort: 'name' %}
+{% assign apis = site.apis | sort_natural: 'name' %}
 {% for api in apis %}
+{::options parse_block_html="true" /}
+
+<div class="project"><div class="project-title">
 
 ## {{ api.name }}
+
+{% if api.status_slug %}
+<a href="https://status.sibr.dev/services/{{ api.status_slug }}" target="_blank"><img src="https://status.sibr.dev/api/v1/badges/uptime/24h/{{ api.status_slug }}.svg" /></a>
+{% endif %}
+
+</div>
 
 {{ api.content }}
 
@@ -16,7 +25,7 @@ permalink: /apis
 {% endif %}
 
 {% if api.docs %}
-**Docs Link**: [{{ api.docs }}]({{ api.docs }})
+**Documentation**: [{{ api.docs }}]({{ api.docs }})
 {% endif %}
-
+</div>
 {% endfor %}

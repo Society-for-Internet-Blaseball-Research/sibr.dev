@@ -3,6 +3,6 @@ name: Blases Loaded (#blases-loaded)
 site:  https://rangerrick.github.io/blobile/
 code:  https://github.com/RangerRick/blobile
 contributors: RangerRick#6987
-types: Viewing Live Games
+category: Websites
 ---
- Blases Loaded is a mobile app for live-viewing Blaseball games.
+ Blases Loaded is a website and mobile app for live-viewing Blaseball games.

@@ -2,6 +2,7 @@
 name: Chronicler
 base_url: http://api.sibr.dev/chronicler/v1
 docs: https://astrid.stoplight.io/docs/sibr/reference/Chronicler.v1.yaml
+status_slug: sibr-apis_chronicler-v2
 ---
 Chronicler will get you:
 

@@ -5,7 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% if page.title %}{{ page.title | escape }} &mdash; {% endif %}Society for Internet Blaseball Research</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/assets/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+        <link rel="manifest" href="/assets/site.webmanifest">
+        <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#112441">
+        <meta name="msapplication-TileColor" content="#112441">
+        <meta name="theme-color" content="#ffffff">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script src="/airtable.js"></script>
@@ -20,6 +27,7 @@
                     <li><a href="/apis">APIs</a></li>
                     <li><a href="https://research.blaseball-reference.com/">Research</a></li>
                     <li><a href="/falsehoods">Falsehoods</a></li>
+                    <li><a href="https://status.sibr.dev">Status</a></li>
                     <li><a href="https://sibr.bigcartel.com/">Merch</a></li>
                 </ul>
                 <ul class="icons">
@@ -30,7 +38,7 @@
             </nav>
         </header>
         <main>
-            {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+            {% if page.title and page.title != 'SIBR Homepage' %}<h1>{{ page.title }}</h1>{% endif %}
             {{ content }}
         </main>
         <footer>

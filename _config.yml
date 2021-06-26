@@ -4,16 +4,19 @@ collections:
     output: true
     permalink: /:path
   apis:
-    name: true
     base_url: true
+    code: true
     docs: true
+    name: true
+    status_slug: true
+    tasks: true
   projects:
+    code: true
     name: true
     site: true
-    code: true
-    contributors: true
+    status_slug: true
     tasks: true
-    types: true
+    categories: true
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
