@@ -25,4 +25,7 @@ defaults:
       layout: "default"
 plugins:
   - jekyll-redirect-from
-theme: sibr-jekyll-theme
+  - jekyll-remote-theme
+    
+remote_theme: Society-for-Internet-Blaseball-Research/sibr-jekyll-theme
+
