@@ -1,5 +1,5 @@
 ---
-name: The Stadium Viewer
+name: Grindrail
 site: https://faculty.sibr.dev/~dlareau/grind_rail.html
 category: Websites
 ---
