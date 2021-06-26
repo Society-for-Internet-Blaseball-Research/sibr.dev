@@ -41,5 +41,5 @@ collections:
       - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
       - {label: "Tasks / Project Board (if applicable)", name: "tasks", widget: "string", required: false}
       - {label: "status.sibr.dev Slug", name: "status_slug", widget: "string", required: false}
-      - {label: "Categories", name: "categories", widget: "select", options: ["API Clients", "Archival Tools", "Discord Bots", "Miscellaneous", "Websites"], required: false}
+      - {label: "Category", name: "category", widget: "select", options: ["API Clients", "Archival Tools", "Discord Bots", "Miscellaneous", "Websites"], required: true}
       - {label: "Body", name: "body", widget: "markdown"}

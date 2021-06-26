@@ -25,3 +25,4 @@ defaults:
       layout: "default"
 plugins:
   - jekyll-redirect-from
+theme: sibr-jekyll-theme

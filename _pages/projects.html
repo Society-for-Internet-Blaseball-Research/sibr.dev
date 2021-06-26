@@ -10,7 +10,8 @@ excerpt: The project directory for SIBR
 
 {% for cat in categories %}
 <h2>{{ cat.name | remove: '[' | remove: ']' | remove: '"' }}</h2>
-{% for project in cat.items | sort_natural: "name" %}
+{% assign projects =  cat.items | sort_natural:"name" %}
+{% for project in projects %}
     <div class="project">
         <p>
             <strong>{{ project.name }}</strong>: {{ project.content }}
