@@ -4,4 +4,4 @@ site:  https://vibecheck.sibr.dev
 contributors: Dlareau
 category: Websites
 ---
- checks some vibes
+Vibe Check plots player vibes by day based on our knowledge of the vibe formula.
