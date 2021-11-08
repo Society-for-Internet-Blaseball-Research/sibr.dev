@@ -17,8 +17,7 @@ collections:
     status_slug: true
     tasks: true
     categories: true
-  hackathonprojects:
-    collections_dir: _hackathon_projects
+  hackathon_projects:
     name: true
     site: true
     code: true
