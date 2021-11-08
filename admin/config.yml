@@ -43,3 +43,15 @@ collections:
       - {label: "status.sibr.dev Slug", name: "status_slug", widget: "string", required: false}
       - {label: "Category", name: "category", widget: "select", options: ["Archival Tools", "Miscellaneous", "Websites"], required: true}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "hackathon-projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Hackathon Projects" # Used in the UI
+    folder: "_hackathon_projects" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{name}}.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Site URL (if applicable)", name: "site", widget: "string", required: false}
+      - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "string", required: true}
+      - {label: "Awards", name: "awards", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}

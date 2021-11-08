@@ -1,0 +1,22 @@
+---
+title: SIBR Hackathon Project Directory
+permalink: /hackathon
+excerpt: The hackathon project directory
+---
+
+<div>Here is a list of projects submitted to SIBR's first Cursed Blaseball Viewer Hackathon:</div>
+
+{% assign projects =  site.projects | sort_natural:"name" %}
+
+{% for project in projects %}
+    <div class="project">
+        <p>
+            <strong>{{ project.name }}</strong>: {{ project.content }}
+        </p>
+
+        <ul class="links">
+            {% if project.site %}<li><a href="{{ project.site }}" target="_blank">Site</a></li>{% endif %}
+            {% if project.code %}<li><a href="{{ project.code }}" target="_blank">Code</a></li>{% endif %}
+        </ul>
+    </div>
+{% endfor %}

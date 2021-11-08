@@ -17,6 +17,12 @@ collections:
     status_slug: true
     tasks: true
     categories: true
+  hackathon-projects:
+    name: true
+    site: true
+    code: true
+    description: true
+    awards: true
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
@@ -26,6 +32,6 @@ defaults:
 plugins:
   - jekyll-redirect-from
   - jekyll-remote-theme
-    
+
 remote_theme: Society-for-Internet-Blaseball-Research/sibr-jekyll-theme
 
