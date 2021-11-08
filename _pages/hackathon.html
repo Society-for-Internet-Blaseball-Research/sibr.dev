@@ -6,12 +6,12 @@ excerpt: The hackathon project directory
 
 <div>Here is a list of projects submitted to SIBR's first Cursed Blaseball Viewer Hackathon:</div>
 
-{% assign projects =  site.hackathon-projects | sort_natural:"name" %}
+{% assign projects =  site.hackathonprojects | sort_natural:"name" %}
 
 {% for project in projects %}
     <div class="project">
         <p>
-            <strong>{{ project.name }}</strong>: {{ project.content }}
+            <strong>{{ project.name }}</strong>:
         </p>
 
         <ul class="links">
