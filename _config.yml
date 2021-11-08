@@ -18,7 +18,7 @@ collections:
     tasks: true
     categories: true
   hackathonprojects:
-    collections_dir: hackathon_projects
+    collections_dir: _hackathon_projects
     name: true
     site: true
     code: true
