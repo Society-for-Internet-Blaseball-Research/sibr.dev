@@ -11,16 +11,18 @@ excerpt: The hackathon project directory
 
 {% for project in projects %}
     <div class="hack">
-        <p class="hack-title"><strong>{{ project.name }}</strong></p>
+        <p><strong class="hack-title">{{ project.name }}</strong> - <i>{{ project.author }}</i></p>
         <div style="display: flex;">
-            <img src="/hackathon_projects/{{ project.image }}" class="project_img">
+            <div width=200px;>
+                <img src="/hackathon_projects/{{ project.image }}" class="project_img">
+            </div>
             <div class="details">
                 <p>{{ project.content }}</p>
                 <hr>
 
-                {% if project.awards %}<p>Awards: <i>{{ project.awards }}</i></p>{% endif %}
+                {% if project.awards %}<p><b>Awards: </b><i>{{ project.awards }}</i></p>{% endif %}
 
-                {% if project.awards %}<p>Judges Comments: {{ project.comments }}</p>{% endif %}
+                {% if project.comments %}<p><b>Judges Comments:</b></p><p>{{ project.comments }}</p>{% endif %}
 
                 <ul class="links">
                     {% if project.site %}<li><a href="{{ project.site }}" target="_blank">Site</a></li>{% endif %}
