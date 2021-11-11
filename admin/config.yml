@@ -51,7 +51,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Project Image", name: "image", widget: "image", media_folder: "images"}
+      - {label: "Project Image", name: "image", widget: "image", media_folder: "images", default: "images/default.png"}
       - {label: "Site URL (if applicable)", name: "site", widget: "string", required: false}
       - {label: "Code URL (if applicable)", name: "code", widget: "string", required: false}
       - {label: "Comments", name: "comments", widget: "string", required: false}

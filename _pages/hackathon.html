@@ -12,17 +12,21 @@ excerpt: The hackathon project directory
 {% for project in projects %}
     <div class="hack">
         <p class="hack-title"><strong>{{ project.name }}</strong></p>
-        <div class="details">
-            <p>{{ project.content }}</p>
+        <div style="display: flex;">
+            <img src="/hackathon_projects/{{ project.image }}" class="project_img">
+            <div class="details">
+                <p>{{ project.content }}</p>
+                <hr>
 
-            {% if project.awards %}<p><i>Won: {{ project.awards }}</i></p>{% endif %}
+                {% if project.awards %}<p>Awards: <i>{{ project.awards }}</i></p>{% endif %}
 
-            <p>{{ project.comments }}</p>
+                {% if project.awards %}<p>Judges Comments: {{ project.comments }}</p>{% endif %}
 
-            <ul class="links">
-                {% if project.site %}<li><a href="{{ project.site }}" target="_blank">Site</a></li>{% endif %}
-                {% if project.code %}<li><a href="{{ project.code }}" target="_blank">Code</a></li>{% endif %}
-            </ul>
+                <ul class="links">
+                    {% if project.site %}<li><a href="{{ project.site }}" target="_blank">Site</a></li>{% endif %}
+                    {% if project.code %}<li><a href="{{ project.code }}" target="_blank">Code</a></li>{% endif %}
+                </ul>
+            </div>
         </div>
     </div>
 {% endfor %}
