@@ -3,20 +3,26 @@ title: SIBR Hackathon Project Directory
 permalink: /hackathon
 excerpt: The hackathon project directory
 ---
+<link rel="stylesheet" href="/assets/hack_temp.css">
 
 <div>Here is a list of projects submitted to SIBR's first Cursed Blaseball Viewer Hackathon:</div>
 
 {% assign projects =  site.hackathon_projects | sort_natural:"name" %}
 
 {% for project in projects %}
-    <div class="project">
-        <p>
-            <strong>{{ project.name }}</strong>:
-        </p>
+    <div class="hack">
+        <p class="hack-title"><strong>{{ project.name }}</strong></p>
+        <div class="details">
+            <p>{{ project.content }}</p>
 
-        <ul class="links">
-            {% if project.site %}<li><a href="{{ project.site }}" target="_blank">Site</a></li>{% endif %}
-            {% if project.code %}<li><a href="{{ project.code }}" target="_blank">Code</a></li>{% endif %}
-        </ul>
+            {% if project.awards %}<p><i>Won: {{ project.awards }}</i></p>{% endif %}
+
+            <p>{{ project.comments }}</p>
+
+            <ul class="links">
+                {% if project.site %}<li><a href="{{ project.site }}" target="_blank">Site</a></li>{% endif %}
+                {% if project.code %}<li><a href="{{ project.code }}" target="_blank">Code</a></li>{% endif %}
+            </ul>
+        </div>
     </div>
 {% endfor %}

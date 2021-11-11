@@ -19,9 +19,11 @@ collections:
     categories: true
   hackathon_projects:
     name: true
+    author: true
+    image: true
     site: true
     code: true
-    description: true
+    comments: true
     awards: true
 defaults:
   - scope:
