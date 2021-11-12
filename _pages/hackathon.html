@@ -12,8 +12,8 @@ excerpt: The hackathon project directory
 {% for project in projects %}
     <div class="hack">
         <p><strong class="hack-title">{{ project.name }}</strong> - <i>{{ project.author }}</i></p>
-        <div style="display: flex;">
-            <div width=200px;>
+        <div style="display: flex; flex-wrap: wrap;">
+            <div width=200px; style="margin-right: 20px;">
                 <img src="/hackathon_projects/{{ project.image }}" class="project_img">
             </div>
             <div class="details">
