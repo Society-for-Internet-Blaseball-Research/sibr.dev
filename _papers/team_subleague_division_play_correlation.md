@@ -1,7 +1,7 @@
 ---
 title: Correlation between a team’s subleague/division and the series they play
 authors: Thomas Chick (@Tantusar#7835) (he/they)
-date: 2021-08-08
+date: 08/08/2020
 file: files/schedule-balance.pdf
 ---
 
