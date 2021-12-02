@@ -16,5 +16,5 @@ title: SIBR Papers
 {% assign papers =  site.papers | sort_natural:"name" %}
 
 {% for paper in papers %}
-* [{{ paper.title }}](/hackathon_projects/{{ paper.file }}) ({{ paper.year }})
+* [{{ paper.title }}](/files/{{ paper.file }}) ({{ paper.year }})
 {% endfor %}
