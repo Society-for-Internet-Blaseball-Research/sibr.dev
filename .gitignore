@@ -2,5 +2,6 @@
 /Gemfile.lock
 /vendor
 /_site
+/_papers/papers/_site
 /.sass-cache
 /.jekyll-metadata

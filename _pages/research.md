@@ -11,3 +11,10 @@ title: SIBR Papers
 * [Mutually Arising: Improving accessibility in Discord team role color contrast](https://research.blaseball-reference.com/Improving_Accessibility__Contrast_in_Discord_Team_Roles_1.2.pdf) (2021)
 * [Blaseball Is a Mess, Fair Play Is the Future: An analysis of odds, outcomes, and accuracy in the Peace and Prosperity Era](https://research.blaseball-reference.com/Fair_Play_is_the_Future.pdf) (2021)
 * [A sinking feeling: Investigating the relationship between team eDensity and Level](https://research.blaseball-reference.com/SIBR_eDensity2.pdf) (2021)
+
+
+{% assign papers =  site.papers | sort_natural:"name" %}
+
+{% for paper in papers %}
+* [{{ paper.title }}](/hackathon_projects/{{ paper.file }}) ({{ paper.year }})
+{% endfor %}
