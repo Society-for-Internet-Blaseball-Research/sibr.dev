@@ -28,6 +28,17 @@ collections:
     slug: "{{title}}.md" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Author(s)", name: "authors", widget: "string", required: false}
+      - {label: "year", name: "year", widget: "string"}
+      - {label: "File", name: "file", widget: "file", media_folder: "papers"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "papers" # Used in routes, e.g., /admin/collections/blog
+    label: "Papers" # Used in the UI
+    folder: "_papers" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{title}}.md" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Permalink", name: "permalink", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
