@@ -28,7 +28,7 @@ collections:
   papers:
     title: true
     authors: true
-    year: true
+    date: true
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
