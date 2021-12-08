@@ -15,9 +15,9 @@ The Society peeks behind the curtain of Blaseball. We archive game data and work
 SIBR:
 
 * harvests lots of raw data from games as they happen
-* processes that data and store it in databases
+* processes that data and stores it in databases
 * builds [tools](https://whichtool.sibr.dev/) and [sites](https://blaseball-reference.com/) where fans can view and explore that data
-* uses all of this data to publish [research](https://research.blaseball-reference.com/) into the underlying algorithms of Blaseball, and how its unique rules impact play
+* uses all of this data to publish [research](https://research.blaseball-reference.com/) related to the underlying algorithms of Blaseball, and how its unique rules impact play
 
 ## How do I join SIBR?
 
@@ -33,7 +33,7 @@ You should look at [Whichtool](https://whichtool.sibr.dev), an interactive tool-
 
 ## Is there a script to vote/bet/etc? Can you help me write one?
 
-No and no. SIBR focuses on read-only data and unauthenticated endpoints, and we ask that others respect the Blaseball community and do the same.
+No and no. SIBR focuses on read-only data and unauthenticated endpoints, and we ask that others respect the Blaseball community by doing the same.
 
 However, we understand that itch. Our advice, if you must: build something for your own self development, but don't share it or brag about it.
 
