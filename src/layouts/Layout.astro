@@ -26,6 +26,9 @@ const text_links = {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=Barlow:wght@600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet"> 
 		<link rel="stylesheet" href="/assets/fonts/NotoSerif/NotoSerif.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
@@ -33,7 +36,7 @@ const text_links = {
 	<body>
 		<header class="link-bar">
 			<a href="/">
-				<img class="image" src="https://sibr.dev/assets/logo.svg" alt="Society for Internet Blaseball Research">
+				<img class="sibr-image" src="https://sibr.dev/assets/logo.svg" alt="Society for Internet Blaseball Research">
 			</a>
 			<nav>
 				<ul class="link text">
@@ -83,9 +86,14 @@ const text_links = {
 		font-family: "NotoSerif", "Times New Roman", system-ui, sans-serif;
 		background-color: #F6F6F6;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+	pre {
+		padding: .3em 1em;
+		font-family: "IBM Plex Mono", Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	.sibr-image {
+		width: 400px;
 	}
 
 	li {
@@ -97,11 +105,13 @@ const text_links = {
 		max-width: 950px;
 		margin: 2em auto;
 		grid-template-columns: 240px 1fr;
+		gap: 2em;
 	}
 
 	.link-bar {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		gap: var(--space-m);
 
 		font-variation-settings: "wght" 900, "wdth" 80;
@@ -113,18 +123,37 @@ const text_links = {
 		}
 
 		.link {
+			font-family: "Barlow Semi Condensed";
+			text-transform: uppercase;
+			font-size: 1.5em;
+
 			&.text {
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				gap: var(--space-2xs);
+
+				li {
+					transition: all .2s ease;
+					&:hover {
+						transform: rotate(360deg);
+					}
+				}
+
+				a {
+					text-decoration: none;
+				}
 			}
 
 			&.icon {
 				display: flex;
 				justify-items: center;
 				flex-wrap: 1;
-				gap: var(--space-2xs);
+				gap: var(--space-4xs);
+
+				img {
+					width: 3em;
+				}
 			}
 		}
 	}
