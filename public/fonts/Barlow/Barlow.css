@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Barlow V";
+    src: url("BarlowV-subset.woff2") format("woff2-variations"),
+         url("BarlowV-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 200 700;
+}
+
+@font-face {
+    font-family: "Barlow";
+    src: url("Barlow-Regular-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow Semi Condensed";
+    src: url("BarlowSemiCondensed-SemiBold-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+}

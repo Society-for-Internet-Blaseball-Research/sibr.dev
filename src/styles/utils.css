@@ -40,6 +40,7 @@
 	--barlow: Barlow, Arial, sans-serif;
 	--barlow-condensed: "Barlow Semi Condensed", Arial, sans-serif;
 	--noto-serif: "Noto Serif", Georgia, serif;
+  --mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 	
 	
 	/* Colors */
@@ -164,4 +165,13 @@
   --violet-700: #663189;
   --violet-800: #46225e;
   --violet-900: #281636;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    /* Font Families */
+    --barlow: "Barlow V", Arial, sans-serif;
+    --barlow-condensed: "Barlow V", Arial, sans-serif;
+    --noto-serif: "Noto Serif V", Georgia, serif;
+  }
 }

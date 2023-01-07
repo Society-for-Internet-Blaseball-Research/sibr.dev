@@ -26,10 +26,8 @@ const text_links = {
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&family=Barlow:wght@600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet"> 
-		<link rel="stylesheet" href="/assets/fonts/NotoSerif/NotoSerif.css">
+		<link rel="stylesheet" href="/fonts/NotoSerif/NotoSerif.css">
+		<link rel="stylesheet" href="/fonts/Barlow/Barlow.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -83,13 +81,11 @@ const text_links = {
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
 	html {
-		font-family: "NotoSerif", "Times New Roman", system-ui, sans-serif;
-		background-color: #F6F6F6;
+		font-family: var(--noto-serif);
 	}
 	pre {
 		padding: .3em 1em;
-		font-family: "IBM Plex Mono", Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		font-family: var(--mono);
 	}
 
 	.sibr-image {
@@ -114,7 +110,7 @@ const text_links = {
 		align-items: center;
 		gap: var(--space-m);
 
-		font-variation-settings: "wght" 900, "wdth" 80;
+		// font-variation-settings: "wght" 900, "wdth" 80;
 
 		nav {
 			display: flex;
@@ -123,9 +119,12 @@ const text_links = {
 		}
 
 		.link {
-			font-family: "Barlow Semi Condensed";
+			// font-family: var(--barlow-condensed);
+			font-family: var(--barlow-condensed);
 			text-transform: uppercase;
 			font-size: 1.5em;
+			font-weight: 130;
+			font-variation-settings: "wdth" 400;
 
 			&.text {
 				display: flex;
