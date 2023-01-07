@@ -1,0 +1,167 @@
+:root {
+	/* Type Scale */
+	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1116,22,1.25,5,2,&s=0.75|0.5|0.25|0.125,1.5|2|3|4|6,s-l|s-2xl&g=s,l,xl,12 */
+  --step--2: clamp(0.69rem, calc(0.62rem + 0.37vw), 0.88rem);
+  --step--1: clamp(0.83rem, calc(0.73rem + 0.54vw), 1.10rem);
+  --step-0: clamp(1.00rem, calc(0.85rem + 0.75vw), 1.38rem);
+  --step-1: clamp(1.20rem, calc(0.99rem + 1.04vw), 1.72rem);
+  --step-2: clamp(1.44rem, calc(1.16rem + 1.42vw), 2.15rem);
+  --step-3: clamp(1.73rem, calc(1.34rem + 1.92vw), 2.69rem);
+  --step-4: clamp(2.07rem, calc(1.56rem + 2.58vw), 3.36rem);
+  --step-5: clamp(2.49rem, calc(1.80rem + 3.43vw), 4.20rem);
+	
+	
+	/* Spacing Scale */
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1116,22,1.25,5,2,&s=0.75|0.5|0.25|0.125,1.5|2|3|4|6,s-l|s-2xl&g=s,l,xl,12 */
+  --space-4xs: clamp(0.13rem, calc(0.10rem + 0.13vw), 0.19rem);
+  --space-3xs: clamp(0.25rem, calc(0.20rem + 0.25vw), 0.38rem);
+  --space-2xs: clamp(0.50rem, calc(0.42rem + 0.38vw), 0.69rem);
+  --space-xs: clamp(0.75rem, calc(0.62rem + 0.63vw), 1.06rem);
+  --space-s: clamp(1.00rem, calc(0.85rem + 0.75vw), 1.38rem);
+  --space-m: clamp(1.50rem, calc(1.27rem + 1.13vw), 2.06rem);
+  --space-l: clamp(2.00rem, calc(1.70rem + 1.51vw), 2.75rem);
+  --space-xl: clamp(3.00rem, calc(2.55rem + 2.26vw), 4.13rem);
+  --space-2xl: clamp(4.00rem, calc(3.40rem + 3.02vw), 5.50rem);
+  --space-3xl: clamp(6.00rem, calc(5.10rem + 4.52vw), 8.25rem);
+
+  /* One-up pairs */
+  --space-4xs-3xs: clamp(0.13rem, calc(0.02rem + 0.50vw), 0.38rem);
+  --space-3xs-2xs: clamp(0.25rem, calc(0.07rem + 0.88vw), 0.69rem);
+  --space-2xs-xs: clamp(0.50rem, calc(0.27rem + 1.13vw), 1.06rem);
+  --space-xs-s: clamp(0.75rem, calc(0.50rem + 1.26vw), 1.38rem);
+  --space-s-m: clamp(1.00rem, calc(0.57rem + 2.14vw), 2.06rem);
+  --space-m-l: clamp(1.50rem, calc(1.00rem + 2.51vw), 2.75rem);
+  --space-l-xl: clamp(2.00rem, calc(1.15rem + 4.27vw), 4.13rem);
+  --space-xl-2xl: clamp(3.00rem, calc(1.99rem + 5.03vw), 5.50rem);
+  --space-2xl-3xl: clamp(4.00rem, calc(2.29rem + 8.54vw), 8.25rem);
+	
+	
+	/* Font Families */
+	--barlow: Barlow, Arial, sans-serif;
+	--barlow-condensed: "Barlow Semi Condensed", Arial, sans-serif;
+	--noto-serif: "Noto Serif", Georgia, serif;
+	
+	
+	/* Colors */
+  --purble: var(--purble-400);
+	
+	/* Purble */
+	--purble-50: #fafafb;
+	--purble-100: #f2effa;
+	--purble-200: #e4d3f5;
+	--purble-300: #caace6;
+	--purble-400: #b981d5;
+	--purble-500: #a25cc6;
+	--purble-600: #8741ae;
+	--purble-700: #663189;
+	--purble-800: #46225e;
+	--purble-900: #281636;
+	
+	/* Rouge */
+	--rouge-50: #fcfbfa;
+	--rouge-100: #f8eff4;
+	--rouge-200: #f1d0e9;
+	--rouge-300: #e2a6d0;
+	--rouge-400: #da78b2;
+	--rouge-500: #c85497;
+	--rouge-600: #ae3a77;
+	--rouge-700: #862b58;
+	--rouge-800: #5f1e3a;
+	--rouge-900: #381320;
+	
+	/* Red */
+  --red-50: #fcfbfa;
+  --red-100: #faf0ea;
+  --red-200: #f5d2d4;
+  --red-300: #e8a7ad;
+  --red-400: #e07982;
+  --red-500: #cf5560;
+  --red-600: #b53b44;
+  --red-700: #8e2c32;
+  --red-800: #641f22;
+  --red-900: #3e1414;
+	
+	/* Orange */
+  --orange-50: #fcfbf8;
+  --orange-100: #faf0d9;
+  --orange-200: #f4d7b2;
+  --orange-300: #e5ae7f;
+  --orange-400: #d68151;
+  --orange-500: #c05f32;
+  --orange-600: #a34520;
+  --orange-700: #7e341a;
+  --orange-800: #572414;
+  --orange-900: #37160d;
+
+  /* Yellow */
+  --yellow-50: #fbfaf4;
+  --yellow-100: #f8efc2;
+  --yellow-200: #f0dc89;
+  --yellow-300: #dbb856;
+  --yellow-400: #bc8d30;
+  --yellow-500: #9e6e19;
+  --yellow-600: #815410;
+  --yellow-700: #623f0e;
+  --yellow-800: #432b0c;
+  --yellow-900: #2d1b09;
+	
+	/* Green */
+  --green-50: #f2f6f4;
+  --green-100: #ddefec;
+  --green-200: #b2e5d5;
+  --green-300: #79c9ab;
+  --green-400: #38a97d;
+  --green-500: #278d55;
+  --green-600: #22763f;
+  --green-700: #1e5a33;
+  --green-800: #163e27;
+  --green-900: #0f261d;
+
+  /* Cyan */
+  --cyan-50: #f2f6f6;
+  --cyan-100: #d9f0f0;
+  --cyan-200: #aee7e7;
+  --cyan-300: #7bd0d0;
+  --cyan-400: #3eb4b4;
+  --cyan-500: #2c9b9b;
+  --cyan-600: #247f7f;
+  --cyan-700: #1d6464;
+  --cyan-800: #154949;
+  --cyan-900: #0e3131;
+	
+	/* Blue */
+  --blue-50: #f4f8f9;
+  --blue-100: #ddf0fa;
+  --blue-200: #b7def5;
+  --blue-300: #86bfe7;
+  --blue-400: #539ad4;
+  --blue-500: #3f79c3;
+  --blue-600: #3f79c3;
+  --blue-700: #355eac;
+  --blue-800: #1f3063;
+  --blue-900: #121e40;
+	
+	/* Indigo */
+  --indigo-50: #f6f9fa;
+  --indigo-100: #e1f0fb;
+  --indigo-200: #c1dbf8;
+  --indigo-300: #95b9ee;
+  --indigo-400: #6a93e0;
+  --indigo-500: #5470d4;
+  --indigo-600: #4554c2;
+  --indigo-700: #363f9f;
+  --indigo-800: #262b74;
+  --indigo-900: #161b49;
+	
+	/* Violet */
+  --violet-50: #fafafb;
+  --violet-100: #f2effa;
+  --violet-200: #e4d3f5;
+  --violet-300: #caace6;
+  --violet-400: #b981d5;
+  --violet-500: #a25cc6;
+  --violet-600: #8741ae;
+  --violet-700: #663189;
+  --violet-800: #46225e;
+  --violet-900: #281636;
+}
