@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "NotoSerif V";
+    src: url("NotoSerifV-subset.woff2") format("woff2-variations"),
+         url("NotoSerifV-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 200 700;
+}
+
+@font-face {
+    font-family: "NotoSerif V";
+    src: url("NotoSerifV-Italic-subset.woff2") format("woff2-variations"),
+         url("NotoSerifV-Italic-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: italic;
+    font-weight: 200 700;
+}
+
+@font-face {
+    font-family: "NotoSerif";
+    src: url("NotoSerif-Regular-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NotoSerif";
+    src: url("NotoSerif-Italic-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "NotoSerif";
+    src: url("NotoSerif-Bold-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "NotoSerif";
+    src: url("NotoSerif-BoldItalic-subset.woff2") format("woff2");
+    font-display: swap;
+    font-style: italic;
+    font-weight: 700;
+}

@@ -1,0 +1,166 @@
+---
+import "../styles/reset.css";
+import "../styles/utils.css";
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+const text_links = {
+	FAQ: "/faq",
+	Projects: "/projects",
+	APIs: "/apis",
+	Research: "https://research.blaseball-reference.com/",
+	Falsehoods: "/falsehoods",
+	Status: "https://status.sibr.dev",
+	Merch: "https://sibr.bigcartel.com",
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+		<link rel="stylesheet" href="/fonts/NotoSerif/NotoSerif.css">
+		<link rel="stylesheet" href="/fonts/Barlow/Barlow.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="link-bar">
+			<a href="/">
+				<img class="sibr-image" src="https://sibr.dev/assets/logo.svg" alt="Society for Internet Blaseball Research">
+			</a>
+			<nav>
+				<ul class="link text">
+					{Object.entries(text_links).map(([name, link]) => (
+						<>
+							<li>
+								<a href={link}> {name} </a>
+							</li>
+						</>
+					))}
+				</ul>
+				<ul class="link icon">
+					<li>
+						<a href="https://discord.gg/F8YSJE6">
+							<img src="https://sibr.dev/assets/discord.svg" alt="Join our Discord">
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/SIBROfficial">
+							<img src="https://sibr.dev/assets/twitter.svg" alt="Follow us on Twitter">
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/Society-for-Internet-Blaseball-Research">
+							<img src="https://sibr.dev/assets/github.svg" alt="SIBR on GitHub">
+						</a>
+					</li>					
+				</ul>
+			</nav>
+		</header>
+		<main class="main-content">
+			<slot />
+			<footer class="disclaimer">
+				<p>
+					SIBR is neither endorsed by nor directly affiliated with The Game Band.
+				</p>
+			</footer>
+		</main>
+	</body>
+</html>
+<style is:global lang="scss">
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: var(--noto-serif);
+	}
+	pre {
+		padding: .3em 1em;
+		font-family: var(--mono);
+	}
+
+	.sibr-image {
+		width: 400px;
+	}
+
+	li {
+		list-style-type: none;
+	}
+
+	body {
+		display: grid;
+		max-width: 950px;
+		margin: 2em auto;
+		grid-template-columns: 240px 1fr;
+		gap: 2em;
+	}
+
+	.link-bar {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-m);
+
+		// font-variation-settings: "wght" 900, "wdth" 80;
+
+		nav {
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-s);
+		}
+
+		.link {
+			// font-family: var(--barlow-condensed);
+			font-family: var(--barlow-condensed);
+			text-transform: uppercase;
+			font-size: 1.5em;
+			font-weight: 130;
+			font-variation-settings: "wdth" 400;
+
+			&.text {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: var(--space-2xs);
+
+				li {
+					transition: all .2s ease;
+					&:hover {
+						transform: rotate(360deg);
+					}
+				}
+
+				a {
+					text-decoration: none;
+				}
+			}
+
+			&.icon {
+				display: flex;
+				justify-items: center;
+				flex-wrap: 1;
+				gap: var(--space-4xs);
+
+				img {
+					width: 3em;
+				}
+			}
+		}
+	}
+
+	.disclaimer {
+		p {
+			text-align: center;
+			font-size: .7em;
+		}
+	}
+</style>
