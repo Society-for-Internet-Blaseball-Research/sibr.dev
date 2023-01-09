@@ -1,32 +1,78 @@
 ---
-import Base from "../layouts/Base.astro"
+import Base from "../layouts/Base.astro";
+
+
+const projects = import.meta.glob("../_projects/*.md");
+const resolved = Object.entries(projects).map(([, resolver]) => resolver());
+
+const projs: any[] = (await Promise.all(resolved)).map((p: any) => ({
+    ...p.frontmatter,
+    Content: p.Content,
+}));
+
+const groups = projs.reduce((init, tool) => {
+    const category = tool.category;
+    if (category in init) init[category].push(tool);
+    else init[category] = [tool];
+    return init;
+}, {} as any);
+
+console.log(groups);
 ---
 <Base title="Projects">
-    <p>
-        &lt;TODO: Port this page from liquid to astro&gt;
-    </p>
-</Base>
-<!-- <div>The following projects are hosted on the SIBR servers or a SIBR subdomain:</div>
+    <div>The following projects are hosted on the SIBR servers or a SIBR subdomain:</div>
 
-{% assign categories =  site.projects | group_by: "categories" | sort:"name" %}
-
-{% for cat in categories %}
-<h2>{{ cat.name | remove: '[' | remove: ']' | remove: '"' }}</h2>
-{% assign projects =  cat.items | sort_natural:"name" %}
-{% for project in projects %}
-    <div class="project">
-        <p>
-            <strong>{{ project.name }}</strong>: {{ project.content }}
-        </p>
-
-        <ul class="links">
-            {% if project.site %}<li><a href="{{ project.site }}" target="_blank">Site</a></li>{% endif %}
-            {% if project.code %}<li><a href="{{ project.code }}" target="_blank">Code</a></li>{% endif %}
-            {% if project.tasks %}<li><a href="{{ project.tasks }}" target="_blank">Project Board / Tasks</a></li>{% endif %}
-            {% if project.status_slug %}
-                <li><a href="https://status.sibr.dev/services/{{ project.status_slug }}" target="_blank"><img src="https://status.sibr.dev/api/v1/badges/uptime/24h/{{ project.status_slug }}.svg" /></a></li>
-            {% endif %}
+    {Object.entries(groups).map(([category, tools]: any) => (
+        <h2> {category} </h2>
+        <ul class="project-list">
+            {tools.map((tool: any) => (
+                <li class="project">
+                    <div class="project-info">
+                        <strong class="project-name">{tool.name}</strong>
+                        <tool.Content />
+                    </div>
+    
+                    <ul class="links">
+                        {tool.site ? (<li><a href={tool.site} target="_blank">Site</a></li>) : (<></>)}
+                        {tool.code ? (<li><a href={tool.code} target="_blank">Code</a></li>) : (<></>)}
+                        {tool.tasks ? (<li><a href={tool.tasks} target="_blank">Project Board / Tasks</a></li>) : (<></>)}
+                        {tool.status_slug 
+                            ? (<li><a href={"https://status.sibr.dev/services/" + tool.status_slug} target="_blank">
+                                <img src={"https://status.sibr.dev/api/v1/badges/uptime/24h/" + tool.status_slug} />
+                              </a></li>) 
+                            : (<></>)}
+                    </ul>
+                </li>
+            ))}
         </ul>
-    </div>
-{% endfor %}
-{% endfor %} -->
+    ))}    
+</Base>
+
+<style lang="scss" is:global>
+    li {
+        list-style-type: none;
+    }
+
+    .links li {
+        display: inline-block;
+        padding-right: 1em;
+        font-weight: 600;
+    }
+
+    .project {
+        padding-bottom: 1em;
+
+        .project-info {
+            .project-name {
+
+                &::after {
+                    content: ":";
+                }
+            }
+
+            p {
+                display: inline;
+            }
+        }
+    }
+</style>
