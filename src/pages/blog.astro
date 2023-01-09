@@ -2,18 +2,8 @@
 import Base from "../layouts/Base.astro";
 import BlogPost from "../components/BlogPost.astro";
 
-interface Blog {
-  title: string;
-  author: string;
-  date: string;
-  description: string;
-  tags: string[];
-  image?: string;
-  alt?: string;
-}
-
 // a list of blog posts following the above interface
-const posts: Blog[] = [
+const posts = [
   {
     title: "My first blog post",
     author: "John Doe",
@@ -47,3 +37,7 @@ const posts: Blog[] = [
     <BlogPost {...post} />
   ))}
 </Base>
+
+<style>
+  
+</style>
