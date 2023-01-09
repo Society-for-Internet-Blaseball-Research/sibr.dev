@@ -6,7 +6,7 @@ const posts = (await Astro.glob('./posts/*.md')).map(post=>{
   let front = post.frontmatter;
   front.url = post.url;
   return front;
-});
+}).filter((post)=>!post.draft);
 
 ---
 
