@@ -3,31 +3,13 @@ import Base from "../layouts/Base.astro";
 import BlogPost from "../components/BlogPost.astro";
 
 // a list of blog posts following the above interface
-const posts = [
-  {
-    title: "My first blog post",
-    author: "John Doe",
-    date: "2021-01-01",
-    description: "This is my first blog post",
-    tags: ["blog", "astro"],
-  },
-  {
-    title: "My second blog post",
-    author: "John Doe",
-    date: "2021-01-02",
-    description: "This is my second blog post",
-    tags: ["blog", "astro"],
-  },
-  {
-    title: "My third blog post",
-    author: "John Doe",
-    date: "2021-01-03",
-    description: "This is my third blog post",
-    tags: ["blog", "astro"],
-    image: "https://placekitten.com/200/300",
-    alt: "A cute kitten",
-  }
-];
+const posts = (await Astro.glob('./posts/*.md')).map(post=>{
+  let front = post.frontmatter;
+  front.url = post.url;
+  return front;
+}
+);
+
 ---
 
 <Base title="Blog">

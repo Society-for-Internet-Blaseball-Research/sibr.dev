@@ -2,71 +2,91 @@
 
 export interface Props {
   title: string;
-  author: string;
+  authors: string[];
   date: string;
   description: string;
   tags: string[];
   image?: string;
   alt?: string;
+  url: string;
 }
 
 const { 
   title,
-  author,
+  authors,
   date,
   description,
   tags,
   image,
   alt,
+  url
 } = Astro.props;
 
 ---
-
 <article class="card">
-  <!-- If there's a better way of putting the image off to the side let me know -->
-  <div class="wrapper">
-    <header>
-      <h2>{title}</h2>
-    </header>
-    <div class="author">
-      <p>{author}</p>
-      <span aria-hidden="true">•</span>
-      <p>{date}</p>
+    {image && (
+      <div class="img">
+        <img src={image} alt={alt} />
+      </div>
+    )}
+    <!-- If there's a better way of putting the image off to the side let me know -->
+    <div class="wrapper">
+      <header>
+        <a href={url}>
+          <h2>{title}</h2>
+        </a>
+      </header>
+      <div class="author">
+        <p>{authors?.join(", ")}</p>
+        <span aria-hidden="true">•</span>
+        <p>{date}</p>
+      </div>
+      <p class="description">{description}</p>
+      <div class="tags">
+        {tags?.map((tag) => (
+          <a class={`tag`} x-tag={tag}>{tag}</a>
+        ))}
+      </div>
     </div>
-    <p class="description">{description}</p>
-    <div class="tags">
-      {tags.map((tag) => (
-        <a class={`tag ${tag}`}>{tag}</a>
-      ))}
-    </div>
-  </div>
-  {image && (
-    <div class="img">
-      <img src={image} alt={alt} />
-    </div>
-  )}
 </article>
 
 <style>
   .card {
-    
+    display: flex;
+    /* flex-direction: column; */
+    align-content: center;
+    padding: 0.5rem;
+    border-radius: var(--space-3xs);
+    max-height: 20ch;
+    overflow: hidden;
   }
 
-  .card {
-    display: flex;
-    justify-content: space-between;
-    /* flex-direction: column; */
+  .wrapper{
+    padding: 0.2rem;
+    margin-block: auto;
+  }
+  .card:hover{
+    background-color: #88888822;
   }
 
   .card .img {
-    max-width: 25%;
+    /* For some reason just setting the width won't work here,
+       so this is done instead. 💻🔨 */
+    max-width: 20%; 
+    min-width: 20%;
     height: auto;
-    /* align-items: stretch; */
     border-radius: var(--space-2xs);
+    margin-inline-end: 2ch;
+    display: flex;
+    align-items: center;
+    text-align: center;
   }
 
   .card img {
     object-fit: cover;
+    max-height: 18ch;
+    border-radius: var(--space-3xs);
+    margin-inline: auto;
   }
 
   .card header > h2 {
@@ -106,6 +126,7 @@ const {
     border-radius: var(--space-3xs);
     padding: var(--space-3xs);
     line-height: 1;
+    background-color: #ddd; /*Default Tag Colour*/
   }
 
   a.tag.blog {
@@ -116,5 +137,10 @@ const {
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  /* Tag Colours Here */
+  a.tag[x-tag="nerd stuff"]{
+    background-color: #ffcccc;
   }
 </style>

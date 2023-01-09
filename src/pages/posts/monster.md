@@ -1,5 +1,12 @@
 ---
-title: The Grand Monster
+layout: "../../layouts/Page.astro"
+title: "The Grand Monster"
+authors: ["Whats","Umpdog"]
+date: "5000-04-20"
+description: "Markdown Testing Stuff"
+tags: ["nerd stuff"]
+image: https://placekitten.com/300/400
+alt: a kitten
 ---
 
 # Header 1

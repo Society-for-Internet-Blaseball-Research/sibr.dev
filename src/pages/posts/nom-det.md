@@ -1,5 +1,10 @@
 ---
-layout: "../layouts/Page.astro"
+layout: "../../layouts/Page.astro"
+title: "The Nominative-Determinism Article"
+authors: ["beiju"]
+date: "2021-01-09"
+description: "Something about learning about how we deconstructed the sim <TODO CHANGE THIS>"
+tags: ["nerd stuff","another tag"]
 ---
 
 If you're a huge Blaseball nerd, in the past months you may have heard of a 
