@@ -22,6 +22,8 @@ const {
   url
 } = Astro.props;
 
+import Tags from './Tags.astro';
+
 ---
 <article class="card">
     {image && (
@@ -42,11 +44,7 @@ const {
         <p>{date}</p>
       </div>
       <p class="description">{description}</p>
-      <div class="tags">
-        {tags?.map((tag) => (
-          <a class={`tag`} x-tag={tag}>{tag}</a>
-        ))}
-      </div>
+      <Tags tags={tags} />
     </div>
 </article>
 
@@ -63,7 +61,6 @@ const {
 
   .wrapper{
     padding: 0.2rem;
-    margin-block: auto;
   }
   .card:hover{
     background-color: #88888822;
@@ -109,30 +106,8 @@ const {
     font-size: var(--step--1);
     font-weight: 400;
     line-height: 1.5;
-  }
-
-  .tags {
-    display: flex;
-    flex-direction: row;
-    gap: var(--space-xs);
-    font-family: var(--barlow);
-    font-weight: 90;
-    font-size: var(--scale--2);
-  }
-
-  a.tag {
-    /* border: none; */
-    /* text-align: center; */
-    border-radius: var(--space-3xs);
-    padding: var(--space-3xs);
-    line-height: 1;
-    background-color: #ddd; /*Default Tag Colour*/
-  }
-
-  a.tag.blog {
-    background-color: var(--red-200);
-    color: var(--red-800);
-  }
+    margin-block-end: 0.5rem;
+  }  
 
   a {
     text-decoration: none;
@@ -142,8 +117,4 @@ const {
     text-decoration: underline;
   }
 
-  /* Tag Colours Here */
-  a.tag[x-tag="nerd stuff"]{
-    background-color: #ffcccc;
-  }
 </style>

@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/Page.astro"
+layout: "../../layouts/BlogPage.astro"
 title: "The Nominative-Determinism Article"
 authors: ["beiju"]
 date: "2021-01-09"

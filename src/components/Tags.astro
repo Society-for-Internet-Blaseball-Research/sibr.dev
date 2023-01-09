@@ -1,0 +1,49 @@
+---
+
+export interface Props {
+  tags: string[];
+}
+
+const { 
+  tags
+} = Astro.props;
+
+---
+
+<div class="tags">
+    {tags?.map((tag) => (
+      <a class={`tag`} x-tag={tag}>{tag}</a>
+    ))}
+</div>
+
+<style>
+    .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    font-family: var(--barlow);
+    font-weight: 90;
+    font-size: var(--scale--2);
+    margin: 0;
+  }
+
+  a.tag {
+    /* border: none; */
+    /* text-align: center; */
+    border-radius: var(--space-3xs);
+    padding: var(--space-3xs);
+    line-height: 1;
+    background-color: #ddd; /*Default Tag Colour*/
+  }
+
+  a.tag[x-tag=blog] {
+    background-color: var(--red-200);
+    color: var(--red-800);
+  }
+
+  /* Tag Colours Here */
+  a.tag[x-tag="nerd stuff"]{
+    background-color: #ffcccc;
+  }
+</style>
