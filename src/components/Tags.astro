@@ -25,25 +25,76 @@ const {
     font-family: var(--barlow);
     font-weight: 90;
     font-size: var(--scale--2);
+    font-stretch: 400%;
     margin: 0;
   }
 
   a.tag {
-    /* border: none; */
-    /* text-align: center; */
     border-radius: var(--space-3xs);
     padding: var(--space-3xs);
     line-height: 1;
-    background-color: #ddd; /*Default Tag Colour*/
+    background-color: var(--tag-gray-background); /*Default Tag Colour*/
+    color: var(--tag-gray-text)
   }
 
   a.tag[x-tag=blog] {
-    background-color: var(--red-200);
-    color: var(--red-800);
+    background-color: var(--tag-red-background);
+    color: var(--tag-red-text);
   }
 
   /* Tag Colours Here */
   a.tag[x-tag="nerd stuff"]{
-    background-color: #ffcccc;
+    background-color: var(--tag-purble-background);
+    color: var(--tag-purble-text);
+  }
+
+  a.tag[x-tag=purble] {
+    background-color: var(--tag-purble-background);
+    color: var(--tag-purble-text);
+  }
+
+  a.tag[x-tag=rouge] {
+    background-color: var(--tag-rouge-background);
+    color: var(--tag-rouge-text);
+  }
+
+  a.tag[x-tag=red] {
+    background-color: var(--tag-red-background);
+    color: var(--tag-red-text);
+  }
+
+  a.tag[x-tag=orange] {
+    background-color: var(--tag-orange-background);
+    color: var(--tag-orange-text);
+  }
+
+  a.tag[x-tag=yellow] {
+    background-color: var(--tag-yellow-background);
+    color: var(--tag-yellow-text);
+  }
+
+  a.tag[x-tag=green] {
+    background-color: var(--tag-green-background);
+    color: var(--tag-green-text);
+  }
+
+  a.tag[x-tag=cyan] {
+    background-color: var(--tag-cyan-background);
+    color: var(--tag-cyan-text);
+  }
+
+  a.tag[x-tag=blue] {
+    background-color: var(--tag-blue-background);
+    color: var(--tag-blue-text);
+  }
+
+  a.tag[x-tag=indigo] {
+    background-color: var(--tag-indigo-background);
+    color: var(--tag-indigo-text);
+  }
+
+  a.tag[x-tag=violet] {
+    background-color: var(--tag-violet-background);
+    color: var(--tag-violet-text);
   }
 </style>

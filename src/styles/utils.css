@@ -55,7 +55,30 @@
 	
 	
 	/* Colors */
-  --purble: var(--purble-400);
+  --purble-text: var(--purble-black);
+  --purble-background: var(--purble-50);
+  --tag-purble-text: var(--purble-800);
+  --tag-purble-background:var(--purble-200);
+  --tag-rouge-text: var(--rouge-800);
+  --tag-rouge-background: var(--rouge-200);
+  --tag-red-text: var(--red-800);
+  --tag-red-background: var(--red-200);
+  --tag-orange-text: var(--orange-800);
+  --tag-orange-background: var(--orange-200);
+  --tag-yellow-text: var(--yellow-800);
+  --tag-yellow-background: var(--yellow-200);
+  --tag-green-text: var(--green-800);
+  --tag-green-background: var(--green-200);
+  --tag-cyan-text: var(--cyan-800);
+  --tag-cyan-background: var(--cyan-200);
+  --tag-blue-text: var(--blue-800);
+  --tag-blue-background: var(--blue-200);
+  --tag-indigo-text: var(--indigo-800);
+  --tag-indigo-background: var(--indigo-200);
+  --tag-violet-text: var(--violet-800);
+  --tag-violet-background: var(--violet-200);
+  --tag-gray-text: var(--gray-800);
+  --tag-gray-background: var(--gray-200);
 	
 	/* Purble */
 	--purble-50: #fafafb;
@@ -178,6 +201,18 @@
   --violet-700: #663189;
   --violet-800: #46225e;
   --violet-900: #281636;
+
+  /* Gray */
+  --gray-50: #f9faf9;
+  --gray-100: #f1f2f3;
+  --gray-200: #dfdee4;
+  --gray-300: #bcbbc3;
+  --gray-400: #91919b;
+  --gray-500: #736e76;
+  --gray-600: #5b5358;
+  --gray-700: #453e41;
+  --gray-800: #2f292d;
+  --gray-900: #1b191c;
 }
 
 @supports (font-variation-settings: normal) {
@@ -186,5 +221,34 @@
     --barlow: "Barlow V", Arial, sans-serif;
     --barlow-condensed: "Barlow V", Arial, sans-serif;
     --serif: "NotoSerif V", Georgia, serif;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --purble-text: var(--purble-50);
+    --purble-background: var(--purble-black);
+    --tag-purble-text: var(--purble-200);
+    --tag-purble-background:var(--purble-800);
+    --tag-rouge-text: var(--rouge-200);
+    --tag-rouge-background: var(--rouge-800);
+    --tag-red-text: var(--red-200);
+    --tag-red-background: var(--red-800);
+    --tag-orange-text: var(--orange-200);
+    --tag-orange-background: var(--orange-800);
+    --tag-yellow-text: var(--yellow-200);
+    --tag-yellow-background: var(--yellow-800);
+    --tag-green-text: var(--green-200);
+    --tag-green-background: var(--green-800);
+    --tag-cyan-text: var(--cyan-200);
+    --tag-cyan-background: var(--cyan-800);
+    --tag-blue-text: var(--blue-200);
+    --tag-blue-background: var(--blue-800);
+    --tag-indigo-text: var(--indigo-200);
+    --tag-indigo-background: var(--indigo-800);
+    --tag-violet-text: var(--violet-200);
+    --tag-violet-background: var(--violet-800);
+    --tag-gray-text: var(--gray-200);
+    --tag-gray-background: var(--gray-800);
   }
 }

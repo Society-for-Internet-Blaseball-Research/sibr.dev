@@ -4,7 +4,7 @@ title: "The Grand Monster"
 authors: ["Whats","Umpdog"]
 date: "5000-04-20"
 description: "Markdown Testing Stuff"
-tags: ["nerd stuff"]
+tags: ["nerd stuff", "purble", "rouge", "red", "orange", "yellow", "green", "cyan", "blue", "indigo", "violet"]
 image: https://placekitten.com/300/400
 alt: a kitten
 draft: true
@@ -31,6 +31,14 @@ draft: true
 ```js
 const logic = "should be highlighted"
 ```
+
+> quote
+>
+> quote2
+>
+> quote3
+> 
+> this line of *text* has a lot of **formatting** _weirdness_ [like](https://sibr.dev) `this` and also $$ \textrm{this} $$
 
 this line of *text* has a lot of **formatting** _weirdness_ [like](https://sibr.dev) `this` and also $$ \textrm{this} $$
 
