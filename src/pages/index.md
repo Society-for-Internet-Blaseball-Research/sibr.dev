@@ -8,6 +8,10 @@ redirect_from:
 
 <span class="mission">The **Society for Internet Blaseball Research** is a community devoted to unravelling [Blaseball](https:/www.blaseball.com)'s deepest mysteries. We work together to make Blaseball data more accessible by creating tools, analyzing past games, and discovering new records. We are, in our own strange way, participating in the cultural event of Blaseball.</span>
 
+## Historical
+
+These are tools made during the past Eras of Blaseball - may or may not be functional. They remain here for prosperity.
+
 * [![](/reference.png)][reference]
   [**Blaseball Reference**][reference] tabulates traditional baseball statistics, player leaderboards, and team schedules.
 * [![](/reblase.png)][reblase]
@@ -42,7 +46,7 @@ redirect_from:
   }
 
   ul {
-    padding: none;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: .8em;
@@ -52,6 +56,10 @@ redirect_from:
   li {
     list-style-type: none;
     font-size: .8em;
+  }
+
+  li img {
+    margin-bottom: .5em;
   }
 
 </style>
