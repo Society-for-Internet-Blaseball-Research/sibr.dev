@@ -30,14 +30,14 @@ These are tools made during the past Eras of Blaseball - may or may not be funct
   [**Onomancer**][onomancer] is a webapp for people to submit and rate Blaseball names and form teams to share with friends.
 </section>
 
-[reference]: https:/blaseball-reference.com
-[reblase]: https:/reblase.sibr.dev
-[before]: https:/before.sibr.dev
-[blasebot]: https:/github.com/BeeFox-sys/blasebot
-[blases-loaded]: https:/github.com/RangerRick/blobile
-[research]: https:/research.blaseball-reference.com
-[onomancer]: https:/onomancer.sibr.dev
-[whichtool]: https:/whichtool.sibr.dev/
+[reference]: https://blaseball-reference.com
+[reblase]: https://reblase.sibr.dev
+[before]: https://before.sibr.dev
+[blasebot]: https://github.com/BeeFox-sys/blasebot
+[blases-loaded]: https://github.com/RangerRick/blobile
+[research]: https://research.blaseball-reference.com
+[onomancer]: https://onomancer.sibr.dev
+[whichtool]: https://whichtool.sibr.dev/
 
 <style>
 
