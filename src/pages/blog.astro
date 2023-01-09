@@ -1,0 +1,49 @@
+---
+import Base from "../layouts/Base.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+interface Blog {
+  title: string;
+  author: string;
+  date: string;
+  description: string;
+  tags: string[];
+  image?: string;
+  alt?: string;
+}
+
+// a list of blog posts following the above interface
+const posts: Blog[] = [
+  {
+    title: "My first blog post",
+    author: "John Doe",
+    date: "2021-01-01",
+    description: "This is my first blog post",
+    tags: ["blog", "astro"],
+  },
+  {
+    title: "My second blog post",
+    author: "John Doe",
+    date: "2021-01-02",
+    description: "This is my second blog post",
+    tags: ["blog", "astro"],
+  },
+  {
+    title: "My third blog post",
+    author: "John Doe",
+    date: "2021-01-03",
+    description: "This is my third blog post",
+    tags: ["blog", "astro"],
+    image: "https://placekitten.com/200/300",
+    alt: "A cute kitten",
+  }
+];
+---
+
+<Base title="Blog">
+  <h1>Blog</h1>
+
+  {posts.map((post) => (
+    <BlogPost {...post} />
+  ))}
+</Base>

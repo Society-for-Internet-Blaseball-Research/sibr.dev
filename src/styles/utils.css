@@ -1,14 +1,15 @@
 :root {
 	/* Type Scale */
 	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1116,22,1.25,5,2,&s=0.75|0.5|0.25|0.125,1.5|2|3|4|6,s-l|s-2xl&g=s,l,xl,12 */
-  --step--2: clamp(0.69rem, calc(0.62rem + 0.37vw), 0.88rem);
-  --step--1: clamp(0.83rem, calc(0.73rem + 0.54vw), 1.10rem);
-  --step-0: clamp(1.00rem, calc(0.85rem + 0.75vw), 1.38rem);
-  --step-1: clamp(1.20rem, calc(0.99rem + 1.04vw), 1.72rem);
-  --step-2: clamp(1.44rem, calc(1.16rem + 1.42vw), 2.15rem);
-  --step-3: clamp(1.73rem, calc(1.34rem + 1.92vw), 2.69rem);
-  --step-4: clamp(2.07rem, calc(1.56rem + 2.58vw), 3.36rem);
-  --step-5: clamp(2.49rem, calc(1.80rem + 3.43vw), 4.20rem);
+  /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1116,20,1.25,5,2,&s=0.75|0.5|0.25|0.125,1.5|2|3|4|6,s-l|s-2xl&g=s,l,xl,12 */
+  --step--2: clamp(0.69rem, calc(0.65rem + 0.21vw), 0.80rem);
+  --step--1: clamp(0.83rem, calc(0.77rem + 0.34vw), 1.00rem);
+  --step-0: clamp(1.00rem, calc(0.90rem + 0.50vw), 1.25rem);
+  --step-1: clamp(1.20rem, calc(1.05rem + 0.73vw), 1.56rem);
+  --step-2: clamp(1.44rem, calc(1.23rem + 1.03vw), 1.95rem);
+  --step-3: clamp(1.73rem, calc(1.44rem + 1.43vw), 2.44rem);
+  --step-4: clamp(2.07rem, calc(1.68rem + 1.97vw), 3.05rem);
+  --step-5: clamp(2.49rem, calc(1.95rem + 2.67vw), 3.82rem);
 	
 	
 	/* Spacing Scale */
@@ -34,13 +35,23 @@
   --space-l-xl: clamp(2.00rem, calc(1.15rem + 4.27vw), 4.13rem);
   --space-xl-2xl: clamp(3.00rem, calc(1.99rem + 5.03vw), 5.50rem);
   --space-2xl-3xl: clamp(4.00rem, calc(2.29rem + 8.54vw), 8.25rem);
-	
+
+  /* Custom pairs */
+  --space-s-l: clamp(1.00rem, calc(0.30rem + 3.52vw), 2.75rem);
+  --space-s-2xl: clamp(1.00rem, calc(-0.81rem + 9.05vw), 5.50rem);
+
+
+  /* Screen Sizes */
+  /* use for desktop queries */
+  --screen-desktop: 1280px; /* Taken from sibr.dev */
+  /* use for mobile queries */
+  --screen-mobile: 1279px; /* Taken from sibr.dev */
 	
 	/* Font Families */
-	--barlow: Barlow, Arial, sans-serif;
+	--barlow: "Barlow", Arial, sans-serif;
 	--barlow-condensed: "Barlow Semi Condensed", Arial, sans-serif;
-	--noto-serif: "Noto Serif", Georgia, serif;
-  --mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+	--serif: "Noto Serif", Georgia, serif;
+  --mono: ml, ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 	
 	
 	/* Colors */
@@ -57,6 +68,8 @@
 	--purble-700: #663189;
 	--purble-800: #46225e;
 	--purble-900: #281636;
+  /* TODO: Make work with alpha instead, since in figma this is just 20% purble-900 over black */
+  --purble-black: #09040c;
 	
 	/* Rouge */
 	--rouge-50: #fcfbfa;
@@ -172,6 +185,6 @@
     /* Font Families */
     --barlow: "Barlow V", Arial, sans-serif;
     --barlow-condensed: "Barlow V", Arial, sans-serif;
-    --noto-serif: "Noto Serif V", Georgia, serif;
+    --serif: "NotoSerif V", Georgia, serif;
   }
 }

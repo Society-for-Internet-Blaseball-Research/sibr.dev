@@ -1,0 +1,51 @@
+---
+
+export interface Props {
+  title: string;
+  author: string;
+  date: string;
+  description: string;
+  tags: string[];
+  image?: string;
+  alt?: string;
+}
+
+const { 
+  title,
+  author,
+  date,
+  description,
+  tags,
+  image,
+  alt,
+} = Astro.props;
+
+---
+
+<article class="card">
+  <!-- If there's a better way of putting the image off to the side let me know -->
+  <div class="wrapper">
+    <header>
+      <h2>{title}</h2>
+    </header>
+    <div class="author">
+      <p>{author}</p>
+      <p>{date}</p>
+    </div>
+    <p>{description}</p>
+    <div class="tags">
+      {tags.map((tag) => (
+        <span class={`tag ${tag}`}>{tag}</span>
+      ))}
+    </div>
+  </div>
+  {image && (
+    <img src={image} alt={alt} />
+  )}
+</article>
+
+<style>
+  .card {
+    
+  }
+</style>
