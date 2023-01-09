@@ -60,6 +60,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
 
 	.article-content sup {
 		font-size: var(--step--2);
+		text-decoration: none;
 	}
 
 	.article-content > :where(ul, ol) > * + * {
@@ -110,6 +111,11 @@ const { title } = Astro.props.frontmatter || Astro.props;
 
 	.article-content :where(h1, h2, h3) {
 		font-weight: 600;
+	}
+
+	.article-content a {
+		color: inherit;
+		font-weight: 700;
 	}
 	/* // body {
 

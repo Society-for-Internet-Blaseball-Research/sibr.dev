@@ -57,6 +57,7 @@
 	/* Colors */
   --purble-text: var(--purble-black);
   --purble-background: var(--purble-50);
+  --purble-link: var(--purble-500);
   --tag-purble-text: var(--purble-800);
   --tag-purble-background:var(--purble-200);
   --tag-rouge-text: var(--rouge-800);
@@ -228,6 +229,7 @@
   :root {
     --purble-text: var(--purble-50);
     --purble-background: var(--purble-black);
+    --purble-link: var(--purble-400);
     --tag-purble-text: var(--purble-200);
     --tag-purble-background:var(--purble-800);
     --tag-rouge-text: var(--rouge-200);
