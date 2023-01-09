@@ -58,24 +58,24 @@ const { links = [
     <ul class="link icon">
       <li>
         <a href="https://discord.gg/F8YSJE6">
-          <img src="https://sibr.dev/assets/discord.svg" alt="Join our Discord" />
+          <img id="discord-link-icon" src="/discord.svg" alt="Join our Discord" />
         </a>
       </li>
       <li>
         <a href="https://twitter.com/SIBROfficial">
-          <img src="https://sibr.dev/assets/twitter.svg" alt="Follow us on Twitter" />
+          <img id="twitter-link-icon" src="/twitter.svg" alt="Follow us on Twitter" />
         </a>
       </li>
       <li>
         <a href="https://github.com/Society-for-Internet-Blaseball-Research">
-          <img src="https://sibr.dev/assets/github.svg" alt="SIBR on GitHub" />
+          <img id="github-link-icon" src="/github.svg" alt="SIBR on GitHub" />
         </a>
       </li>
     </ul>
   </nav>
 </header>
 
-<style>
+<style lang="scss">
   a.sibr-image {
     min-width: 90px;
     max-width: 240px;
@@ -120,10 +120,19 @@ const { links = [
     justify-items: center;
     flex-wrap: 1;
     gap: var(--space-4xs);
-  }
 
-  .link.icon img {
-    width: 1.5em;
+    li {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 1.5em;
+
+        &#discord-link-icon, &#github-link-icon {
+          transform: scale(0.8);
+        }
+      }
+    }
   }
 
   li {
