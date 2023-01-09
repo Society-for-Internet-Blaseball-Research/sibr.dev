@@ -1,0 +1,155 @@
+---
+export interface Props {
+  links?: {
+    name: string;
+    href: string;
+  } [];
+}
+
+const { links = [
+  {
+    name: "FAQ",
+    href: "/faq",
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "APIs",
+    href: "/apis",
+  },
+  {
+    name: "Research",
+    href: "https://research.blaseball-reference.com/",
+  },
+  {
+    name: "Falsehoods",
+    href: "/falsehoods",
+  },
+  {
+    name: "Status",
+    href: "https://status.sibr.dev",
+  },
+  {
+    name: "Merch",
+    href: "https://sibr.bigcartel.com",
+  },
+] } = Astro.props;
+
+---
+<header class="link-bar">
+  <a class="sibr-image" href="/">
+    <!-- TODO: Use better source -->
+    <img class="sibr-image" src="https://sibr.dev/assets/logo.svg" alt="Society for Internet Blaseball Research" />
+  </a>
+  <nav>
+    <ul class="link text">
+      {links.map((link) => (
+        <li>
+          <a href={link.href}>{link.name}</a>
+        </li>
+      ))}
+    </ul>
+    <ul class="link icon">
+      <li>
+        <a href="https://discord.gg/F8YSJE6">
+          <img src="https://sibr.dev/assets/discord.svg" alt="Join our Discord" />
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/SIBROfficial">
+          <img src="https://sibr.dev/assets/twitter.svg" alt="Follow us on Twitter" />
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Society-for-Internet-Blaseball-Research">
+          <img src="https://sibr.dev/assets/github.svg" alt="SIBR on GitHub" />
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  a.sibr-image {
+    min-width: 90px;
+    max-width: 240px;
+    width: clamp(90px, 20vw, 240px);
+    display: inline-block;
+  }
+
+  .link-bar {
+    gap: var(--space-s-m);
+    display: flex;
+    align-items: center;
+    margin-block-end: 2ch;
+  }
+
+  .link {
+    font-family: var(--barlow-condensed);
+    text-transform: uppercase;
+    font-size: var(--step-2);
+    font-weight: 100;
+    font-stretch: semi-condensed;
+    color: var(--purble-black);
+  }
+
+  .link.text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3xs);
+  }
+
+  .link.text a {
+    text-decoration: none;
+    color: var(--purble-black);
+  }
+
+  .link.text a:hover {
+    text-decoration: underline;
+  }
+
+  .link.icon {
+    display: flex;
+    justify-items: center;
+    flex-wrap: 1;
+    gap: var(--space-4xs);
+  }
+
+  .link.icon img {
+    width: 1.5em;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  @media (min-width: 1280px) {
+    nav {
+      flex-direction: column;
+    }
+
+    .link-bar {
+      flex-direction: column;
+      justify-items: center;
+    }
+
+    .link.text {
+      flex-direction: column;
+      justify-items: center;
+    }
+
+  }
+</style>

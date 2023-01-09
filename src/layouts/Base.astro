@@ -3,122 +3,72 @@ import "../styles/reset.css";
 import "../styles/utils.css";
 
 import Skeleton from "./Skeleton.astro";
+import Sidebar from "../components/Sidebar.astro";
 
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
-
-const text_links = {
-	FAQ: "/faq",
-	Projects: "/projects",
-	APIs: "/apis",
-	Research: "https://research.blaseball-reference.com/",
-	Falsehoods: "/falsehoods",
-	Status: "https://status.sibr.dev",
-	Merch: "https://sibr.bigcartel.com",
-}
 ---
 
-<header class="link-bar">
-	<a href="/">
-		<img class="image" src="https://sibr.dev/assets/logo.svg" alt="Society for Internet Blaseball Research">
-	</a>
-	<nav>
-		<ul class="link text">
-			{Object.entries(text_links).map(([name, link]) => (
-				<>
-					<li>
-						<a href={link}> {name} </a>
-					</li>
-				</>
-			))}
-		</ul>
-		<ul class="link icon">
-			<li>
-				<a href="https://discord.gg/F8YSJE6">
-					<img src="/assets/discord.svg" alt="Join our Discord">
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/SIBROfficial">
-					<img src="/assets/twitter.svg" alt="Follow us on Twitter">
-				</a>
-			</li>
-			<li>
-				<a href="https://github.com/Society-for-Internet-Blaseball-Research">
-					<img src="/assets/github.svg" alt="SIBR on GitHub">
-				</a>
-			</li>					
-		</ul>
-	</nav>
-</header>
-<main class="main-content">
-	<slot />
-	<footer class="disclaimer">
-		<p>
-			SIBR is neither endorsed by nor directly affiliated with The Game Band.
-		</p>
-	</footer>
-</main>
-<style is:global lang="scss">
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
+<Skeleton>
+	<Sidebar />
+	<main class="main-content">
+		<slot />
+		<footer class="disclaimer">
+			<p>
+				SIBR is neither endorsed by nor directly affiliated with The Game Band.
+			</p>
+		</footer>
+	</main>
+</Skeleton>
+<style>
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-
-	li {
-		list-style-type: none;
+		font-family: var(--serif);
+		background-color: var(--purble-50);
 	}
 
 	body {
-		display: grid;
-		max-width: 950px;
-		margin: 2em auto;
-		grid-template-columns: 240px 1fr;
+		color: var(--purble-black);
+		margin: var(--space-s-l, 1.5rem);
 	}
 
-	.link-bar {
+	main {
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-m);
+	}
 
-		nav {
-			display: flex;
-			flex-direction: column;
-			gap: var(--space-s);
-		}
+	main > * {
+		max-width: 70ch;
+	}
+	
+	main > *:last-child {
+		margin-bottom: var(--space-l-xl);
+	}
 
-		.link {
-			&.text {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: var(--space-2xs);
-			}
+	main h1 {
+		font-size: var(--step-4);
+	}
 
-			&.icon {
-				display: flex;
-				justify-items: center;
-				flex-wrap: 1;
-				gap: var(--space-2xs);
-			}
+	main :where(h1, h2, h3) {
+		font-weight: 600;
+	}
+
+	@media (min-width: 1280px) {
+		body {
+			display: grid;
+			max-width: 1152px;
+			margin: var(--space-xl) auto;
+			grid-template-columns: 240px 1fr;
+			column-gap: var(--space-l-xl);
 		}
 	}
 
-	.disclaimer {
-		p {
+
+	.disclaimer p {
 			text-align: center;
 			font-size: .7em;
-		}
 	}
 </style>

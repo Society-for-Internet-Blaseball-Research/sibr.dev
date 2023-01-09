@@ -1,0 +1,41 @@
+---
+
+import Tags from "../components/Tags.astro";
+import Page from "./Page.astro"
+
+export interface Props {
+	title: string;
+    authors: string[];
+    date: string;
+    description: string;
+    tags: string[];
+    image?: string;
+    alt?: string;
+    url: string;
+}
+
+const {
+  title,
+  authors,
+  date,
+  description,
+  tags,
+  image,
+  alt,
+  url
+} = Astro.props.frontmatter || Astro.props;
+
+---
+
+<Page title={title}>
+    <span class="info">By: {authors?.join(", ")} <span aria-hidden="true">•</span> {new Date(date).toDateString()}</span>
+    <h1 class="title">{title}</h1>
+    <Tags tags={tags}/>
+    <slot/>
+</Page>
+
+<style>
+    h1.title{
+        margin-top: 0;
+    }
+</style>
