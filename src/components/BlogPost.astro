@@ -22,7 +22,6 @@ const {
 
 ---
 
-<a href="#">
 <article class="card">
   <!-- If there's a better way of putting the image off to the side let me know -->
   <div class="wrapper">
@@ -37,7 +36,7 @@ const {
     <p class="description">{description}</p>
     <div class="tags">
       {tags.map((tag) => (
-        <span class={`tag ${tag}`}>{tag}</span>
+        <a class={`tag ${tag}`}>{tag}</a>
       ))}
     </div>
   </div>
@@ -47,7 +46,6 @@ const {
     </div>
   )}
 </article>
-</a>
 
 <style>
   .card {
@@ -95,19 +93,24 @@ const {
 
   .tags {
     display: flex;
+    flex-direction: row;
     gap: var(--space-xs);
     font-family: var(--barlow);
     font-weight: 90;
     font-size: var(--scale--2);
   }
 
-  .tag {
+  a.tag {
+    /* border: none; */
+    /* text-align: center; */
     border-radius: var(--space-3xs);
+    padding: var(--space-3xs);
+    line-height: 1;
   }
 
-  .tag.blog {
-    background-color: var(--color-red-200);
-    color: var(--color-red-800);
+  a.tag.blog {
+    background-color: var(--red-200);
+    color: var(--red-800);
   }
 
   a {
