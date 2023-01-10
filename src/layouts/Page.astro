@@ -104,7 +104,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
 	}
 
 	.article-content blockquote {
-		padding: var(--space-xs);
+		padding: var(--space-s);
 		background-color: var(--purble-100);
 		border-left: 3px solid var(--purble-700);
 	}
@@ -117,9 +117,11 @@ const { title } = Astro.props.frontmatter || Astro.props;
 		color: inherit;
 		font-weight: 700;
 	}
-	/* // body {
 
-	// } */
+	#sibr {
+		color: var(--tag-purble-text)
+	}
+
 	:root {
 		--screen-desktop: 1280px;
 	}

@@ -6,7 +6,7 @@ redirect_from:
   - /index
 ---
 
-<span class="mission">The **Society for Internet Blaseball Research** is a community devoted to unravelling [Blaseball](https:/www.blaseball.com)'s deepest mysteries. We work together to make Blaseball data more accessible by creating tools, analyzing past games, and discovering new records. We are, in our own strange way, participating in the cultural event of Blaseball.</span>
+<span class="mission">The **<span id="sibr">Society for Internet Blaseball Research</span>** is a community devoted to unravelling [Blaseball](https:/www.blaseball.com)'s deepest mysteries. We work together to make Blaseball data more accessible by creating tools, analyzing past games, and discovering new records. We are, in our own strange way, participating in the cultural event of Blaseball.</span>
 
 ## Historical
 
