@@ -5,13 +5,13 @@ import Page from "./Page.astro"
 
 export interface Props {
 	title: string;
-    authors: string[];
-    date: string;
-    description: string;
-    tags: string[];
-    image?: string;
-    alt?: string;
-    url: string;
+  authors: string[];
+  date: string;
+  description: string;
+  tags: string[];
+  image?: string;
+  alt?: string;
+  url: string;
 }
 
 const {
@@ -28,14 +28,39 @@ const {
 ---
 
 <Page title={title}>
+  <header>
     <span class="info">By: {authors?.join(", ")} <span aria-hidden="true">•</span> {new Date(date).toDateString()}</span>
     <h1 class="title">{title}</h1>
-    <Tags tags={tags}/>
-    <slot/>
+    <div class="tag">
+      <Tags tags={tags}/>
+    </div>
+  </header>
+  <slot/>
 </Page>
 
 <style>
-    h1.title{
-        margin-top: 0;
+  h1.title{
+      margin-top: 0;
+  }
+
+  .info {
+    font-size: var(--step-0);
+    font-weight: 90;
+    font-family: var(--barlow);
+    font-stretch: 400%;
+  }
+
+  header > .title {
+    margin-top: var(--space-2xs);
+  }
+
+  header > .tag {
+    margin-top: var(--space-xs);
+  }
+
+  @media (min-width: 1280px) {
+    header {
+      margin-top: 0; 
     }
+  }
 </style>

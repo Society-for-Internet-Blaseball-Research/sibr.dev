@@ -26,26 +26,26 @@ import Tags from './Tags.astro';
 
 ---
 <article class="card">
-    {image && (
-      <div class="img">
-        <img src={image} alt={alt} />
-      </div>
-    )}
-    <!-- If there's a better way of putting the image off to the side let me know -->
-    <div class="wrapper">
-      <header>
-        <a href={url}>
-          <h2>{title}</h2>
-        </a>
-      </header>
-      <div class="author">
-        <p>{authors?.join(", ")}</p>
-        <span aria-hidden="true">•</span>
-        <p>{date}</p>
-      </div>
-      <p class="description">{description}</p>
-      <Tags tags={tags} />
+  {image && (
+    <div class="img">
+      <img src={image} alt={alt} />
     </div>
+  )}
+  <!-- If there's a better way of putting the image off to the side let me know -->
+  <div class="wrapper">
+    <header>
+      <a href={url}>
+        <h2>{title}</h2>
+      </a>
+    </header>
+    <div class="author">
+      <p>{authors?.join(", ")}</p>
+      <span aria-hidden="true">•</span>
+      <p>{date}</p>
+    </div>
+    <p class="description">{description}</p>
+    <Tags tags={tags} />
+  </div>
 </article>
 
 <style>
