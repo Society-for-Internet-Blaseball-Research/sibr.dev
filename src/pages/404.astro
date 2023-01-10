@@ -1,0 +1,63 @@
+---
+import Base from "@layouts/Base.astro";
+---
+
+<Base title="404: Page not found">
+  <h1>404: Page not found</h1>
+
+  <p class="error">This page doesn't seem to exist yet!</p>
+
+  <img class="floaty" src="/giant-squid.svg" alt="floaty"/>
+
+  <p class="pre-disclaimer">Squid by Delapouite at <a href="https://game-icons.net/">game-icons.net</a></p>
+</Base>
+
+<style>
+  h1 {
+    font-size: var(--step-4);
+  }
+  .error {
+    text-align: center;
+    font-size: var(--step-1);
+    margin-bottom: var(--space-xl);
+  }
+  .floaty {
+    margin: 0 auto;
+    animation-name: floaty;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation: floaty 4s ease-in-out infinite;
+
+    filter: invert(1);
+  }
+
+  .pre-disclaimer {
+    text-align: center;
+    font-size: var(--step--2);
+    font-style: italic;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .floaty {
+      filter: invert(0);
+    }
+  }
+
+  a {
+    color: inherit;
+    font-weight: bold;
+  }
+
+  @keyframes floaty {
+    0% {
+        transform:translateY(-80px)
+    }
+    50% {
+      transform: translateY(0px)
+    }
+    100% {
+        transform:translateY(-80px)
+    }
+  }
+</style>

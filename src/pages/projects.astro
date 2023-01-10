@@ -20,61 +20,81 @@ const groups = projs.reduce((init, tool) => {
 console.log(groups);
 ---
 <Base title="Projects">
+  <div class="body">
     <h1> SIBR Project Directory </h1>
     
     <div>The following projects are hosted on the SIBR servers or a SIBR subdomain:</div>
 
     {Object.entries(groups).map(([category, tools]: any) => (
-        <h2> {category} </h2>
-        <ul class="project-list">
-            {tools.map((tool: any) => (
-                <li class="project">
-                    <div class="project-info">
-                        <strong class="project-name">{tool.name}</strong>
-                        <tool.Content />
-                    </div>
-    
-                    <ul class="links">
-                        {tool.site ? (<li><a href={tool.site} target="_blank">Site</a></li>) : (<></>)}
-                        {tool.code ? (<li><a href={tool.code} target="_blank">Code</a></li>) : (<></>)}
-                        {tool.tasks ? (<li><a href={tool.tasks} target="_blank">Project Board / Tasks</a></li>) : (<></>)}
-                        {tool.status_slug 
-                            ? (<li><a href={"https://status.sibr.dev/services/" + tool.status_slug} target="_blank">
-                                <img src={"https://status.sibr.dev/api/v1/badges/uptime/24h/" + tool.status_slug} />
-                              </a></li>) 
-                            : (<></>)}
-                    </ul>
-                </li>
-            ))}
-        </ul>
+      <h2> {category} </h2>
+      <ul class="project-list">
+        {tools.map((tool: any) => (
+          <li class="project">
+            <div class="project-info">
+              <strong class="project-name">{tool.name}</strong>
+              <tool.Content />
+            </div>
+
+            <ul class="links">
+              {tool.site ? (<li><a href={tool.site} target="_blank">Site</a></li>) : (<></>)}
+              {tool.code ? (<li><a href={tool.code} target="_blank">Code</a></li>) : (<></>)}
+              {tool.tasks ? (<li><a href={tool.tasks} target="_blank">Project Board / Tasks</a></li>) : (<></>)}
+              {tool.status_slug 
+                ? (<li><a href={"https://status.sibr.dev/services/" + tool.status_slug} target="_blank">
+                  <img src={"https://status.sibr.dev/api/v1/badges/uptime/24h/" + tool.status_slug} />
+                </a></li>) 
+                : (<></>)}
+            </ul>
+          </li>
+        ))}
+      </ul>
     ))}    
+  </div>
 </Base>
 
 <style lang="scss" is:global>
-    li {
-        list-style-type: none;
-    }
+  .body > * + * {
+    margin-top: var(--space-m);
+  }
+  h1 {
+    font-size: var(--step-4);
+  }
 
-    .links li {
-        display: inline-block;
-        padding-right: 1em;
-        font-weight: 600;
-    }
+  h2:not(#\#) {
+    font-size: var(--step-3);
+    margin-top: var(--space-l);
+  }
 
-    .project {
-        padding-bottom: 1em;
+  li {
+    list-style-type: none;
+  }
 
-        .project-info {
-            .project-name {
 
-                &::after {
-                    content: ":";
-                }
-            }
+  .links {
+    margin-top: var(--space-2xs);
+  }
 
-            p {
-                display: inline;
-            }
+  .links li {
+    display: inline-block;
+    padding-right: 1em;
+    font-weight: 600;
+  }
+
+  .project {
+    padding-bottom: 1em;
+    margin-top: var(--space-s);
+
+    .project-info {
+      .project-name {
+
+        &::after {
+          content: ":";
         }
+      }
+
+      p {
+        display: inline;
+      }
     }
+  }
 </style>

@@ -1,6 +1,7 @@
 ---
 import "../styles/reset.css";
 import "../styles/utils.css";
+import "../styles/global.css";
 
 import Skeleton from "./Skeleton.astro";
 import Sidebar from "../components/Sidebar.astro";
@@ -67,9 +68,12 @@ const { title } = Astro.props;
 		}
 	}
 
+	.disclaimer {
+		margin: 0 auto;
+	}
 
 	.disclaimer p {
 			text-align: center;
-			font-size: .7em;
+			font-size: var(--step--2);
 	}
 </style>

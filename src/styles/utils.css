@@ -49,7 +49,7 @@
 	
 	/* Font Families */
 	--barlow: "Barlow", Arial, sans-serif;
-	--barlow-condensed: "Barlow Semi Condensed", Arial, sans-serif;
+	--barlow-condensed: "Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
 	--serif: "Noto Serif", Georgia, serif;
   --mono: ml, ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 	
@@ -220,7 +220,7 @@
   :root {
     /* Font Families */
     --barlow: "Barlow V", Arial, sans-serif;
-    --barlow-condensed: "Barlow V", Arial, sans-serif;
+    --barlow-condensed: "Barlow V", "Arial Condensed", Arial, sans-serif;
     --serif: "NotoSerif V", Georgia, serif;
   }
 }

@@ -53,11 +53,14 @@ const { viewBox, d } = icons[type];
 		--aside-accent-color: hsl(var(--aside-color-base), var(--aside-color-lightness));
 		--aside-text-lightness: 20%;
 		--aside-text-accent-color: hsl(var(--aside-color-base), var(--aside-text-lightness)); */
-		/* border-inline-start: 2px solid var(--aside-accent-color); */
-    --callout-title: var(--tag-purble-text);
-    --callout-background: var(--tag-purble-background);
-		padding: var(--space-s);
+
+		--callout-title: var(--purble-700);
+    --callout-background: var(--purble-100);
+
+		border-inline-start: var(--space-4xs) solid var(--callout-title);
+		padding: var(--space-xs);
 		background-color: var(--callout-background);
+		/* border-radius: var(--space-2xs); */
 		/* Indicates the aside boundaries for forced colors users, transparent is changed to a solid color */
 		/* outline: 1px solid transparent; */
 	}
@@ -67,7 +70,8 @@ const { viewBox, d } = icons[type];
 		margin-bottom: 0.5rem;
 		font-size: var(--step--1);
 		letter-spacing: 0.05em;
-		font-weight: bold;
+		font-family: var(--barlow);
+		font-weight: 125;
 		text-transform: uppercase;
 		color: var(--callout-title);
 	}
@@ -94,15 +98,35 @@ const { viewBox, d } = icons[type];
 		margin-right: 0;
 	} */
 	.tip {
-		--callout-title: var(--tag-cyan-text);
-    --callout-background: var(--tag-cyan-background);
+		--callout-title: var(--cyan-700);
+    --callout-background: var(--cyan-100);
 	}
 	.caution {
-		--callout-title: var(--tag-yellow-text);
-    --callout-background: var(--tag-yellow-background);
+		--callout-title: var(--yellow-700);
+    --callout-background: var(--yellow-100);
 	}
 	.danger {
-		--callout-title: var(--tag-danger-text);
-    --callout-background: var(--tag-danger-background);
+		--callout-title: var(--red-700);
+    --callout-background: var(--red-100);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		aside {
+			--callout-title: var(--purble-300);
+    	--callout-background: var(--purble-900);
+		}
+
+		.tip {
+		--callout-title: var(--cyan-300);
+    --callout-background: var(--cyan-900);
+	}
+	.caution {
+		--callout-title: var(--yellow-300);
+    --callout-background: var(--yellow-900);
+	}
+	.danger {
+		--callout-title: var(--red-300);
+    --callout-background: var(--red-900);
+	}
 	}
 </style>

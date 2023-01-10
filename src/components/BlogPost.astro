@@ -20,7 +20,7 @@ const {
   image,
   alt,
   url
-} = Astro.props;
+} = Astro.props as Props;
 
 import Tags from './Tags.astro';
 
@@ -44,23 +44,33 @@ import Tags from './Tags.astro';
       <p>{date}</p>
     </div>
     <p class="description">{description}</p>
-    <Tags tags={tags} />
+    <div>
+      <Tags tags={tags} />
+    </div>
   </div>
 </article>
 
 <style>
+  /* Ok i think it's nearly done.
+   * there's basically just this one issue where
+   * the width of the image div doesn't shrink if
+   * the image is small but that's whatever rn
+   * (image of bug: https://share.cleanshot.com/5x7rYBTg) */
+
   .card {
     display: flex;
-    /* flex-direction: column; */
     align-content: center;
-    padding: 0.5rem;
-    border-radius: var(--space-3xs);
+    gap: var(--space-xs);
+    /* janky hack */
+    margin-left: calc(-1 * var(--space-xs));
+    padding: var(--space-xs);
+    border-radius: var(--space-2xs);
     max-height: 20ch;
     overflow: hidden;
   }
 
-  .wrapper{
-    padding: 0.2rem;
+  .wrapper > * + * {
+    margin-top: var(--space-2xs);
   }
   .card:hover{
     background-color: #88888822;
@@ -70,23 +80,26 @@ import Tags from './Tags.astro';
     /* For some reason just setting the width won't work here,
        so this is done instead. 💻🔨 */
     max-width: 20%; 
-    min-width: 20%;
+    /* min-width: 20%; */
     height: auto;
-    border-radius: var(--space-2xs);
-    margin-inline-end: 2ch;
+    border-radius: var(--space-3xs);
+    /* margin-inline-end: 2ch; */
     display: flex;
     align-items: center;
     text-align: center;
+    /* flex: 0 0 auto; */
   }
 
   .card img {
     object-fit: cover;
     max-height: 18ch;
+    height: 100%;
     border-radius: var(--space-3xs);
     margin-inline: auto;
   }
 
   .card header > h2 {
+    line-height: 1;
     font-size: var(--step-1);
     font-weight: 500;
   }

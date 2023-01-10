@@ -1,0 +1,38 @@
+---
+export interface Props {
+  title: string;
+  href: string;
+  img: string;
+  alt?: string;
+}
+
+const { 
+  title, 
+  href, 
+  img, 
+  alt = '', 
+} = Astro.props as Props;
+---
+
+<div class="card">
+  <a href={href}>
+    <img src={img} alt={alt}>
+  </a>
+  <p class="description">
+    <a href={href}><strong>{title}</strong></a> <slot />
+  </p>
+</div>
+
+<style>
+  .card a {
+    color: inherit;
+    font-weight: bold;
+  }
+  .description {
+    font-size: var(--step--1);
+  }
+
+  .card img {
+    margin-bottom: var(--space-2xs);
+  }
+</style>

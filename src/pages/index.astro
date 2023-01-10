@@ -1,0 +1,88 @@
+---
+import Base from "../layouts/Base.astro";
+import Callout from "src/components/Callout.astro";
+import IndexCard from "src/components/IndexCard.astro";
+---
+
+<Base title="Home">
+  <p class="mission">
+    The <strong><span id="sibr">Society for Internet Blaseball Research</span></strong> is a community devoted to unravelling <a href="https://www.blaseball.com">Blaseball</a>’s deepest mysteries. We work together to make Blaseball data more accessible by creating tools, analyzing past games, and discovering new records. We are, in our own strange way, participating in the cultural event of Blaseball.
+  </p>
+
+  <Callout title="Historical">
+    These are tools made during the past Eras of Blaseball which may or may not be functional. They remain here for prosperity.
+  </Callout>
+
+  <ul>
+    <li>
+      <IndexCard title="Blaseball Reference" href="https://blaseball-reference.com" img="/reference.png">
+        tabulates traditional baseball statistics, player leaderboards, and team schedules.
+      </IndexCard>
+    </li>
+    <li>
+      <IndexCard title="Reblase" href="https://reblase.sibr.dev" img="/reblase.png">
+        displays play-by-play data of live and past Blaseball games.
+      </IndexCard>
+    </li>
+    <li>
+      <IndexCard title="Before" href="https://before.sibr.dev" img="/before.png">
+        replays Blaseball from any moment recorded by the SIBR archives.
+      </IndexCard>
+    </li>
+    <li>
+      <IndexCard title="Blasebot" href="https://github.com/BeeFox-sys/blasebot" img="/blasebot.png">
+        is a Discord bot for following games and providing information on players and teams.
+      </IndexCard>
+    </li>
+    <li>
+      <IndexCard title="Blases Loaded" href="https://github.com/RangerRick/blobile" img="/blases-loaded.png">
+        is a mobile app for live-viewing Blaseball games, available on <a href="https:/apps.apple.com/us/app/id1529695719">iOS</a> and <a href="https:/play.google.com/store/apps/details?id=com.raccoonfink.blobile">Android</a>.
+      </IndexCard>
+    </li>
+    <li>
+      <IndexCard title="whichtool" href="https://whichtool.sibr.dev/" img="/whichtool.png">
+        is an interactive tool picker that helps you find the right tools for your blaseball needs.
+      </IndexCard>
+    </li>
+    <li>
+      <IndexCard title="Research papers" href="https://research.blaseball-reference.com" img="/research.png">
+        published by SIBR dive into data analysis and "what if?" scenarios.
+      </IndexCard>
+    </li>
+    <li>
+      <IndexCard title="Onomancer" href="https://onomancer.sibr.dev" img="/onomancer.png">
+        is a webapp for people to submit and rate Blaseball names and form teams to share with friends.
+      </IndexCard>
+    </li>
+  </ul>
+</Base>
+
+<style>
+  #sibr {
+		color: var(--tag-purble-text)
+	}
+
+  .mission {
+    font-size: var(--step-1);
+    font-weight: 500;
+    line-height: 1.5;
+    max-width: 70c;
+  }
+
+  a {
+    color: inherit;
+    font-weight: bold;
+  }
+
+  ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-m);
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+</style>
