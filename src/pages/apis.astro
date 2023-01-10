@@ -25,9 +25,9 @@ console.log(projs);
           <project.Content />
           
           <ul class="links">
-            {project.url && (<li><strong>Base URL: </strong><a href={project.url}>{project.url}</a></li>)}
-            {project.code && (<li><strong>Code: </strong><a href={project.code}>{project.code}</a></li>)}
-            {project.documentation && (<li><strong>Documentation: </strong><a href={project.documentation}>{project.documentation}</a></li>)}
+            {project.url && (<li><a href={project.url}>Base URL</a></li>)}
+            {project.code && (<li><a href={project.code}>Code</a></li>)}
+            {project.documentation && (<li><a href={project.documentation}>Documentation</a></li>)}
           </ul>
         </li>
       ))}
@@ -53,7 +53,7 @@ console.log(projs);
     margin-top: var(--space-xs);
   }
 
-  :global(ul > * + *) {
+  :global(ul.api-list > * + *) {
     margin-top: var(--space-4xs);
   }
 
@@ -61,7 +61,14 @@ console.log(projs);
     list-style-type: none;
   }
 
+  .links {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
   div.title {
+    margin-top: var(--space-l);
     display: flex;
     align-items: center;
     gap: var(--space-xs);
