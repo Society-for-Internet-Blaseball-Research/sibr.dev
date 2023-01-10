@@ -1,7 +1,69 @@
 ---
 import Base from "@layouts/Base.astro";
+
+const projects = import.meta.glob("../_apis/*.md");
+const resolved = Object.entries(projects).map(([, resolver]) => resolver());
+
+const projs: any[] = (await Promise.all(resolved)).map((p: any) => ({
+  ...p.frontmatter,
+  Content: p.Content,
+}));
+
+console.log(projs);
 ---
 
-<Base title="SIBR API Directory">
-  TODO: Port this page to astro
+<Base title="APIs">
+  <div class="body">
+    <h1>SIBR API Directory</h1>
+    <ul class="api-list">
+      {projs.map((project: any) => (
+        <li class="api">
+          <div class="title">
+            <h2 class="api-name">{project.name}</h2>
+            {project.status && (<a href={"https://status.sibr.dev/services/" + project.status}><img src={"https://status.sibr.dev/api/v1/badges/uptime/24h/" + project.status} /></a>)}
+          </div>
+          <project.Content />
+          
+          <ul class="links">
+            {project.url && (<li><strong>Base URL: </strong><a href={project.url}>{project.url}</a></li>)}
+            {project.code && (<li><strong>Code: </strong><a href={project.code}>{project.code}</a></li>)}
+            {project.documentation && (<li><strong>Documentation: </strong><a href={project.documentation}>{project.documentation}</a></li>)}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  </div>
 </Base>
+
+<style>
+  .body > * + * {
+    margin-top: var(--space-m);
+  }
+
+  .api-list > * + * {
+    margin-top: var(--space-m);
+  }
+
+  :global(.api > * + *) {
+    margin-top: var(--space-xs);
+  }
+
+  :global(ul) {
+    list-style-type: disc;
+    margin-top: var(--space-xs);
+  }
+
+  :global(ul > * + *) {
+    margin-top: var(--space-4xs);
+  }
+
+  ul.api-list, ul.links {
+    list-style-type: none;
+  }
+
+  div.title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+</style>

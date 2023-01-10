@@ -8,6 +8,11 @@ body {
 }
 
 a {
-  color: inherit;
-  font-weight: bold;
+  color: var(--purble-link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
 }
