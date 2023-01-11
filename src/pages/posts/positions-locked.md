@@ -13,15 +13,21 @@ The December 9th, 2022 Fall brought us, in addition to twenty-four returning Pla
 
 Parker MacMillan IIIII, in the past, hadn’t been known for revealing many details about Blaseball, the cosmology of the immaterial plane, or even basic information about his job as Commissioner of Internet League Blaseball. This grid seemed to be inviting the community to inquire about it. An early clue came in the form of @Sir5000 asking what the 0th Base was (@Sir5000 2022), to which Parker replied, “a Position”. @V3rnedian asked if The Field was a twenty-fifth Team (@V3rnedian 2022), to which Parker said, “no”. Several presented their grids with Positions filled out to Parker (myself included), receiving “wrong” to each of them. User Barswainian presented Parker with a grid, inquiring if it was “wronger,” (@barswanian 2022) to which Parker responded, “yes”. Would Parker, proverbially, play ball?
 
-![@barswanian’s grid](positions-locked/barswanian.png)
+![](positions-locked/barswanian.png)
+
+@barswanian’s grid
 
 Blaseball News Network Editor-in-Chief Cat Stlats decided on a new strategy. Submit a blank grid with “4th Base” on the bottom corner of the diamond (@CatStlats 2022). ‘4th Base’, in previous incarnations of blaseball, was generally implied to be home plate, where runners would successfully score Runs by reaching or stealing it. After some persistence (as with many of these questions to come), Parker responded “warmer”. Aha, temperature checks worked. I offered two grids with 1st through 4th Bases in a diamond, and asked Parker. The answer: “warmer”. I presented the same question a few more times, with the latter grid including different distances between each of the four Bases. The initial left grid was correct, each base was separated by an at the time unknown other Position. It was a start; four Positions down, thirty-two to go.
 
-![My final of the four Base warmer/colder query grid submission](positions-locked/final-four.png)
+![](positions-locked/final-four.png)
+
+My final of the four Base warmer/colder query grid submission
 
 @trail_juniper asked Parker to rate their grid based on a simple scale: “0 to 37” (37 due to Outerfielders placed outside the grid). (@trail_juniper 2022). Parker: “37”. 
 
-![@trail_juniper’s 0 to 37 query and Parker’s response](positions-locked/trail-juniper.png)
+![](positions-locked/trail-juniper.png)
+
+@trail_juniper’s 0 to 37 query and Parker’s response
 
 While in retrospect it was a hyperbolic answer from the Commissioner, it established a somewhat more consistent way to score a grid in terms of overall accuracy, and it was helpful even if it ended up providing an unclear answer. Getting answers out of Parker at times felt like a carefully worded wish, as @biffifh quipped during a livestream to Joey T. Badger, blaseball commentator of the Splorts Hub, dedicated partially to solving the grid.
 
@@ -31,27 +37,36 @@ One of the more prominent sources of confusion was ‘0th Base’. Such a Positi
 
 How did the community manage to guess? Through a strategy often employed in logic puzzles, games of bulls and cows (popularized as commercial board game Mastermind), or Wordle: trial and error. By submitting boards that are similar, albeit with specific differences, you can then work out which positions are correct and which are wrong depending on Parker’s answer. @biffifh rigged up a spreadsheet to quickly compare grid values with conditional formatting (@Biffifh 2022). 
 
-![@biffifh’s spreadsheet](positions-locked/biffifh.png)
+![](positions-locked/biffifh.png)
+
+@biffifh’s spreadsheet
 
 As an example, @Kidror9 submitted the two Outerfielders in the same Position as other high-scoring grids, and tended to have a higher number of correct guesses than grids that didn’t (@Kidror19 2022).
 
-![@Kidror9’s grid that received a twenty-five from Parker](positions-locked/kidror.png)
+![](positions-locked/kidror.png)
+
+@Kidror9’s grid that received a twenty-five from Parker
 
 @asherlark created a thread to compile Parker’s answered grids. Parker would respond maybe one to three times in a given day, if that. At times, it seemed as if we had hit a wall. The community submitted grids hovering between fifteen and twenty-six. Was this unsolvable? 
 
 Then, @Breakneckabyss9 submitted a grid with thirty-two out of thirty-six (@Breakneckabyss9 2022). A break in the case. 
 
-![@Breakneckabyss9’s thirty-two grid](positions-locked/breakneckabyss.png)
+![](positions-locked/breakneckabyss.png)
+
+@Breakneckabyss9’s thirty-two grid
 
 The completed grid was in sight. I requested from Parker the number of Rangers and Highfielders, gaining “2” (@clip_ny 2022) and “3” (@clip_ny 2022) respectively. More grids were submitted, such as @HonkBonk8’s grid receiving a twenty-eight (@HonkBonk8 2022). 
 
-![@HonkBonk’s submitted twenty-eight grid](positions-locked/honkbonk.png)
+![](positions-locked/honkbonk.png)
+@HonkBonk’s submitted twenty-eight grid
 
 After some double checking with @biffifh’s spreadsheets, three sets of Positions needed to be swapped, but which ones?
 
 In the end, @Timothyjackmann presented Parker with a thirty-six correct Positions grid (@Timothyjackmann 2022). With a retweet from the Commissioner, the hunt was a success. 
 
-![@Timothyjackmann’s thirty-six grid](positions-locked/timothyjackmann.png)
+![](positions-locked/timothyjackmann.png)
+
+@Timothyjackmann’s thirty-six grid
 
 One of the many remarkable things about blaseball and its community is the galvanization of folks from many walks of life coming together to achieve a goal, and time after time, exceeding expectations. May the Fielding Responses join the hallowed halls of community projects alongside Throwback Thursday (the use of red herring to reveal Library Entries) and the peanut-fueled Season 10 Hall Star selection process. I would like to thank everyone from the community for submitting their grids and taking a chance on finding a solution, and the comedic grids for a hearty chuckle along the way (such as @MaclunkeyCulkin’s featuring a Triscuit under the presented grid (@MaclunkeyCulkin 2022)). A special thank you to these fine Twitter users, among many others:
 
