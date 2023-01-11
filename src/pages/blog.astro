@@ -13,15 +13,25 @@ const posts = (await Astro.glob('./blog/*.md')).map(post=>{
 ---
 
 <Base title="Blog">
-  <h1>Blog</h1>
-
-  {posts.map((post) => (
-    <BlogPost {...post} />
-  ))}
+  <div class="main">
+    <h1>Blog</h1>
+    <div class="posts">
+      {posts.map((post) => (
+        <BlogPost {...post} />
+      ))}
+    </div>
+  </div>
 </Base>
 
 <style>
   h1 {
     font-size: var(--step-4);
+  }
+
+  .posts {
+    margin-top: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
   }
 </style>
