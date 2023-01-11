@@ -122,6 +122,13 @@ const { title } = Astro.props.frontmatter || Astro.props;
 		border-left: 3px solid var(--purble-700);
 	}
 
+	@media (prefers-color-scheme: dark) {
+		.article-content blockquote {
+			background-color: var(--purble-900);
+			border-left: 3px solid var(--purble-200);
+		}
+	}
+
 	.article-content :where(h1, h2, h3) {
 		font-weight: 600;
 	}
