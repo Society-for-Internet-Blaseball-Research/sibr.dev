@@ -65,7 +65,7 @@ import Tags from './Tags.astro';
     margin-left: calc(-1 * var(--space-xs));
     padding: var(--space-xs);
     border-radius: var(--space-2xs);
-    max-height: 20ch;
+    /* max-height: 20ch; */
     overflow: hidden;
   }
 
@@ -73,7 +73,7 @@ import Tags from './Tags.astro';
     margin-top: var(--space-2xs);
   }
   .card:hover{
-    background-color: #88888822;
+    background-color: rgba(var(--purble-hover), 0.33);
   }
 
   .card .img {
@@ -105,12 +105,13 @@ import Tags from './Tags.astro';
   }
 
   .card .author {
+    margin-top: 0;
     display: flex;
     gap: var(--space-2xs);
   }
 
   .card .author > * {
-    font-size: var(--step--1);
+    font-size: var(--step-0);
     font-weight: 90;
     font-family: var(--barlow);
   }

@@ -2,9 +2,9 @@
 layout: "../../layouts/BlogPage.astro"
 title: "The Nominative-Determinism Article"
 authors: ["beiju"]
-date: "2021-01-09"
-description: "Something about learning about how we deconstructed the sim <TODO CHANGE THIS>"
-tags: ["nerd stuff","another tag"]
+date: "January 11, 2023"
+description: "A not-so-concise summary of SIBR's research into the inner workings of the Beta sim based on cracking the RNG, and a few select discoveries."
+tags: ["Beta", "Nominative-Determinism", "Research"]
 ---
 
 If you're a huge Blaseball nerd, in the past months you may have heard of a 

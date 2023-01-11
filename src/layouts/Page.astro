@@ -30,11 +30,11 @@ const { title } = Astro.props.frontmatter || Astro.props;
 <style is:global>
 	html {
 		font-family: var(--serif);
-		background-color: var(--purble-background);
+		background-color: rgb(var(--purble-background));
 	}
 
 	body {
-		color: var(--purble-text);
+		color: rgb(var(--purble-text));
 		margin: var(--space-s-l, 1.5rem);
 	}
 
@@ -100,8 +100,20 @@ const { title } = Astro.props.frontmatter || Astro.props;
 		font-size: var(--step-4);
 	}
 
+	.article-content h2 {
+		font-size: var(--step-3);
+	}
+
+	.article-content h3 {
+		font-size: var(--step-2);
+	}
+
 	.article-content p {
 		font-size: var(--step-0);
+	}
+
+	.article-content p {
+		line-height: 1.7;
 	}
 
 	.article-content blockquote {

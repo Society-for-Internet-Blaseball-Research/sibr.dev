@@ -53,11 +53,13 @@
 	--serif: "Noto Serif", Georgia, serif;
   --mono: ml, ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro","Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 	
+  /* TODO: Move to rgb lol */
 	
 	/* Colors */
   --purble-text: var(--purble-black);
   --purble-background: var(--purble-50);
   --purble-link: var(--purble-600);
+  --purble-hover: 228, 211, 245; /* same as purble-200 */
   --tag-purble-text: var(--purble-800);
   --tag-purble-background:var(--purble-200);
   --tag-rouge-text: var(--rouge-800);
@@ -67,7 +69,7 @@
   --tag-orange-text: var(--orange-800);
   --tag-orange-background: var(--orange-200);
   --tag-yellow-text: var(--yellow-800);
-  --tag-yellow-background: var(--yellow-200);
+  --tag-yellow-background: var(--yellow-100);
   --tag-green-text: var(--green-800);
   --tag-green-background: var(--green-200);
   --tag-cyan-text: var(--cyan-800);
@@ -82,7 +84,7 @@
   --tag-gray-background: var(--gray-200);
 	
 	/* Purble */
-	--purble-50: #fafafb;
+	--purble-50: 250, 250, 251;
 	--purble-100: #f2effa;
 	--purble-200: #e4d3f5;
 	--purble-300: #caace6;
@@ -90,10 +92,10 @@
 	--purble-500: #a25cc6;
 	--purble-600: #8741ae;
 	--purble-700: #663189;
-	--purble-800: #46225e;
+	--purble-800: #46225e; /* 70, 34, 94 */
 	--purble-900: #281636;
   /* TODO: Make work with alpha instead, since in figma this is just 20% purble-900 over black */
-  --purble-black: #09040c;
+  --purble-black: 9, 4, 12;
 	
 	/* Rouge */
 	--rouge-50: #fcfbfa;
@@ -230,6 +232,7 @@
     --purble-text: var(--purble-50);
     --purble-background: var(--purble-black);
     --purble-link: var(--purble-400);
+    --purble-hover: 70, 34, 94;
     --tag-purble-text: var(--purble-200);
     --tag-purble-background:var(--purble-800);
     --tag-rouge-text: var(--rouge-200);

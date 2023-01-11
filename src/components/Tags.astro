@@ -8,11 +8,20 @@ const {
   tags
 } = Astro.props as Props;
 
+tags.sort((a, b) => {
+  if (a.toLowerCase() < b.toLowerCase()) {
+    return -1;
+  }
+  if (a.toLowerCase() > b.toLowerCase()) {
+    return 1;
+  }
+  return 0;
+})
 ---
 
 <div class="tags">
     {tags?.map((tag) => (
-      <a class={`tag`} x-tag={tag}>{tag}</a>
+      <a class={`tag`} x-tag={tag.toLowerCase()}>{tag}</a>
     ))}
 </div>
 
@@ -41,6 +50,16 @@ const {
     font-weight: 90;
   }
 
+  a.tag[x-tag=meta] {
+    background-color: var(--tag-gray-background);
+    color: var(--tag-gray-text);
+  }
+
+  a.tag[x-tag=beta] {
+    background-color: var(--tag-gray-background);
+    color: var(--tag-gray-text);
+  }
+
   a.tag[x-tag=blog] {
     background-color: var(--tag-red-background);
     color: var(--tag-red-text);
@@ -62,7 +81,7 @@ const {
     color: var(--tag-rouge-text);
   }
 
-  a.tag[x-tag=red] {
+  a.tag[x-tag="data crimes"] {
     background-color: var(--tag-red-background);
     color: var(--tag-red-text);
   }
@@ -72,12 +91,12 @@ const {
     color: var(--tag-orange-text);
   }
 
-  a.tag[x-tag=yellow] {
+  a.tag[x-tag=economy] {
     background-color: var(--tag-yellow-background);
     color: var(--tag-yellow-text);
   }
 
-  a.tag[x-tag=green] {
+  a.tag[x-tag=graphs] {
     background-color: var(--tag-green-background);
     color: var(--tag-green-text);
   }
@@ -87,17 +106,17 @@ const {
     color: var(--tag-cyan-text);
   }
 
-  a.tag[x-tag=blue] {
+  a.tag[x-tag=research] {
     background-color: var(--tag-blue-background);
     color: var(--tag-blue-text);
   }
 
-  a.tag[x-tag=indigo] {
+  a.tag[x-tag=project] {
     background-color: var(--tag-indigo-background);
     color: var(--tag-indigo-text);
   }
 
-  a.tag[x-tag=violet] {
+  a.tag[x-tag=nominative-determinism] {
     background-color: var(--tag-violet-background);
     color: var(--tag-violet-text);
   }
