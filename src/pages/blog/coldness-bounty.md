@@ -45,6 +45,6 @@ On the 11th of December, with four weeks to go, SIBR member Kidror (@Kidror19) d
 
 Further research confirmed this. Kidror said they were building off the work of SIBR members Astrid (@AReblase), Beiju (beiju#9630), and glumbaron. Those four people claimed the bounty, paid by the editors of this very journal you’re reading. 
 
-https://twitter.com/Kidror19/status/1602280132600905728?t=R-hIFLF-Z7zIWLAHLpdnDg&s=19
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">An effect of Coldness has been located!<br><br>In SIBR&#39;s Nominative Determination research project we&#39;ve been steadily reverse engineering the Expansion Era Sim through RNG.</p>&mdash; Kidror (@Kidror19) <a href="https://twitter.com/Kidror19/status/1602280132600905728?ref_src=twsrc%5Etfw">December 12, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 So there you have it. That’s one of the many things Coldness does. Meanwhile, we’re reasonably confident SIBR has figured out one more, but we aren’t going to tell you about that yet…

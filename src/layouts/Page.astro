@@ -36,6 +36,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
 	body {
 		color: rgb(var(--purble-text));
 		margin: var(--space-s-l, 1.5rem);
+		max-width: 70ch;
 	}
 
 	code {
@@ -85,7 +86,7 @@ const { title } = Astro.props.frontmatter || Astro.props;
 	}
 
 	.article-content > * {
-		max-width: 70ch;
+		/* max-width: 70ch; */
 	}
 	
 	.article-content > *:last-child {
@@ -127,6 +128,11 @@ const { title } = Astro.props.frontmatter || Astro.props;
 			background-color: var(--purble-900);
 			border-left: 3px solid var(--purble-200);
 		}
+	}
+
+	.twitter-tweet {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.article-content :where(h1, h2, h3) {
