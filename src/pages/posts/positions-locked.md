@@ -13,19 +13,19 @@ The December 9th, 2022 Fall brought us, in addition to twenty-four returning Pla
 
 Parker MacMillan IIIII, in the past, hadn’t been known for revealing many details about Blaseball, the cosmology of the immaterial plane, or even basic information about his job as Commissioner of Internet League Blaseball. This grid seemed to be inviting the community to inquire about it. An early clue came in the form of @Sir5000 asking what the 0th Base was (@Sir5000 2022), to which Parker replied, “a Position”. @V3rnedian asked if The Field was a twenty-fifth Team (@V3rnedian 2022), to which Parker said, “no”. Several presented their grids with Positions filled out to Parker (myself included), receiving “wrong” to each of them. User Barswainian presented Parker with a grid, inquiring if it was “wronger,” (@barswanian 2022) to which Parker responded, “yes”. Would Parker, proverbially, play ball?
 
-![](positions-locked/barswanian.png)
+![](positions-locked/barswanian.jpg)
 
 @barswanian’s grid
 
 Blaseball News Network Editor-in-Chief Cat Stlats decided on a new strategy. Submit a blank grid with “4th Base” on the bottom corner of the diamond (@CatStlats 2022). ‘4th Base’, in previous incarnations of blaseball, was generally implied to be home plate, where runners would successfully score Runs by reaching or stealing it. After some persistence (as with many of these questions to come), Parker responded “warmer”. Aha, temperature checks worked. I offered two grids with 1st through 4th Bases in a diamond, and asked Parker. The answer: “warmer”. I presented the same question a few more times, with the latter grid including different distances between each of the four Bases. The initial left grid was correct, each base was separated by an at the time unknown other Position. It was a start; four Positions down, thirty-two to go.
 
-![](positions-locked/final-four.png)
+![](positions-locked/final-four.jpg)
 
 My final of the four Base warmer/colder query grid submission
 
 @trail_juniper asked Parker to rate their grid based on a simple scale: “0 to 37” (37 due to Outerfielders placed outside the grid). (@trail_juniper 2022). Parker: “37”. 
 
-![](positions-locked/trail-juniper.png)
+![](positions-locked/trail-juniper.jpg)
 
 @trail_juniper’s 0 to 37 query and Parker’s response
 
@@ -43,7 +43,7 @@ How did the community manage to guess? Through a strategy often employed in logi
 
 As an example, @Kidror9 submitted the two Outerfielders in the same Position as other high-scoring grids, and tended to have a higher number of correct guesses than grids that didn’t (@Kidror19 2022).
 
-![](positions-locked/kidror.png)
+![](positions-locked/kidror.jpg)
 
 @Kidror9’s grid that received a twenty-five from Parker
 
@@ -51,20 +51,20 @@ As an example, @Kidror9 submitted the two Outerfielders in the same Position as 
 
 Then, @Breakneckabyss9 submitted a grid with thirty-two out of thirty-six (@Breakneckabyss9 2022). A break in the case. 
 
-![](positions-locked/breakneckabyss.png)
+![](positions-locked/breakneckabyss.jpg)
 
 @Breakneckabyss9’s thirty-two grid
 
 The completed grid was in sight. I requested from Parker the number of Rangers and Highfielders, gaining “2” (@clip_ny 2022) and “3” (@clip_ny 2022) respectively. More grids were submitted, such as @HonkBonk8’s grid receiving a twenty-eight (@HonkBonk8 2022). 
 
-![](positions-locked/honkbonk.png)
+![](positions-locked/honkbonk.jpg)
 @HonkBonk’s submitted twenty-eight grid
 
 After some double checking with @biffifh’s spreadsheets, three sets of Positions needed to be swapped, but which ones?
 
 In the end, @Timothyjackmann presented Parker with a thirty-six correct Positions grid (@Timothyjackmann 2022). With a retweet from the Commissioner, the hunt was a success. 
 
-![](positions-locked/timothyjackmann.png)
+![](positions-locked/timothyjackmann.jpg)
 
 @Timothyjackmann’s thirty-six grid
 
