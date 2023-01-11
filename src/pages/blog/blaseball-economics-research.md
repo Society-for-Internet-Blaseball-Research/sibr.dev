@@ -13,7 +13,7 @@ I joined the Blaseball Community extremely early on, midway through Season 2, an
 
 Since that point in time I’ve been relatively central in the efforts to try to record the ETR values and during the Short Circuits, helped by Frostbird, did some Betting Surveys during the Short Circuit series. This said, compared to other areas which SIBR researches, fundamentally we do not have any real endpoints of data or information related to most of the broad level economics data that we have available to us. In the past we have been able to infer the size and shape of the economy by reviewing total known spending as visible through publicly visible votes spent into decrees, blessing, renovations, and other sinks, but as always it is an imperfect data set. Tools like the ETR survey has provided us with a huge amount of discreet information which is potentially helpful, like the below graphics I created in some of the early seasons.
 
-![](blaseball-economics-research/image1.png)
+![](/blog/blaseball-economics-research/image1.png)
 
 But for us to be able to employ a survey, it needs to be discrete and specific and notable in measurement - this is why some specific event, like the triggering of the Eat the Rich decree, is ideal for this. When we did follow up with the Short Circuit surveys, our response rate fell greatly, likely for a variety of factors, but from my perspective very largely from the fact that there wasn’t really a specific discrete economic event to engage with. This is why we ended up not engaging with a survey for the third Short Circuit series, as while we could we were not confident on it’s representiveness being useful or usable.
 

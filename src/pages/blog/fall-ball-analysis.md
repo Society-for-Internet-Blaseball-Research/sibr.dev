@@ -21,17 +21,17 @@ Therefore we need to make a judgment call. For the purpose of this article I am 
 
 Whereas each team received exactly 10 players, the roster size of the main 24 teams varied widely, ranging from 57 players on the Garages roster to 24 players on the Georgias and Jazz Hands roster. With players being spit out of the Black Hole at random, some teams would naturally be more represented in the new rosters than others.
 
-![](fall-ball-analysis/those-fall-balls.png)
+![](/blog/fall-ball-analysis/those-fall-balls.png)
 
 (Chart showing how many players fell from the Season 24 roster of each of the main 24 teams.)
 
 As expected, the two largest rosters, the Garages and Tacos (57 and 56 players respectively) had the most players fall from their team, with 18 each. The rest of the league however varies widely in how well represented their Season 24 rosters are.
 
-![](fall-ball-analysis/expected-blorboes.png)
+![](/blog/fall-ball-analysis/expected-blorboes.png)
 
 (Chart showing how over or underrepresented each team’s Season 24 roster is, courtesy of Lucien on the SIBR Discord server.)
 
-![](fall-ball-analysis/fall-ball-table.png)
+![](/blog/fall-ball-analysis/fall-ball-table.png)
 
 (Table showing how many players from each Season 24 roster would be expected to fall if distributed evenly versus how many actually fell, courtesy of Lucien on the SIBR Discord server.)
 
@@ -43,7 +43,7 @@ As of this article’s writing, we know that the old player attributes aside fro
 
 I see no reason not to stack the teams up by those old metrics however.
 
-![](fall-ball-analysis/total-stars.png)
+![](/blog/fall-ball-analysis/total-stars.png)
 
 (Chart showing the total star counts of the new rosters based on player’s stars as of the end of Season 24.)
 
@@ -59,7 +59,7 @@ Of the 800 players assumed to be eligible to fall, 493 had at least 1 plate appe
 
 Of the 240 players who fell, 162 have at least 1 recorded PA or BF, or ~68% of the new rosters. But just how experienced are the new rosters? To answer this question, I added up the total PA and BF of the players on each team. For players who debuted during Seasons 1 or 2, which SIBR’s Datablase has no record of, I used the same method the Hall of Fame project used when determining if players reached their cutoff for eligibility: 4 BA per game for batters, 36 BF per game pitched for pitchers. For simplicity’s sake I gave an even 396 BA to every batter and 720 BF to every pitcher who debuted in Seasons 1 or 2 regardless of whether they replaced an incinerated player in Season 2 or not. In the only place where teams were close enough that it might make a difference, Simon Haley’s extra PAs could not prevent the Moist Talkers from being the least experienced team in the new era.
 
-![](fall-ball-analysis/total-pa-bf.png)
+![](/blog/fall-ball-analysis/total-pa-bf.png)
 
 (Chart showing the total number of plate appearances and batters faced by the new rosters of the main 24 teams.)
 
