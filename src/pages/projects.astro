@@ -41,7 +41,7 @@ console.log(groups);
               {tool.tasks ? (<li><a href={tool.tasks} target="_blank">Project Board / Tasks</a></li>) : (<></>)}
               {tool.status_slug 
                 ? (<li><a href={"https://status.sibr.dev/services/" + tool.status_slug} target="_blank">
-                  <img src={"https://status.sibr.dev/api/v1/badges/uptime/24h/" + tool.status_slug} />
+                  <img alt="status" src={"https://status.sibr.dev/api/v1/badges/uptime/24h/" + tool.status_slug} />
                 </a></li>) 
                 : (<></>)}
             </ul>
