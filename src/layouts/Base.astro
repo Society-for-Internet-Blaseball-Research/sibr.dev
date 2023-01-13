@@ -1,0 +1,79 @@
+---
+import "../styles/reset.css";
+import "../styles/utils.css";
+import "../styles/global.css";
+
+import Skeleton from "./Skeleton.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<Skeleton>
+	<Sidebar />
+	<main class="main-content">
+		<slot />
+		<footer class="disclaimer">
+			<p>
+				SIBR is neither endorsed by nor directly affiliated with The Game Band.
+			</p>
+		</footer>
+	</main>
+</Skeleton>
+
+<style>
+	html {
+		font-family: var(--serif);
+		background-color: rgb(var(--purble-background));
+	}
+
+	body {
+		color: rgb(var(--purble-text));
+		margin: var(--space-s-l, 1.5rem);
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-m);
+	}
+
+	main > * {
+		max-width: 70ch;
+	}
+	
+	main > *:last-child {
+		margin-bottom: var(--space-l-xl);
+	}
+
+	main h1 {
+		font-size: var(--step-4);
+	}
+
+	main :where(h1, h2, h3) {
+		font-weight: 600;
+	}
+
+	@media (min-width: 1280px) {
+		body {
+			display: grid;
+			max-width: 1152px;
+			margin: var(--space-xl) auto;
+			grid-template-columns: 240px 1fr;
+			column-gap: var(--space-l-xl);
+		}
+	}
+
+	.disclaimer {
+		margin: 0 auto;
+	}
+
+	.disclaimer p {
+			text-align: center;
+			font-size: var(--step--2);
+	}
+</style>

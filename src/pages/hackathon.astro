@@ -1,0 +1,75 @@
+---
+import Base from "../layouts/Base.astro"
+
+const hackathon = import.meta.glob("../_hackathon_projects/*.md");
+const resolved = Object.entries(hackathon).map(([, resolver]) => resolver());
+
+interface Project {
+    name: string
+    author: string
+    image: string
+    site: string
+    code: string
+    comments: string
+    awards?: string
+    Content: any
+}
+
+const projs: Project[] = (await Promise.all(resolved)).map((p: any) => ({
+    ...p.frontmatter,
+    Content: p.Content,
+}));
+---
+
+<Base title="Hackathon">
+    <h1> SIBR Hackathon Project Directory </h1>
+    <div> Here is a list of projects submitted to SIBR's first Cursed Blaseball Viewer Hackathon: </div>
+
+    {projs.map(project => (
+        <div class="project">
+            <div class="title">
+                <h2> {project.name} </h2> - <i> {project.author} </i>
+            </div>
+            <div class="content">
+                <div class="image">
+                    <img src={'/hackathon/' + project.image } alt={project.name}>
+                </div>
+                <div class="details">
+                    <project.Content/>
+                    <hr/>
+                    {project.awards ? (<p><b>⭐ Awards: </b><i>{project.awards}</i> ⭐</p>) : (<></>)}
+                    {project.comments ? (<p><b>Guest Judge Comments:</b></p><p>{project.comments}</p>) : (<></>)}
+                    <ul class="links">
+                        {project.site ? (<li><a href={project.site} target="_blank">Site</a></li>) : (<></>)}
+                        {project.code ? (<li><a href={project.code} target="_blank">Code</a></li>) : (<></>)}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    ))}
+</Base>
+
+<style lang="scss">
+    .project {
+        .title h2 {
+            display: inline;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 1.5em;
+
+            .image img {
+                width: 100%;
+            }
+
+            .details {
+                hr {
+                    height: 2px;
+                    background: #222222;
+                }
+            }
+        }
+    }
+</style>

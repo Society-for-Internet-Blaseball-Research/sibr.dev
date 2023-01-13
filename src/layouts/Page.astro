@@ -1,0 +1,196 @@
+---
+import "../styles/reset.css";
+import "../styles/utils.css";
+import "../styles/global.css"
+
+import Skeleton from "./Skeleton.astro";
+import Sidebar from "../components/Sidebar.astro";
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props.frontmatter || Astro.props;
+---
+
+<Skeleton title={title}>
+	<Sidebar />
+	<main class="main-content">
+		<article class="article-content">
+			<slot />
+			<footer class="disclaimer">
+				<p>
+					SIBR is neither endorsed by nor directly affiliated with The Game Band.
+				</p>
+			</footer>
+		</article>
+	</main>
+</Skeleton>
+
+<style is:global>
+	html {
+		font-family: var(--serif);
+		background-color: rgb(var(--purble-background));
+	}
+
+	body {
+		color: rgb(var(--purble-text));
+		margin: var(--space-s-l, 1.5rem);
+		max-width: 70ch;
+	}
+
+	code {
+		font-family: var(--mono);
+	}
+
+	.article-content > * + * {
+		margin-top: var(--space-m);
+	}
+
+	.article-content > :where(h1, h2, h3) + * {
+		margin-top: var(--space-s);
+	}
+
+	.article-content > blockquote > * + * {
+		margin-top: var(--space-m);
+	}
+
+	.article-content > :where(ul, ol) {
+		padding: 0 var(--space-s);
+		font-size: var(--step-0);
+	}
+
+	.article-content sup {
+		font-size: var(--step--2);
+		text-decoration: none;
+	}
+
+	.article-content > :where(ul, ol) > * + * {
+		margin-top: var(--space-xs);
+	}
+	
+	.article-content > .footnotes * + * {
+		margin-top: var(--space-xs);
+	}
+
+	.article-content > .footnotes p {
+		font-size: var(--step--1);
+	}
+
+	.article-content > .footnotes {
+		margin-top: var(--space-l);
+	}
+
+	.article-content img {
+		margin: 0 auto;
+	}
+
+	.article-content > * {
+		/* max-width: 70ch; */
+	}
+	
+	.article-content > *:last-child {
+		margin-bottom: var(--space-l-xl);
+	}
+	
+	/* .article-content > *:first-child {
+		margin-top: var(--space-l-xl);
+	} */
+
+	.article-content h1 {
+		font-size: var(--step-4);
+	}
+
+	.article-content h2 {
+		font-size: var(--step-3);
+	}
+
+	.article-content h3 {
+		font-size: var(--step-2);
+	}
+
+	.article-content p {
+		font-size: var(--step-0);
+	}
+
+	.article-content p {
+		line-height: 1.7;
+	}
+
+	.article-content blockquote {
+		padding: var(--space-xs);
+		background-color: var(--purble-100);
+		border-left: 3px solid var(--purble-700);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.article-content blockquote {
+			background-color: var(--purble-900);
+			border-left: 3px solid var(--purble-200);
+		}
+	}
+
+	.twitter-tweet {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.article-content :where(h1, h2, h3) {
+		font-weight: 600;
+	}
+
+	:root {
+		--screen-desktop: 1280px;
+	}
+
+	@media (min-width: 1280px) {
+		body {
+			display: grid;
+			max-width: 1152px;
+			margin: var(--space-xl) auto;
+			grid-template-columns: 240px 1fr;
+			column-gap: var(--space-l-xl);
+		}
+	}
+
+	@media (max-width: 1279px) {
+		main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	/* .link-bar {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-m);
+	}
+	.link-bar nav {
+			display: flex;
+			flex-direction: column;
+			gap: var(--space-s);
+	} */
+/* 
+		.link {
+			&.text {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: var(--space-2xs);
+			}
+
+			&.icon {
+				display: flex;
+				justify-items: center;
+				flex-wrap: 1;
+				gap: var(--space-2xs);
+			}
+		}
+	} */
+
+	.disclaimer p {
+		text-align: center;
+		font-size: var(--step--2);
+	}
+</style>

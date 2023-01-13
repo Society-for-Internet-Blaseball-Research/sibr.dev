@@ -1,0 +1,185 @@
+---
+export interface Props {
+  links?: {
+    name: string;
+    href: string;
+  } [];
+}
+
+const { 
+  links = [
+  {
+    name: "FAQ",
+    href: "/faq",
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+  },
+  {
+    name: "APIs",
+    href: "/apis",
+  },
+  {
+    name: "Research",
+    href: "/research",
+  },
+  {
+    name: "Falsehoods",
+    href: "/falsehoods",
+  },
+  {
+    name: "Status",
+    href: "https://status.sibr.dev",
+  },
+  {
+    name: "Merch",
+    href: "https://sibr.bigcartel.com",
+  },
+] } = Astro.props as Props;
+
+---
+<header class="link-bar">
+  <a class="sibr-image" href="/">
+    <!-- TODO: Use better source -->
+    <!-- <img class="sibr-image" src="/logo.svg" alt="Society for Internet Blaseball Research" /> -->
+    <img class="sibr-image" src="https://sibr.dev/assets/logo.svg" alt="Society for Internet Blaseball Research" />
+  </a>
+  <nav>
+    <ul class="link text">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} >{link.name}</a>
+        </li>
+      ))}
+    </ul>
+    <ul class="link icon">
+      <li>
+        <a href="https://discord.gg/F8YSJE6" target="_blank" rel="noreferrer noopener">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36" id="discord-link-icon" aria-labelledby="sibr-discord-title" role="img"><title id="sibr-discord-title">Join our Discord</title><path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg> -->
+          <img id="discord-link-icon" title="Join our Discord" src="/discord.svg" alt="Discord" />
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/SIBROfficial" target="_blank" rel="noreferrer noopener">
+          <img id="twitter-link-icon" title="Follow us on Twitter" src="/twitter.svg" alt="Twitter" />
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" id="twitter-link-icon" aria-labelledby="sibr-twitter-title" role="img"><title id="sibr-twitter-title">Follow us on Twitter</title><path d="M153.62,301.59c94.34,0,145.94-78.16,145.94-145.94,0-2.22,0-4.43-.15-6.63A104.36,104.36,0,0,0,325,122.47a102.38,102.38,0,0,1-29.46,8.07,51.47,51.47,0,0,0,22.55-28.37,102.79,102.79,0,0,1-32.57,12.45,51.34,51.34,0,0,0-87.41,46.78A145.62,145.62,0,0,1,92.4,107.81a51.33,51.33,0,0,0,15.88,68.47A50.91,50.91,0,0,1,85,169.86c0,.21,0,.43,0,.65a51.31,51.31,0,0,0,41.15,50.28,51.21,51.21,0,0,1-23.16.88,51.35,51.35,0,0,0,47.92,35.62,102.92,102.92,0,0,1-63.7,22A104.41,104.41,0,0,1,75,278.55a145.21,145.21,0,0,0,78.62,23"/></svg> -->
+        </a>
+      </li>
+      <li>
+        <a href="https://www.patreon.com/sibr" target="_blank" rel="noreferrer noopener">
+          <img id="patreon-link-icon" src="/patreon.svg" title="Support us on Patreon" alt="Patreon">
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/Society-for-Internet-Blaseball-Research" target="_blank" rel="noreferrer noopener">
+          <img id="github-link-icon" src="/github.svg" title="SIBR on GitHub" alt="GitHub" />
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" id="github-link-icon" aria-labelledby="sibr-github-title" role="img"><title id="sibr-github-title">SIBR on Github</title><path fill-rule="evenodd" d="M19.998 4C11.164 4 4 11.163 4 20c0 7.069 4.584 13.066 10.942 15.182.8.147 1.092-.347 1.092-.772 0-.38-.013-1.385-.021-2.72-4.45.967-5.39-2.145-5.39-2.145-.728-1.848-1.777-2.341-1.777-2.341-1.452-.992.11-.972.11-.972 1.606.112 2.451 1.649 2.451 1.649 1.427 2.445 3.745 1.738 4.656 1.329.146-1.033.56-1.739 1.016-2.139-3.552-.404-7.288-1.776-7.288-7.907 0-1.748.624-3.175 1.647-4.294-.164-.404-.714-2.032.157-4.234 0 0 1.343-.43 4.4 1.64a15.366 15.366 0 014.005-.54 15.36 15.36 0 014.005.538c3.055-2.07 4.396-1.64 4.396-1.64.873 2.204.324 3.83.16 4.236 1.025 1.118 1.644 2.545 1.644 4.293 0 6.147-3.741 7.5-7.304 7.895.573.494 1.085 1.47 1.085 2.964 0 2.138-.02 3.864-.02 4.388 0 .428.288.926 1.1.77C31.42 33.06 36 27.068 36 20c0-8.837-7.165-16-16.002-16"/></svg> -->
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style lang="scss">
+  a.sibr-image {
+    min-width: 90px;
+    max-width: 240px;
+    width: clamp(90px, 20vw, 240px);
+    display: inline-block;
+  }
+
+  .link-bar {
+    gap: var(--space-s-m);
+    display: flex;
+    align-items: center;
+    margin-block-end: 2ch;
+  }
+
+  .link {
+    font-family: var(--barlow-condensed);
+    text-transform: uppercase;
+    font-size: var(--step-2);
+    font-weight: 100;
+    font-stretch: semi-condensed;
+    color: rgb(var(--purble-text));
+  }
+
+  .link.text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3xs);
+  }
+
+  .link.text a {
+    text-decoration: none;
+    font-weight: 100;
+    color: rgb(var(--purble-text));
+  }
+
+  .link.text a:hover {
+    text-decoration: underline;
+  }
+
+  .link.icon {
+    display: flex;
+    justify-items: center;
+    flex-wrap: 1;
+    gap: var(--space-4xs);
+
+    li {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 1.5em;
+
+        &#discord-link-icon, &#github-link-icon {
+          transform: scale(0.8);
+        }
+        
+        &#patreon-link-icon {
+          transform: scale(0.68);
+        }
+      }
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .link.icon img {
+      filter: invert(1);
+    }
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s-m);
+  }
+
+  @media (min-width: 1280px) {
+    nav {
+      flex-direction: column;
+    }
+
+    .link-bar {
+      flex-direction: column;
+      justify-items: center;
+    }
+
+    .link.text {
+      flex-direction: column;
+      justify-items: center;
+    }
+
+  }
+</style>

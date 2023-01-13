@@ -1,0 +1,22 @@
+{
+  "name": "@example/basics",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.14.0",
+    "astro": "^1.9.0",
+    "rehype-katex": "^6.0.2",
+    "remark-math": "^5.1.1"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}

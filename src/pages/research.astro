@@ -1,0 +1,70 @@
+---
+import Base from "@layouts/Base.astro";
+
+const research = import.meta.glob("../_papers/*.md");
+const resolved = Object.entries(research).map(([, resolver]) => resolver());
+
+// console.log(resolved);
+
+const papers: any[] = (await Promise.all(resolved)).map((p: any) => {
+  let date = new Date(p.frontmatter.date);
+  console.log(date);
+  let year = date.getFullYear();
+  console.log(year);
+  return {
+    ...p.frontmatter,
+    date: year,
+    Content: p.Content
+  }
+}).sort((a, b) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+}).reverse();
+
+console.log(papers);
+---
+
+<Base title="Research">
+  <div class="body">
+    <h1>SIBR Papers</h1>
+    <ul class="paper-list">
+      {papers.map((paper: any) => (
+        <li class="paper">
+          <a href={"/_papers/" + paper.file}>{paper.title}</a> ({paper.date})
+        </li>
+      ))}
+    </ul>
+  </div>
+</Base>
+
+<style>
+  .body > * + * {
+    margin-top: var(--space-m);
+  }
+
+  .api-list > * + * {
+    margin-top: var(--space-m);
+  }
+
+  :global(.api > * + *) {
+    margin-top: var(--space-xs);
+  }
+
+  :global(.body ul) {
+    list-style-type: disc;
+    margin-top: var(--space-xs);
+  }
+
+  :global(.body ul > * + *) {
+    margin-top: var(--space-xs);
+  }
+
+  /* ul.api-list, ul.links {
+    list-style-type: none;
+  } */
+
+  /* div.title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  } */
+</style>

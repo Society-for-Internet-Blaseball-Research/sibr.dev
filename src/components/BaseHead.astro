@@ -1,0 +1,90 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import "../styles/reset.css";
+import "../styles/utils.css";
+
+export interface Props {
+	title: string;
+	description?: string;
+	image?: string;
+}
+const {
+	title,
+	description,
+	image = "", // social media image here
+} = Astro.props as Props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<!-- <link
+	rel="alternate"
+	type="application/atom+xml"
+	title="Atom Feed"
+	href="/atom.xml"
+/>
+<link
+	rel="alternate"
+	type="application/feed+json"
+	title="JSON Feed"
+	href="/feed.json"
+/>
+<link
+	rel="alternate"
+	type="application/rss+xml"
+	title="RSS Feed"
+	href="/rss.xml"
+/> -->
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- generics -->
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="icon" href="/favicon-128.png" sizes="128x128">
+<link rel="icon" href="/favicon-180.png" sizes="180x180">
+<link rel="icon" href="/favicon-192.png" sizes="192x192">
+
+<!-- Android -->
+<link rel="shortcut icon" sizes="196x196" href="/favicon-196.png">
+
+<!-- iOS -->
+<link rel="apple-touch-icon" href="/favicon-120.png" sizes="120x120">
+<link rel="apple-touch-icon" href="/favicon-152.png" sizes="152x152">
+<link rel="apple-touch-icon" href="/favicon-180.png" sizes="180x180">
+
+<!-- Windows 8 IE 10-->
+<meta name="msapplication-TileColor" content="#CAACE6">
+<meta name="msapplication-TileImage" content="/favicon-144.png">
+
+<!-- Windows 8.1 + IE11 and above -->
+<meta name="msapplication-config" content="/browserconfig.xml" />
+
+<!-- Katex -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
+<link href="https://www.monolisa.dev/api/fonts/initial" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/NotoSerif/NotoSerif.css">
+<link rel="stylesheet" href="/fonts/Barlow/Barlow.css">
+
+<!-- Primary Meta Tags -->
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<meta name="title" content={title} />
+{description && <meta name="description" content={description} />}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+{description && <meta property="twitter:description" content={description} />}
+<meta property="twitter:image" content={new URL(image, Astro.url)} />

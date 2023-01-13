@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+const posts = (await Astro.glob('./blog/*.md')).map(post=>{
+  let front = post.frontmatter;
+  front.url = post.url;
+  return front;
+}).sort((a, b) => {
+  return new Date(b.date).valueOf() - new Date(a.date).valueOf();
+}).filter((post)=>!post.draft);
+
+---
+
+<Base title="Blog">
+  <div class="main">
+    <h1>Blog</h1>
+    <div class="posts">
+      {posts.map((post) => (
+        <BlogPost {...post} />
+      ))}
+    </div>
+  </div>
+</Base>
+
+<style>
+  h1 {
+    font-size: var(--step-4);
+  }
+
+  .posts {
+    margin-top: var(--space-m);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+</style>

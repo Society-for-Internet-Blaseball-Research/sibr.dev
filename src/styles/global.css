@@ -1,0 +1,18 @@
+html {
+  background-color: rgb(var(--purble-background));
+}
+
+body {
+  font-size: var(--step-0);
+  color: rgb(var(--purble-text));
+}
+
+a {
+  color: var(--purble-link);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}

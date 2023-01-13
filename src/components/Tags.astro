@@ -1,0 +1,119 @@
+---
+
+export interface Props {
+  tags: string[];
+}
+
+const { 
+  tags
+} = Astro.props as Props;
+
+tags.sort((a, b) => {
+  if (a.toLowerCase() < b.toLowerCase()) {
+    return -1;
+  }
+  if (a.toLowerCase() > b.toLowerCase()) {
+    return 1;
+  }
+  return 0;
+})
+---
+
+<div class="tags">
+    {tags?.map((tag) => (
+      <span class={`tag`} x-tag={tag.toLowerCase()}>{tag}</span>
+    ))}
+</div>
+
+<style>
+    .tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    font-family: var(--barlow);
+    font-weight: 90;
+    font-size: var(--scale--2);
+    font-stretch: 400%;
+    margin: 0;
+  }
+
+  .tag {
+    border-radius: var(--space-3xs);
+    padding: var(--space-3xs);
+    line-height: 1;
+    background-color: var(--tag-gray-background); /*Default Tag Colour*/
+    color: var(--tag-gray-text)
+  }
+
+  .tag:not(#\#) {
+    font-weight: 90;
+  }
+
+  /* Tag Colours Here */
+
+  .tag[x-tag=meta] {
+    background-color: var(--tag-gray-background);
+    color: var(--tag-gray-text);
+  }
+
+  .tag[x-tag=beta] {
+    background-color: var(--tag-gray-background);
+    color: var(--tag-gray-text);
+  }
+
+  .tag[x-tag=blog] {
+    background-color: var(--tag-red-background);
+    color: var(--tag-red-text);
+  }
+
+  .tag[x-tag=purble] {
+    background-color: var(--tag-purble-background);
+    color: var(--tag-purble-text);
+  }
+
+  .tag[x-tag=rouge] {
+    background-color: var(--tag-rouge-background);
+    color: var(--tag-rouge-text);
+  }
+
+  .tag[x-tag="data crimes"] {
+    background-color: var(--tag-red-background);
+    color: var(--tag-red-text);
+  }
+
+  .tag[x-tag=orange] {
+    background-color: var(--tag-orange-background);
+    color: var(--tag-orange-text);
+  }
+
+  .tag[x-tag=economy] {
+    background-color: var(--tag-yellow-background);
+    color: var(--tag-yellow-text);
+  }
+
+  .tag[x-tag=graphs] {
+    background-color: var(--tag-green-background);
+    color: var(--tag-green-text);
+  }
+
+  .tag[x-tag=cyan] {
+    background-color: var(--tag-cyan-background);
+    color: var(--tag-cyan-text);
+  }
+
+  .tag[x-tag=research] {
+    background-color: var(--tag-blue-background);
+    color: var(--tag-blue-text);
+  }
+
+  .tag[x-tag=project] {
+    background-color: var(--tag-indigo-background);
+    color: var(--tag-indigo-text);
+  }
+
+  .tag[x-tag=nominative-determinism] {
+    background-color: var(--tag-violet-background);
+    color: var(--tag-violet-text);
+  }
+</style>
