@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPage.astro"
-title: "The Nominative-Determinism Article"
+title: "The Gang Reverse-Engineers the Beta Sim"
 authors: ["beiju"]
 date: "January 9, 2023"
 description: "A not-so-concise summary of SIBR's research into the inner workings of the Beta sim based on cracking the RNG, and a few select discoveries."
