@@ -65,8 +65,9 @@ const {
 		margin-top: var(--space-m);
 	}
 
-	.article-content > :where(ul, ol) {
-		padding: 0 var(--space-s);
+	.article-content :where(ul, ol) {
+		padding: 0 0 0 var(--space-m);
+		list-style-position: outside;
 		font-size: var(--step-0);
 	}
 
@@ -83,7 +84,11 @@ const {
 		margin-top: var(--space-xs);
 	}
 
+
+
+	.article-content > .footnotes ol,
 	.article-content > .footnotes p {
+		list-style-position: outside;
 		font-size: var(--step--1);
 	}
 
