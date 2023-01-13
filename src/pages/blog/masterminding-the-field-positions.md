@@ -1,8 +1,6 @@
 ---
 layout: "../../layouts/BlogPage.astro"
-title: "Positions Locked: 
-  Masterminding the Field Positions 
-  by Pestering the Blaseball Commissioner"
+title: "Positions Locked: Masterminding the Field Positions by Pestering the Blaseball Commissioner"
 authors: ["Clip Clipperson"]
 date: "January 9, 2023"
 description: "With the power of persistence, the community asks Parker MacMillan IIIII about a mysterious grid and the Fallen Positions and manage to figure out the Field."
@@ -70,7 +68,7 @@ In the end, @Timothyjackmann presented Parker with a thirty-six correct Position
 
 One of the many remarkable things about blaseball and its community is the galvanization of folks from many walks of life coming together to achieve a goal, and time after time, exceeding expectations. May the Fielding Responses join the hallowed halls of community projects alongside Throwback Thursday (the use of red herring to reveal Library Entries) and the peanut-fueled Season 10 Hall Star selection process. I would like to thank everyone from the community for submitting their grids and taking a chance on finding a solution, and the comedic grids for a hearty chuckle along the way (such as @MaclunkeyCulkin’s featuring a Triscuit under the presented grid (@MaclunkeyCulkin 2022)). A special thank you to these fine Twitter users, among many others:
 
-@ALefeld23, @ariokart, @asherlark, @barswanian, @betaraycarrie, @Biffifh, @Breakneckabyss9, @CatStlats, @cicatricks\_, @HonkBonk8, @JoeyTBadger, @Kidror19, @MaclunkeyCulkin, @quackademicc, @sinjidkiller, @Sir5000, @SupaQuazi, @Timothyjackmann, @trail_juniper, @V3rnedian, @akowdoj
+@akowdoj, @ALefeld23, @ariokart, @asherlark, @barswanian, @betaraycarrie, @Biffifh, @Breakneckabyss9, @CatStlats, @cicatricks\_, @c0elestis, @HonkBonk8, @JoeyTBadger, @Kidror19, @MaclunkeyCulkin, @quackademicc, @sinjidkiller, @Sir5000, @SupaQuazi, @Timothyjackmann, @trail_juniper, @V3rnedian
 
 ## References
 
