@@ -115,7 +115,7 @@ body {
 
 /* Fix h1 font size inside article, aside, nav, and section */
 h1 {
-  font-size: 2em;
+  font-size: var(--step-4);
 }
 
 /* Position list marker inside */
