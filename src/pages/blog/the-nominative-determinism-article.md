@@ -118,7 +118,7 @@ immediately after another.
 [1]: https://blog.securityevaluators.com/hacking-the-javascript-lottery-80cc437e3b7f?gi=c71ccb5fd16a
 [2]: https://blog.securityevaluators.com/xorshift128-backward-ff3365dc0c17
 
-![A screenshot of the Blaseball game log showing Tillman Henderson's incineration and replacement with Silvaire Roadhouse.](/blog/nom-det/tilly-incin-lol.png)
+![A screenshot of the Blaseball game log showing Tillman Henderson's incineration and replacement with Silvaire Roadhouse.](/blog/the-nominative-determinism-article/tilly-incin-lol.png)
 
 It turns out that when a new player is hatched, from incineration or any other 
 source, their attributes are random numbers directly from the RNG. After some 
@@ -146,7 +146,7 @@ that. To figure out all the other events we needed another way to find them.
 
 ## Help from the Birds
 
-![A screenshot of Reblase showing several Birds messages interleaved with normal game messages](/blog/nom-det/birsd.png)
+![A screenshot of Reblase showing several Birds messages interleaved with normal game messages](/blog/the-nominative-determinism-article/birsd.png)
 
 We could look forward and backwards from the incineration and boost events to 
 get a tiny amount of data, but those were too few and far between to figure out 
@@ -195,7 +195,7 @@ always know whether the pitch was in the strike zone. The first roll is the
 weather check, so let's plot the second roll, with Strikes plotted as blue 
 diamonds and Balls as red dots.
 
-![A graph with RNG output ranging from 0 to 1 on the y axis and sample index on the x axis. Strikes, shown as blue diamonds, are concentrated below 0.5 on the y axis and Balls, shown as red dots, are above 0.5. However, the border is very fuzzy and there are strikes as high as 0.9 and balls as low as 0.3.](/blog/nom-det/ball-v-strike-index.png)
+![A graph with RNG output ranging from 0 to 1 on the y axis and sample index on the x axis. Strikes, shown as blue diamonds, are concentrated below 0.5 on the y axis and Balls, shown as red dots, are above 0.5. However, the border is very fuzzy and there are strikes as high as 0.9 and balls as low as 0.3.](/blog/the-nominative-determinism-article/ball-v-strike-index.png)
 
 That looks like something! The blue diamonds are mostly towards the bottom, and 
 the red dots are mostly towards the top. This is what we in the business call 
@@ -208,7 +208,7 @@ because I'm writing this from the future and I already know how we did it,
 let's exclude every sample where the pitcher or batter has a mod that affects 
 attributes.
 
-![A similar graph to before, but now the x axis is pitcher ruthlessness and there is much less overlap between Strikes and Balls. Also, the line separating them is now distinctly diagonal, going up and to the right.](/blog/nom-det/ball-v-strike-ruth.png)
+![A similar graph to before, but now the x axis is pitcher ruthlessness and there is much less overlap between Strikes and Balls. Also, the line separating them is now distinctly diagonal, going up and to the right.](/blog/the-nominative-determinism-article/ball-v-strike-ruth.png)
 
 That's a pretty nice line. Ruthlessness is definitely used to decide whether 
 the pitch is inside the strike zone. But it's obviously not the only thing, 
@@ -229,7 +229,7 @@ cleanly separated.
 [^7]: Technically a hyperplane, which is a math term and not a very fast 
     aircraft.
 
-![A similar graph to the previous two except now strikes and balls are perfectly separated along the diagonal line. The x axis is labeled with this equation: 0.3 + 0.35 * pitcher ruthlessness * (1 + 0.2 * pitcher vibes) + 0.1 * batter musclitude + 0.2 * (ballpark forwardness - 0.5)](/blog/nom-det/ball-v-strike-svc.png)
+![A similar graph to the previous two except now strikes and balls are perfectly separated along the diagonal line. The x axis is labeled with this equation: 0.3 + 0.35 * pitcher ruthlessness * (1 + 0.2 * pitcher vibes) + 0.1 * batter musclitude + 0.2 * (ballpark forwardness - 0.5)](/blog/the-nominative-determinism-article/ball-v-strike-svc.png)
 
 Et voila! That's a perfect separation, telling us that the strikes equation 
 is that big long one you see as the x-axis label. (It may look ragged along the 
