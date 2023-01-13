@@ -7,8 +7,6 @@ description: "With the re-return of Blaseball on January 9th, there's a big ques
 tags: ["Meta"]
 ---
 
-# SIBR on Return
-
 With the re-return of Blaseball on January 9th, there's a big question of how SIBR will handle it. The short version is: we have no clue.
 
 SIBR members work on and maintain many tools and services fans frequently use to help aid their Blaseball experience, but we don't have any more insights on the next era than any other fan. It should be expected that many tools will experience outages when games start again. Several of them will break completely and no longer be maintained for the next era. Without knowing more about what the next era will look like, it's almost impossible to predict what will and won't be useful or even possible in the future.
