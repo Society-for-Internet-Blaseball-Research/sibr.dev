@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPage.astro"
 title: "What to expect from SIBR on the Return"
 authors: ["Errantly Erin, @ErrantlyErin"]
-date: "January 11, 2023"
+date: "January 9, 2023"
 description: "With the re-return of Blaseball on January 9th, there's a big question of how SIBR will handle it. The short version is: we have no clue."
 tags: ["Meta"]
 ---

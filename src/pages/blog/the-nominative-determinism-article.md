@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPage.astro"
 title: "The Nominative-Determinism Article"
 authors: ["beiju"]
-date: "January 11, 2023"
+date: "January 9, 2023"
 description: "A not-so-concise summary of SIBR's research into the inner workings of the Beta sim based on cracking the RNG, and a few select discoveries."
 tags: ["Beta", "Nominative-Determinism", "Research"]
 ---

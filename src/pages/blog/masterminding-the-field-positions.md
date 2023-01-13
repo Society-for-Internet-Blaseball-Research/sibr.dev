@@ -4,7 +4,7 @@ title: "Positions Locked:
   Masterminding the Field Positions 
   by Pestering the Blaseball Commissioner"
 authors: ["Clip Clipperson"]
-date: "January 11, 2023"
+date: "January 9, 2023"
 description: "With the power of persistence, the community asks Parker MacMillan IIIII about a mysterious grid and the Fallen Positions and manage to figure out the Field."
 tags: ["Meta", "Research"]
 ---

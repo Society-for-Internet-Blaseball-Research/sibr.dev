@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPage.astro"
 title: "A Fall Ball Analysis"
 authors: ["LaserMessiah"]
-date: "January 11, 2023"
+date: "January 9, 2023"
 description: "Before games began, we took a look back at Fall Ball to answer all of our burning questions: Which teams got lucky? Who was in the Black Hole? Where's Castillo Turner? Could we predict which teams would be good?"
 tags: ["Research"]
 ---
