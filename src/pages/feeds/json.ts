@@ -1,7 +1,7 @@
-import { json } from "src/utils/feeds";
+import { getFeed } from "src/utils/feeds";
 
 export async function get() {
     return {
-        body: JSON.stringify(json)
+        body: (await getFeed()).json1(),
     }
 }
