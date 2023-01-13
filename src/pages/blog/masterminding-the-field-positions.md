@@ -70,7 +70,7 @@ In the end, @Timothyjackmann presented Parker with a thirty-six correct Position
 
 One of the many remarkable things about blaseball and its community is the galvanization of folks from many walks of life coming together to achieve a goal, and time after time, exceeding expectations. May the Fielding Responses join the hallowed halls of community projects alongside Throwback Thursday (the use of red herring to reveal Library Entries) and the peanut-fueled Season 10 Hall Star selection process. I would like to thank everyone from the community for submitting their grids and taking a chance on finding a solution, and the comedic grids for a hearty chuckle along the way (such as @MaclunkeyCulkin’s featuring a Triscuit under the presented grid (@MaclunkeyCulkin 2022)). A special thank you to these fine Twitter users, among many others:
 
-@ALefeld23, @ariokart, @asherlark, @barswanian, @betaraycarrie, @Biffifh, @Breakneckabyss9, @CatStlats, @cicatricks\_, @HonkBonk8, @JoeyTBadger, @Kidror19, @MaclunkeyCulkin, @quackademicc, @sinjidkiller, @Sir5000, @SupaQuazi, @Timothyjackmann, @trail_juniper, @V3rnedian
+@ALefeld23, @ariokart, @asherlark, @barswanian, @betaraycarrie, @Biffifh, @Breakneckabyss9, @CatStlats, @cicatricks\_, @HonkBonk8, @JoeyTBadger, @Kidror19, @MaclunkeyCulkin, @quackademicc, @sinjidkiller, @Sir5000, @SupaQuazi, @Timothyjackmann, @trail_juniper, @V3rnedian, @akowdoj
 
 ## References
 
