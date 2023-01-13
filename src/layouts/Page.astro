@@ -12,10 +12,14 @@ export interface Props {
 	image?: string;
 }
 
-const { title } = Astro.props.frontmatter || Astro.props;
+const { 
+	title,
+	description,
+	image
+} = Astro.props.frontmatter || Astro.props;
 ---
 
-<Skeleton title={title}>
+<Skeleton title={title} description={description}>
 	<Sidebar />
 	<main class="main-content">
 		<article class="article-content">
