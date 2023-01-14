@@ -46,24 +46,27 @@ export const getFeed = async () => {
             link: "https://sibr.dev",
         }
     });
-
+    
     blogposts
         .filter(post=>!post.draft)
         .sort((a, b) => {
             return new Date(b.date).valueOf() - new Date(a.date).valueOf();
         })
         .forEach(post => {
-        feed.addItem({
-            title: post.title,
-            id: post.path.replace("..","https://sibr.dev"),
-            link: post.path,
-            description: post.description,
-            author: post.authors.map(author => ({
-                name: author
-            })),
-            date: new Date(post.date),
+            feed.addItem({
+                title: post.title,
+                id: post.path.replace("..","https://sibr.dev"),
+                link: post.path,
+                description: post.description,
+                // This for some reason is not posting all authors of an article,
+                //    only the first.
+                // This seems to be an issue with the library
+                author: post.authors.map(author => ({
+                    name: author
+                })),
+                date: new Date(post.date),
+            })
         })
-    })
 
     return feed;
 }
