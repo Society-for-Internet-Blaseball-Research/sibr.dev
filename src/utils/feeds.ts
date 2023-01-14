@@ -9,6 +9,11 @@ interface Post {
     path: string
 }
 
+function pathToUrl(path: string){
+    let url: string = path.replace("../pages","https://sibr.dev").replace(/\.[^.]+$/, "/")
+    return url
+}
+
 export const getFeed = async () => {
     const blogfiles = await import.meta.glob("../pages/blog/*.md");
 
@@ -16,7 +21,7 @@ export const getFeed = async () => {
         const { frontmatter } = await resolver();
         return {
             ...frontmatter,
-            path,
+            path: pathToUrl(path),
         } as Post;
     }));
 
@@ -45,7 +50,7 @@ export const getFeed = async () => {
         feed.addItem({
             title: post.title,
             id: post.path.replace("..","https://sibr.dev"),
-            link: post.path.replace("..","https://sibr.dev"),
+            link: post.path,
             description: post.description,
             author: post.authors.map(author => ({
                 name: author
