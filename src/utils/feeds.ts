@@ -44,8 +44,8 @@ export const getFeed = async () => {
     blogposts.forEach(post => {
         feed.addItem({
             title: post.title,
-            id: post.path,
-            link: post.path,
+            id: post.path.replace("..","https://sibr.dev"),
+            link: post.path.replace("..","https://sibr.dev"),
             description: post.description,
             author: post.authors.map(author => ({
                 name: author
