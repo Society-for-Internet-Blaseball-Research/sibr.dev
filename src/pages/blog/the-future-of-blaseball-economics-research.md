@@ -1,7 +1,8 @@
 ---
 layout: "../../layouts/BlogPage.astro"
 title: "The Future of Blaseball Economics Research"
-authors: ["Cuttlefishman"]
+authors: 
+- name: "Cuttlefishman"
 date: "January 9, 2023"
 description: "Economics. Despite dying at the end of the expansion era, nonetheless remains."
 tags: ["Economy", "Meta", "Research"]
