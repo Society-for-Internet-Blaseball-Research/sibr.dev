@@ -7,6 +7,7 @@ interface Post {
     description: string
     tags: string[]
     path: string
+    draft: Boolean
 }
 
 function pathToUrl(path: string){
@@ -46,7 +47,12 @@ export const getFeed = async () => {
         }
     });
 
-    blogposts.forEach(post => {
+    blogposts
+        .filter(post=>!post.draft)
+        .sort((a, b) => {
+            return new Date(b.date).valueOf() - new Date(a.date).valueOf();
+        })
+        .forEach(post => {
         feed.addItem({
             title: post.title,
             id: post.path.replace("..","https://sibr.dev"),
