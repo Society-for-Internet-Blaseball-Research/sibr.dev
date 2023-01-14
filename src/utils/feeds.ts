@@ -1,13 +1,18 @@
-import { Feed } from "feed";
-
 interface Post {
     title: string
-    authors: string[]
+    authors: [{
+        name: string
+        url?: string
+        avatar?: string
+    }]
     date: string
     description: string
     tags: string[]
     path: string
     draft: Boolean
+    image?: string
+    alt?: string
+    html_content: string
 }
 
 function pathToUrl(path: string){
@@ -15,37 +20,35 @@ function pathToUrl(path: string){
     return url
 }
 
-export const getFeed = async () => {
+export const getFeed = async (feed_url: string) => {
     const blogfiles = await import.meta.glob("../pages/blog/*.md");
-
     const blogposts = await Promise.all(Object.entries(blogfiles).map(async ([path, resolver]: [string, any]) => {
         const { frontmatter } = await resolver();
+        const resolved = await resolver();
+
         return {
             ...frontmatter,
             path: pathToUrl(path),
+            html_content: (await resolved.Content()).props.compiledContent()
         } as Post;
     }));
 
-    const feed = new Feed({
+    const feed = {
+        version:"https://jsonfeed.org/version/1",
         title: "SIBR Blog",
-        description: "PLACEHOLDER",
-        id: "https://sibr.dev",
-        link: "https://sibr.dev/blog",
+        description: "Blog posts from the Society for Internet Blaseball Research",
+        home_page_url: "https://sibr.dev/blog",
+        feed_url,
         language: "en",
-        image: "https://sibr.dev/logo.svg",
+        icon: "https://sibr.dev/logo.svg",
         favicon: "https://sibr.dev/favicon.ico",
-        copyright: "PLACEHOLDER",
-        feedLinks: {
-            json: "https://sibr.dev/feeds/json",
-            atom: "https://sibr.dev/feeds/atom",
-            rss: "https://sibr.dev/feeds/rss",
-        },
         author: {
             name: "SIBR",
-            email: "PLACEHOLDER",
-            link: "https://sibr.dev",
-        }
-    });
+            url: "https://sibr.dev",
+            avatar: "https://sibr.dev/logo.svg"
+        },
+        items: new Array()
+    };
     
     blogposts
         .filter(post=>!post.draft)
@@ -53,20 +56,32 @@ export const getFeed = async () => {
             return new Date(b.date).valueOf() - new Date(a.date).valueOf();
         })
         .forEach(post => {
-            feed.addItem({
+            feed.items.push({
                 title: post.title,
-                id: post.path.replace("..","https://sibr.dev"),
-                link: post.path,
-                description: post.description,
-                // This for some reason is not posting all authors of an article,
-                //    only the first.
-                // This seems to be an issue with the library
-                author: post.authors.map(author => ({
-                    name: author
-                })),
-                date: new Date(post.date),
+                id: post.path,
+                url: post.path,
+                summary: post.description,
+                //Because RSS doesn't support multiple authors, we select the first one. 
+                author:  post.authors.map((author)=>{
+                    return {
+                        name: author.name,
+                        url: author.url ?? undefined,
+                        avatar: author.avatar ?? undefined
+                    }
+                })[0],
+                //In jsonfeed, the authors field is prioritized over the author field.
+                authors: post.authors.map((author)=>{
+                    return {
+                        name: author.name,
+                        url: author.url ?? undefined,
+                        avatar: author.avatar ?? undefined
+                    }
+                }),
+                date_published: (new Date(post.date)).toISOString(),
+                image: post.image ? post.image : undefined,
+                tags: post.tags,
+                content_html: post.html_content
             })
         })
-
     return feed;
 }

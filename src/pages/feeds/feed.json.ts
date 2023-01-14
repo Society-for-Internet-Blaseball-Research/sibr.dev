@@ -2,6 +2,6 @@ import { getFeed } from "src/utils/feeds";
 
 export async function get() {
     return {
-        body: (await getFeed()).json1(),
+        body: JSON.stringify(await getFeed("https://sibr.dev/feeds/feed.json")),
     }
 }
