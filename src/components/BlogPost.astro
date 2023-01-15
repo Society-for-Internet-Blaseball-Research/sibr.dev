@@ -2,7 +2,11 @@
 
 export interface Props {
   title: string;
-  authors: string[];
+  authors: [{
+    name: string;
+    url: string;
+    avatar: string;
+  }];
   date: string;
   description: string;
   tags: string[];
@@ -38,10 +42,16 @@ import Tags from './Tags.astro';
         <h2>{title}</h2>
       </a>
     </header>
-    <div class="author">
-      <p>{authors?.join(", ")}</p>
+    <div class="authors">
+      {authors.map((author, index, array) => {
+        if(author.url){
+          return (<span><a href={author.url}>{author.name}</a>{index < array.length-1 && <span>, </span>}</span>)
+        } else {
+          return (<span>{author.name}{index < array.length-1 && <span>, </span>}</span>)
+        }
+      })}
       <span aria-hidden="true">•</span>
-      <p>{date}</p>
+      <span>{date}</span>
     </div>
     <p class="description">{description}</p>
     <div>
@@ -111,10 +121,14 @@ import Tags from './Tags.astro';
     gap: var(--space-2xs);
   }
 
-  .card .author > * {
+  .card .authors > * {
     font-size: var(--step-0);
     font-weight: 90;
     font-family: var(--barlow);
+  }
+
+  .card .authors a {
+    text-decoration: underline;
   }
 
   .card .description {
