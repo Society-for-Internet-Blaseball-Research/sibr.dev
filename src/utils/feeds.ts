@@ -62,13 +62,9 @@ export const getFeed = async (feed_url: string) => {
                 url: post.path,
                 summary: post.description,
                 //Because RSS doesn't support multiple authors, we select the first one. 
-                author:  post.authors.map((author)=>{
-                    return {
-                        name: author.name,
-                        url: author.url ?? undefined,
-                        avatar: author.avatar ?? undefined
-                    }
-                })[0],
+                author:  {name:post.authors.reduce((acumulated, author, index, array)=>{
+                    return acumulated + author.name + (index < array.length-1 ? ", " : "")
+                }, "")},
                 //In jsonfeed, the authors field is prioritized over the author field.
                 authors: post.authors.map((author)=>{
                     return {
