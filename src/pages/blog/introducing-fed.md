@@ -1,7 +1,8 @@
 ---
 layout: "../../layouts/BlogPage.astro"
 title: "Fed, Solving the Stout Schmitt Problem"
-authors: ["beiju"]
+authors: 
+- name: "beiju"
 date: "January 9, 2023"
 description: "The Feed is an extremely useful addition to blaseball, but dealing with it can be… frustrating."
 tags: ["Beta", "Project"]

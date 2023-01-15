@@ -1,7 +1,8 @@
 ---
 layout: "../../layouts/BlogPage.astro"
 title: "Featured Visualizations and Data Crimes"
-authors: ["Erin Stille, @ErrantlyErin"]
+authors: 
+- name: "Erin Stille, @ErrantlyErin"
 date: "January 9, 2023"
 description: "Bad Graphs and Bad Maths"
 tags: ["Data Crimes", "Graphs"]

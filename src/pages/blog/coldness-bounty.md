@@ -1,7 +1,8 @@
 ---
 layout: "../../layouts/BlogPage.astro"
 title: "The Coldness Bounty"
-authors: ["Dargo"]
+authors: 
+- name: "Dargo"
 date: "January 9, 2023"
 description: "Three months ago, two SIBR members announced that they would pay anyone who figured out how Coldness worked."
 tags: ["Beta", "Meta", "Nominative-Determinism", "Research"]
