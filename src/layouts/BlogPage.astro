@@ -5,8 +5,11 @@ import Page from "./Page.astro"
 
 export interface Props {
 	title: string;
-  authors: string[];
-  date: string;
+  authors: [{
+    name: string;
+    url: string;
+    avatar: string;
+  }];  date: string;
   description: string;
   tags: string[];
   image?: string;
@@ -29,7 +32,14 @@ const {
 
 <Page title={title} description={description}>
   <header>
-    <span class="info">By: {authors?.join(", ")} <span aria-hidden="true">•</span> {new Date(date).toDateString()}</span>
+    <span class="info">By: {authors.map((author: {
+      name: string; url: string; avatar: string;}, index: number, array: []) => {
+      if(author.url){
+        return (<span><a href={author.url}>{author.name}</a>{index < array.length-1 && <span>, </span>}</span>)
+      } else {
+        return (<span>{author.name}{index < array.length-1 && <span>, </span>}</span>)
+      }
+    })} <span aria-hidden="true">•</span> {new Date(date).toDateString()}</span>
     <h1 class="title">{title}</h1>
     <div class="tag">
       <Tags tags={tags}/>
