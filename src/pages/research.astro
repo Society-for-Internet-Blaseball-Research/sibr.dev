@@ -29,7 +29,7 @@ console.log(papers);
     <ul class="paper-list">
       {papers.map((paper: any) => (
         <li class="paper">
-          <a href={"/_papers/" + paper.file}>{paper.title}</a> ({paper.date})
+          <a href={"/papers/" + paper.file}>{paper.title}</a> ({paper.date})
         </li>
       ))}
     </ul>
