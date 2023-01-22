@@ -39,13 +39,14 @@
   /* Custom pairs */
   --space-s-l: clamp(1.00rem, calc(0.30rem + 3.52vw), 2.75rem);
   --space-s-2xl: clamp(1.00rem, calc(-0.81rem + 9.05vw), 5.50rem);
+  --space-xs-m: clamp(0.75rem, calc(0.22rem + 2.64vw), 2.06rem);
 
 
   /* Screen Sizes */
   /* use for desktop queries */
-  --screen-desktop: 1280px; /* Taken from sibr.dev */
+  --screen-desktop: min-width: 1280px; /* Taken from sibr.dev */
   /* use for mobile queries */
-  --screen-mobile: 1279px; /* Taken from sibr.dev */
+  --screen-mobile: max-width: 1279px; /* Taken from sibr.dev */
 	
 	/* Font Families */
 	--barlow: "Barlow", Arial, sans-serif;
