@@ -22,7 +22,7 @@ const {
 <Skeleton title={title} description={description}>
 	<Sidebar />
 	<main class="main-content">
-		<article class="article-content">
+		<article class="prose">
 			<slot />
 			<footer class="disclaimer">
 				<p>
@@ -33,15 +33,8 @@ const {
 	</main>
 </Skeleton>
 
-<style is:global>
-	html {
-		font-family: var(--serif);
-		background-color: rgb(var(--purble-background));
-	}
-
+<style lang="scss" is:global>
 	body {
-		color: rgb(var(--purble-text));
-		margin: var(--space-s-l, 1.5rem);
 		max-width: 70ch;
 	}
 
@@ -49,113 +42,266 @@ const {
 		font-family: var(--mono);
 	}
 
-	.article-content {
+	// TODO: Use only margin bottom once :has() is widely supported
+
+	.prose {
 		max-width: 100%;
-	}
 
-	.article-content > * + * {
-		margin-top: var(--space-m);
-	}
-
-	.article-content > :where(h1, h2, h3) + * {
-		margin-top: var(--space-s);
-	}
-
-	.article-content > blockquote > * + * {
-		margin-top: var(--space-m);
-	}
-
-	.article-content :where(ul, ol) {
-		padding: 0 0 0 var(--space-m);
-		list-style-position: outside;
-		font-size: var(--step-0);
-	}
-
-	.article-content sup {
-		font-size: var(--step--2);
-		text-decoration: none;
-	}
-
-	.article-content > :where(ul, ol) > * + * {
-		margin-top: var(--space-xs);
-	}
-	
-	.article-content > .footnotes * + * {
-		margin-top: var(--space-xs);
-	}
-
-
-
-	.article-content > .footnotes ol,
-	.article-content > .footnotes p {
-		list-style-position: outside;
-		font-size: var(--step--1);
-	}
-
-	.article-content > .footnotes {
-		margin-top: var(--space-l);
-	}
-
-	.article-content img {
-		margin: 0 auto;
-	}
-
-	.article-content > * {
-		/* max-width: 70ch; */
-	}
-	
-	.article-content > *:last-child {
-		margin-bottom: var(--space-l-xl);
-	}
-	
-	/* .article-content > *:first-child {
-		margin-top: var(--space-l-xl);
-	} */
-
-	.article-content h1 {
-		font-size: var(--step-4);
-	}
-
-	.article-content h2 {
-		font-size: var(--step-3);
-	}
-
-	.article-content h3 {
-		font-size: var(--step-2);
-	}
-
-	.article-content p {
-		font-size: var(--step-0);
-	}
-
-	.article-content p {
-		line-height: 1.7;
-	}
-
-	.article-content blockquote {
-		padding: var(--space-xs);
-		background-color: var(--purble-100);
-		border-left: 3px solid var(--purble-700);
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.article-content blockquote {
-			background-color: var(--purble-900);
-			border-left: 3px solid var(--purble-200);
+		// select every text element
+		& :where(blockquote, dd, div, dl, dt, figcaption, figure, li, ol, p, pre, ul, hr, table) {
+			line-height: 1.777;
 		}
-	}
 
-	.twitter-tweet {
-		margin-left: auto;
-		margin-right: auto;
-	}
+		// Body
+		& p {
+			margin-top: var(--space-m);
+			margin-bottom: var(--space-m);
+		}
 
-	.article-content :where(h1, h2, h3) {
-		font-weight: 600;
-	}
+		// Headings
+		& :is(h1, h2, h3, h4) {
+			font-weight: 600;
+			margin-top: var(--space-xl-2xl);
+			margin-bottom: var(--space-m);
+		}
 
-	:root {
-		--screen-desktop: 1280px;
+		& :is(h2, h3, h4) + * {
+			margin-top: 0;
+		}
+
+		& h1 {
+			font-size: var(--step-4);
+			margin-top: 0;
+			margin-bottom: var(--space-l);
+		}
+
+		& h2 {
+			font-size: var(--step-3);
+		}
+
+		& h3 {
+			font-size: var(--step-2);
+		}
+
+		& h4 {
+			font-size: var(--step-1);
+		}
+
+
+		// Lists
+
+		// & ul {
+		// 	list-style-type: none;
+		// 	& li::before {
+		// 		content: "•";
+		// 		display: inline-block;
+		// 		width: var(--space-m);
+		// 		margin-left: -var(--space-m);
+		// 		color: var(--purble-500);
+		// 	}
+		// }
+		
+		& :is(ul, ol) {
+			padding-left: var(--space-m);
+			list-style-position: outside;
+			& > li {
+				padding-left: var(--space-2xs);
+				& p {
+					margin-top: var(--space-2xs);
+					margin-bottom: var(--space-2xs);
+				}
+			}
+
+			& :is(ul, ol) {
+				margin-top: var(--space-2xs);
+				margin-bottom: var(--space-2xs);
+			}
+		}
+
+		& > :is(ul, ol) > li {
+			& p {
+				margin-top: var(--space-2xs);
+				margin-bottom: var(--space-2xs);
+			}
+      
+      & > * {
+          max-width: 70ch;
+      }
+
+			& > *:first-child {
+				margin-top: var(--space-2xs);
+			}
+
+			& > *:last-child {
+				margin-bottom: var(--space-2xs);
+			}
+		}
+
+		& li {
+			margin-top: var(--space-2xs);
+			margin-bottom: var(--space-2xs);
+		}
+
+		// Increases margin for special block elements
+		& :where(blockquote, img, video, figure, code, pre, hr, table),
+		& p > :where(blockquote, img, video, figure, code, pre, hr, table) { // Accounting for bug in remark rn
+			margin-top: var(--space-l);
+			margin-bottom: var(--space-l);
+		}
+
+		// Figure
+		& figure > * {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		& figcaption {
+			font-size: var(--step--1);
+			line-height: 1.5;
+			margin-top: var(--space-xs);
+		}
+
+		// Blockquotes
+		& blockquote {
+			--blockquote-background: var(--purble-100);
+			--blockquote-border: var(--purble-700);
+			@media (prefers-color-scheme: dark) {
+				--blockquote-background: var(--purble-900);
+				--blockquote-border: var(--purble-200);
+			}
+
+			padding-left: var(--space-s);
+			padding-right: var(--space-s);
+			@media (min-width: 1280px) {
+				margin-left: calc(-1 * var(--space-s) - 3px);
+				margin-right: calc(-1 * var(--space-s));
+			}
+
+			padding-top: var(--space-xs);
+			padding-bottom: var(--space-xs);
+			border-left: 3px solid var(--blockquote-border);
+			border-radius: 6px;
+			
+			background-color: var(--blockquote-background);
+
+			& > *:first-child {
+				margin-top: 0;
+			}
+
+			& > *:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		// Code
+		& code {
+			font-size: var(--step--1);
+		}
+		& pre {
+			font-size: var(--step--1);
+			line-height: 1.777;
+			border-radius: var(--space-3xs);
+			padding: var(--space-xs) var(--space-s);
+			@media (min-width: 1280px) {
+				margin-left: calc(-1 * var(--space-s));
+				margin-right: calc(-1 * var(--space-s));
+			}
+		}
+
+		// Horizontal Rule
+		& hr {
+			--hr-border-color: var(--purble-700);
+			--hr-border-size: 1px;
+			@media (prefers-color-scheme: dark) {
+				--hr-border-color: var(--purble-200);
+				--hr-border-size: 0.5px;
+			}
+
+			border: none;
+			border-top: var(--hr-border-size) solid var(--hr-border-color);
+
+			margin-top: var(--space-xl-2xl);
+			margin-bottom: var(--space-xl-2xl);
+
+			& + * {
+				margin-top: 0;
+			}
+		}
+
+		// Tables
+		& table {
+			--table-border-size: 1px;
+			@media (prefers-color-scheme: dark) {
+				--table-border-size: 0.5px;
+			}
+			border-collapse: collapse;
+			border-spacing: 0;
+			width: 100%;
+			margin-top: var(--space-l);
+			margin-bottom: var(--space-l);
+
+			@media (min-width: 1280px) {
+				margin-left: calc(-1 * var(--space-xs));
+				margin-right: calc(-1 * var(--space-xs));
+			}
+		}
+
+		& thead th {
+			--th-background: var(--purble-100);
+			@media (prefers-color-scheme: dark) {
+				--th-background: var(--purble-900);
+			}
+
+			border: var(--table-border-size) solid;
+			border-left-color: var(--purble-text);
+			border-right-color: var(--purble-text);
+			border-top-color: var(--purble-text);
+			border-bottom-color: var(--purble-text);
+			padding: var(--space-xs) var(--space-s);
+			text-align: left;
+
+			background-color: var(--th-background);
+		}
+		& tbody td,
+		& tfoot td {
+			border: var(--table-border-size) solid;
+			border-left-color: var(--purble-text);
+			border-right-color: var(--purble-text);
+			border-top-color: var(--purble-text);
+			border-bottom-color: var(--purble-text);
+			padding: var(--space-xs) var(--space-s);
+		}
+
+		// Tweet
+		& .twitter-tweet {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		// Centers images
+		& img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		// Text Stuff
+		& sup {
+			font-size: var(--step--2);
+			text-decoration: none;
+		}
+
+		// Footnotes
+		& .footnotes :is(p, ul, ol) {
+			font-size: var(--step--1);
+		}
+
+		// Edges
+		& > *:first-child {
+			margin-top: var(--space-l-xl);
+		}
+		& > *:last-child {
+			margin-bottom: var(--space-l-xl);
+		}
 	}
 
 	@media (min-width: 1280px) {
@@ -175,34 +321,6 @@ const {
 			align-items: center;
 		}
 	}
-
-	/* .link-bar {
-		display: flex;
-		flex-direction: column;
-		gap: var(--space-m);
-	}
-	.link-bar nav {
-			display: flex;
-			flex-direction: column;
-			gap: var(--space-s);
-	} */
-/* 
-		.link {
-			&.text {
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: var(--space-2xs);
-			}
-
-			&.icon {
-				display: flex;
-				justify-items: center;
-				flex-wrap: 1;
-				gap: var(--space-2xs);
-			}
-		}
-	} */
 
 	.disclaimer p {
 		text-align: center;

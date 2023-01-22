@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import BlogPost from "../components/BlogPost.astro";
 
-const posts = (await Astro.glob('./blog/*.md')).map(post=>{
+const posts = (await Astro.glob('./blog/*.{md,mdx}')).map(post=>{
   let front = post.frontmatter;
   front.url = post.url;
   return front;

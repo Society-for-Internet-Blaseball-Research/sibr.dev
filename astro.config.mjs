@@ -11,7 +11,11 @@ export default defineConfig({
   markdown: {
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
-    extendDefaultPlugins: true
+    extendDefaultPlugins: true,
+    shikiConfig: {
+      theme: 'dracula',
+      wrap: true,
+    },
   },
   integrations: [mdx()]
 });
