@@ -1,7 +1,11 @@
 ---
-output: 
-  html_document: 
-    keep_md: yes
+layout: "../../layouts/BlogPage.astro"
+title: "Reaching Insights about Stuff: Getting A Broad Picture With Linear Modeling"
+authors: 
+- name: "glumbaron"
+date: "January 22, 2023"
+description: "Let's use basic linear modeling to get a sense of how player attributes affect performance!"
+tags: []
 ---
 # Reaching Insights about Stuff: Getting A Broad Picture With Linear Modeling
 
@@ -627,7 +631,7 @@ So what's up with stealth from earlier? Stealth is important for "power"? That's
 <table style="border-collapse:collapse; border:none;">
 <tr>
 <th style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm;  text-align:left; ">&nbsp;</th>
-<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">1b_h</th>
+<th colspan="3" style="border-top: double; text-align:center; font-style:normal; font-weight:bold; padding:0.2cm; ">1b/h</th>
 </tr>
 <tr>
 <td style=" text-align:center; border-bottom:1px solid; font-style:italic; font-weight:normal;  text-align:left; ">Predictors</td>
@@ -830,7 +834,7 @@ Now, walks per 9 innings:
 
 ~~You heard it here, folks; stuff increases walks.~~ Seriously though, it's really just **control**. If you can throw strikes, you won't walk people. Remarkable! If you plot the relationship, it's quite clear, and also not actually linear (I should do another post that just has a bunch of plots, honestly).
 
-![Scatter plot of BB/9 versus Control. Walk rate appears to be inversely related to Control, in some fashion.](basic_linear_modeling_files/figure-html/unnamed-chunk-11-1.png)
+![Scatter plot of BB/9 versus Control. Walk rate appears to be inversely related to Control, in some fashion.](/blog/basic-linear-modeling/bb9.png)
 
 Let's look at hits per 9 innings next:
 
@@ -979,7 +983,7 @@ Last fit for this section: batting average on balls in play (BABIP). In the Beta
 
 This fit is quite rough. **Stuff** has the strongest relationship to BABIP of the three pitching attributes, but...just look at it. It's not strong. But maybe it's not nothing? It's definitely nowhere near as strong as Unthwackability used to be, though.
 
-![Scatter plot of BABIP versus a linear combination of Stuff and Guile. The relationship seems very weak; there is a possible hint of a negative slope, but tons of scatter.](basic_linear_modeling_files/figure-html/unnamed-chunk-15-1.png)
+![Scatter plot of BABIP versus a linear combination of Stuff and Guile. The relationship seems very weak; there is a possible hint of a negative slope, but tons of scatter.](/blog/basic-linear-modeling/babip.png)
 
 ## Fielding {#fielding}
 
