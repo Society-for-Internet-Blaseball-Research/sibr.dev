@@ -7,7 +7,6 @@ date: "January 22, 2023"
 description: "Let's use basic linear modeling to get a sense of how player attributes affect performance!"
 tags: []
 ---
-# Reaching Insights about Stuff: Getting A Broad Picture With Linear Modeling
 
 The new era of Blaseball has come with a completely rewritten simulation with completely new attributes. Many of us in SIBR want to figure out what these attributes do! But it's hard to know where to look first, or how to study them. And it's tempting to want to figure out "the whole picture" for a given interaction or attribute. But I want to take a simpler approach. Rather than try to solve a question like "what does thwack do," I want to get a broad sense of what attributes are *related to* various performance stats. To do this, let's just use one of the simplest tools available to a statistician: [linear regression](https://en.wikipedia.org/wiki/Linear_regression).
 
