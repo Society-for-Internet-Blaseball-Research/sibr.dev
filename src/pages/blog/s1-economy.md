@@ -1,5 +1,13 @@
+---
+layout: "../../layouts/BlogPage.astro"
+title: "The Economy, Season 1"
+authors: 
+- name: "Frostbird"
+date: "January 22, 2023"
+description: "Insights on betting and the new era economy."
+tags: ["Economy", "Research"]
+---
 
-# The Economy
 At the end of the last era, The Coin was melted (RIV girlboss). The many methods fans had to make coins were destroyed. Even the very concept of money was abolished. The era of expansion, consumerism, inflation, and debt was at an end. Then Blaseball returned, and we forgot all about those lessons. All hail the new economy!
 
 ![An account feed message from S24 of the Expansion Era. It reads "You earned nothing from 51 Incinerations!"](/blog/s1-economy/YouEarnedNothing.png)
