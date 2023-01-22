@@ -41,7 +41,7 @@ First, I tested some very simple strategies that only required information from 
 
 It doesn't seem right to bet on some games and not others, though. So I also developed some combined methods of betting. These performed even better!
 
-![Two tables showing profits from different betting strategies. The first is "Bet Better Record when Wins Difference is <X>, otherwise bet Favorite". <X> runs from >=1 to >=10. It peaks at 5691 at >=2 and slowly decreases to 4162 chips at >=10. The second is "Bet Favorite when Odds <X>, otherwise bet More Wins." <X> runs from >50% to >59%. The table grows rapidly to ~5100 chips at >53% and holds steady (within ~100 chips) all the way to >59%.](ComboBets.png)
+![Two tables showing profits from different betting strategies. The first is "Bet Better Record when Wins Difference is <X>, otherwise bet Favorite". <X> runs from >=1 to >=10. It peaks at 5691 at >=2 and slowly decreases to 4162 chips at >=10. The second is "Bet Favorite when Odds <X>, otherwise bet More Wins." <X> runs from >50% to >59%. The table grows rapidly to ~5100 chips at >53% and holds steady (within ~100 chips) all the way to >59%.](/blog/s1-economy/ComboBets.png)
 
 Then I looked at more complicated methods of betting. I calculated the non-rounded star ratings of each team's skills (batting, running, defense, pitching, and vibes).  To my surprise, batting stars was the best predictor of a win so far! Congrats to the Sunbeams for winning that NEW Batting Boost blessing, I guess. I also calculated the stars of the starting pitchers for each game, and to no surprise that performed a little better than the team's overall pitching.
 
