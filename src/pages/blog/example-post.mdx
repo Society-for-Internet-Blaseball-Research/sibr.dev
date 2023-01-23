@@ -299,6 +299,32 @@ import Callout from '@components/Callout.astro';
 
 Anyways, I guess that's all we have at the moment. So, ciao for now, and see you next time we update this page!
 
+### Utility components
+
+To support certain features, we need utility components. For example, here you have a normal markdown table:
+
+| Title | Entry |
+| ----- | ----- |
+| name  | data  |
+| **bonus** | *more*  |
+
+Due to markdown limitations, we cannot represent a horizontal table. Instead, we can use a `<Table>` component...
+
+```mdx
+import Table from '@components/Table.astro';
+
+<Table rows={[
+  { title: "Title", data: ["name", "**bonus**"]},
+  { title: "Entry", data: ["data", "*more*"]},
+]}/>
+```
+
+import Table from '@components/Table.astro';
+
+<Table rows={[
+  { title: "Title", data: ["name", "**bonus**"]},
+  { title: "Entry", data: ["data", "*more*"]},
+]}/>
 
 $$
 
