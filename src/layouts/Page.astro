@@ -41,7 +41,7 @@ const {
 	// TODO: Use only margin bottom once :has() is widely supported
 
 	.prose {
-		max-width: 100%;
+		max-width: 70ch;
 
 		// select every text element
 		& :where(blockquote, dd, div, dl, dt, figcaption, figure, li, ol, p, pre, ul, hr, table) {
@@ -235,6 +235,8 @@ const {
 			width: 100%;
 			margin-top: var(--space-l);
 			margin-bottom: var(--space-l);
+			display: block;
+			overflow-x: auto;
 
 			@media (min-width: 1280px) {
 				margin-left: calc(-1 * var(--space-xs));
@@ -242,7 +244,7 @@ const {
 			}
 		}
 
-		& thead th {
+		& th {
 			--th-background: var(--purble-100);
 			@media (prefers-color-scheme: dark) {
 				--th-background: var(--purble-900);
