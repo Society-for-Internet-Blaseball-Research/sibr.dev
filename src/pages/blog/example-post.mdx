@@ -299,6 +299,123 @@ import Callout from '@components/Callout.astro';
 
 Anyways, I guess that's all we have at the moment. So, ciao for now, and see you next time we update this page!
 
+## Other
+
+### Vertical Table
+
+#### Basic
+
+```mdx
+<table>
+  <tr>
+    <th> Title </th>
+    <td> `name` </td>
+    <td> **bonus** </td>
+  </tr>
+  <tr>
+    <th> Entry </th>
+    <td> $$ data^2 $$ </td>
+    <td> *more* </td>
+  </tr>
+</table>
+```
+
+<table>
+  <tr>
+    <th> Title </th>
+    <td> `name` </td>
+    <td> **bonus** </td>
+  </tr>
+  <tr>
+    <th> Entry </th>
+    <td> $$ data^2 $$ </td>
+    <td> *more* </td>
+  </tr>
+</table>
+
+#### Scroll
+
+```mdx
+<table>
+  <tr>
+    <th> Long </th>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+  </tr>
+</table>
+```
+
+<table>
+  <tr>
+    <th> Long </th>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+    <td> Buffer </td>
+  </tr>
+</table>
+
+#### Complex
+
+```mdx
+<table>
+  <tr>
+      <td rowspan="2"> tall </td>
+      <th colspan="2"> King Table </th>
+  </tr>
+  <tr>
+      <th> Sub1 </th>
+      <th> Sub2 </th>
+  </tr>
+  <tr>
+      <th> Entry 1 </th>
+      <td> some data </td>
+      <td> $$ \frac{1}{\alpha} $$ </td>
+  </tr>
+</table>
+```
+
+<table>
+  <tr>
+      <td rowspan="2"> tall </td>
+      <th colspan="2"> King Table </th>
+  </tr>
+  <tr>
+      <th> Sub1 </th>
+      <th> Sub2 </th>
+  </tr>
+  <tr>
+      <th> Entry 1 </th>
+      <td> some data </td>
+      <td> $$ \frac{1}{\alpha} $$ </td>
+  </tr>
+</table>
 
 $$
 
