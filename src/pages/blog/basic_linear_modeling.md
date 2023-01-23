@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPage.astro"
-title: "Reaching Insights about Stuff: Getting A Broad Picture With Linear Modeling"
+title: "Reaching In-Sights about Stuff: Getting A Broad Picture With Linear Modeling"
 authors: 
 - name: "glumbaron"
 date: "January 22, 2023"
@@ -12,17 +12,18 @@ The new era of Blaseball has come with a completely rewritten simulation with co
 
 I'm using R (through RStudio and the tidyverse ecosystem) for this post, because it's designed for statistical analysis, it's elegant at it, and I wanted to learn how to use it better. Plus it lets me write pretty reports like this using RMarkdown!
 
-If you want to skip around, here are some heading links:
+If you want to skip around, here are some section links:
 
 -   [Summary](#summary)
--   [Data Loading & Cleaning](#loading)
+-   [Data Loading & Cleaning](#data-loading--cleaning)
 -   [Batting](#batting)
 -   [Pitching](#pitching)
 -   [Fielding](#fielding)
+-   [Conclusion](#conclusion)
 
-## Summary {#summary}
+## Summary
 
-Maybe you're thinking, "why do you want me to look at all those numbers? Just tell me what does what." Well, I can't *really* tell you what does what, because correlation does not equal causation. But I can at least summarize the findings at the top. Here I have grouped the results by category "+Stat" means "this attribute is positively correlated with this statistic," and "-Stat" means "this attribute is negatively correlated with this statistic."
+Maybe you're thinking, "why do you want me to look at all those numbers? Just tell me what does what." Well, I can't *really* tell you what does what, because correlation does not equal causation. But I can at least summarize the findings at the top. Here I have grouped the results by category "+Stat" means "this attribute is positively correlated with this statistic," and "-Stat" means "this attribute is negatively correlated with this statistic." Remember that **this list is by no means comprehensive, or necessarily certain!**
 
 -   Batting
     -   Sight: +BA, +OBP, +SLG. +BB/PA, -SO/PA.
@@ -45,7 +46,7 @@ Maybe you're thinking, "why do you want me to look at all those numbers? Just te
     -   Survive: it's vibes lol. Saw a weak signal in HR/H, but have no idea what that means.
     -   Drama: it's vibes lol
 
-## Data Loading & Cleaning {#loading}
+## Data Loading & Cleaning
 
 First, of course, we load the data. I've already done the work of joining the player stats from [Abyline's Season N1 stats spreadsheet](https://docs.google.com/spreadsheets/d/18_FR5DaN3w4PrxawNHbUXgeBum6ia0X-PF5jHmIRAtY/edit#gid=394555595) to player attributes gathered from our `https://api2.sibr.dev/mirror/players` endpoint, and saved it as a CSV file. You can find a copy of this CSV file [here](https://faculty.sibr.dev/~glumbaron/player_stats_attrs_day90.csv).
 
@@ -113,7 +114,7 @@ head(players_stats)
 ## #   fc <dbl>, dp <dbl>, tp <dbl>, sac <dbl>, rbi <dbl>, ba <dbl>, obp <dbl>, …
 ```
 
-## Batting {#batting}
+## Batting
 
 From here, we can look at whatever we want. Let's start simple: what attributes of the batter are related to their batting average?
 
@@ -307,7 +308,7 @@ tab_model(s_ba, show.ci = FALSE, show.se = TRUE, digits=4, digits.p=2, p.style="
 
 </table>
 
-The fit quality is almost identical with just four factors, so I think we're justified dropping the others. My conclusion: Batting average is positively correlated with **ferocity**, **thwack**, **stealth**, and **sight** (in roughly that order). Stealth's presence here is weird; I expected hustle might matter just from the plain meaning of the word, but not stealth.
+The fit quality is almost identical with just four factors, so I think we're justified dropping the others. My conclusion: Batting average is positively correlated with **Ferocity**, **Thwack**, **Stealth**, and **sSight** (in roughly that order). Stealth's presence here is weird; I expected Hustle might matter just from the plain meaning of the word, but not stealth.
 
 For the rest of this post I'll skip to the "best" fit I have, but this is in general how I do these. I am not trying to make strong claims, so I am not worrying about whether my statistical practice is optimal. I'm also skipping showing the code; it all looks pretty much identical to the previous block, just with different variables, and different formatting arguments.
 
@@ -422,7 +423,7 @@ Onward to on-base percentage and slugging percentage:
 
 </table>
 
-Wow, it's the same four attributes! For OBP, it's **ferocity**, **thwack**, **stealth**, and **sight** (sight is a bit stronger here than for BA). For SLG, it's **ferocity**, **stealth**, **thwack**, and **sight**, with ferocity being almost twice as strong as stealth and thwack, which are on par with each other. Interesting. Let's do walk rate and strikeout rate next:
+Wow, it's the same four attributes! For OBP, it's **Ferocity**, **Thwack**, **Stealth**, and **Sight** (Sight is a bit stronger here than for BA). For SLG, it's **Ferocity**, **Stealth**, **Thwack**, and **sSight**, with Ferocity being almost twice as strong as Stealth and Thwack, which are on par with each other. Interesting. Let's do walk rate and strikeout rate next:
 
 <table style="border-collapse:collapse; border:none;">
 <tr>
@@ -509,9 +510,9 @@ Wow, it's the same four attributes! For OBP, it's **ferocity**, **thwack**, **st
 
 </table>
 
-They're both just **sight** and **thwack**! Perhaps sight helps you draw walks and avoid strikeouts, while thwack makes both less likely. My guess is that higher thwack batters put the ball into play more, which would make both these outcomes less frequent. Important note, though: The R^2^ for BB/PA is *much lower* than the other fits we've done so far, which suggests that most of the variation is not being captured by our variables. Which makes sense; I'm not considering pitcher attributes at all (I can't, with this dependent variable).
+They're both just **Sight** and **Thwack**! Perhaps Sight helps you draw walks and avoid strikeouts, while Thwack makes both less likely. My guess is that higher Thwack batters put the ball into play more, which would make both these outcomes less frequent. Important note, though: The R<sup>2</sup> for BB/PA is *much lower* than the other fits we've done so far, which suggests that most of the variation is not being captured by our variables. Which makes sense; I'm not considering pitcher attributes at all (I can't, with this dependent variable).
 
-So what's up with stealth from earlier? Stealth is important for "power"? That's weird. Let's look at the rates of types of hit relative to total hits, so HR/H, 3B/H, etc:
+So what's up with Stealth from earlier? Stealth is important for "power"? That's weird. Let's look at the rates of types of hit relative to total hits, so HR/H, 3B/H, etc:
 
 <table style="border-collapse:collapse; border:none;">
 <tr>
@@ -670,9 +671,9 @@ So what's up with stealth from earlier? Stealth is important for "power"? That's
 
 </table>
 
-I've cut down variables pretty aggressively here. The R^2^ values aren't all that high for some of these, no matter how many batter attributes I include. Clearly, it's not just up to the batter---the pitcher and defense should matter for these! The best I've got is the observation that **ferocity** increases home run rate, **stealth** increases double and triple rate, and both of those, in turn, decrease single rate the same amount that they increase the other outcomes. There is also my first trace of a vibes attribute, as **survive** seems to be showing up in the home run rate. It's a negative factor, though, which I don't understand. I have no current model for how vibes might work, though, so I'm just glad to see one of the vibes attributes stick around in anything, even if it's barely below the 0.001 significance threshold for the weakest fit in this set. As another friend put it, "someone in the data set hits home runs, and we think they might have less survive, but we're not sure" is probably the most you can conclude from that relationship.
+I've cut down variables pretty aggressively here. The R<sup>2</sup> values aren't all that high for some of these, no matter how many batter attributes I include. Clearly, it's not just up to the batter---the pitcher and defense should matter for these! The best I've got is the observation that **Ferocity** increases home run rate, **Stealth** increases double and triple rate, and both of those, in turn, decrease single rate the same amount that they increase the other outcomes. There is also my first trace of a vibes attribute, as **Survive** seems to be showing up in the home run rate. It's a negative factor, though, which I don't understand. I have no current model for how vibes might work, though, so I'm just glad to see one of the vibes attributes stick around in anything, even if it's barely below the 0.001 significance threshold for the weakest fit in this set. As another friend put it, "someone in the data set hits home runs, and we think they might have less Survive, but we're not sure" is probably the most you can conclude from that relationship.
 
-## Pitching {#pitching}
+## Pitching
 
 Now let's move on to pitching stats! First, perhaps the most general pitching stat, ERA:
 
@@ -725,7 +726,7 @@ Now let's move on to pitching stats! First, perhaps the most general pitching st
 
 </table>
 
-ERA has a strong relationship with all 3 pitching attributes. In order of importance, **stuff** \> **control** \> **guile**, though it's fairly balanced. The R^2^ of 0.65 suggests that there is a lot more going on than just this, which is good, because of course there is.
+ERA has a strong relationship with all 3 pitching attributes. In order of importance, **Stuff** \> **Control** \> **Guile**, though it's fairly balanced. The R<sup>2</sup> of 0.65 suggests that there is a lot more going on than just this, which is good, because of course there is.
 
 Now, let's look at rate stats for outcomes. Strikeouts per 9 innings:
 
@@ -778,7 +779,7 @@ Now, let's look at rate stats for outcomes. Strikeouts per 9 innings:
 
 </table>
 
-Strikeouts seem to be **stuff** \> **guile** \> **control**. Plausibly, "better stuff" is harder to hit, and "trickier pitches" are as well. To look deeper at this, if I had a per-pitch data set I would want to investigate swinging strikes with a logistic regression.
+Strikeouts seem to be **Stuff** \> **Guile** \> **Control**. Plausibly, "better stuff" is harder to hit, and "trickier pitches" are as well. To look deeper at this, if I had a per-pitch data set I would want to investigate swinging strikes with a logistic regression.
 
 Now, walks per 9 innings:
 
@@ -831,7 +832,7 @@ Now, walks per 9 innings:
 
 </table>
 
-~~You heard it here, folks; stuff increases walks.~~ Seriously though, it's really just **control**. If you can throw strikes, you won't walk people. Remarkable! If you plot the relationship, it's quite clear, and also not actually linear (I should do another post that just has a bunch of plots, honestly).
+~~You heard it here, folks; Stuff increases walks.~~ Seriously though, it's really just **Control**. If you can throw strikes, you won't walk people. Remarkable! If you plot the relationship, it's quite clear, and also not actually linear (I should do another post that just has a bunch of plots, honestly).
 
 ![Scatter plot of BB/9 versus Control. Walk rate appears to be inversely related to Control, in some fashion.](/blog/basic-linear-modeling/bb9.png)
 
@@ -880,7 +881,7 @@ Let's look at hits per 9 innings next:
 
 </table>
 
-Hits depend on **stuff** and **guile**, it seems. We're barely above 0.5 R^2^, though, so clearly the pitcher is not the only determinant of this; the batter and defense factors will matter a lot too.
+Hits depend on **Stuff** and **Guile**, it seems. We're barely above 0.5 R<sup>2</sup>, though, so clearly the pitcher is not the only determinant of this; the batter and defense factors will matter a lot too.
 
 Now, how about home runs per 9? Those probably don't depend on the defense.
 
@@ -927,7 +928,7 @@ Now, how about home runs per 9? Those probably don't depend on the defense.
 
 </table>
 
-Home run rate also depends on **stuff** and **guile**, but less strongly: only about 0.425 R^2^. I could be glib and say that 40% of home runs is the pitcher, 40% is the batter, and 20% is, I don't know, the pitcher and batter heatmaps. But I won't say that. You can't pin that on me!
+Home run rate also depends on **Stuff** and **Guile**, but less strongly: only about 0.425 R<sup>2</sup>. I could be glib and say that 40% of home runs is the pitcher, 40% is the batter, and 20% is, I don't know, the pitcher and batter heatmaps. But I won't say that. You can't pin that on me!
 
 Last fit for this section: batting average on balls in play (BABIP). In the Beta-era simulation, pitchers had a pretty significant impact on this, through Unthwackability. Do we still see that sort of impact in the new simulation?
 
@@ -984,7 +985,7 @@ This fit is quite rough. **Stuff** has the strongest relationship to BABIP of th
 
 ![Scatter plot of BABIP versus a linear combination of Stuff and Guile. The relationship seems very weak; there is a possible hint of a negative slope, but tons of scatter.](/blog/basic-linear-modeling/babip.png)
 
-## Fielding {#fielding}
+## Fielding
 
 The fielding stats that we have in this data set aren't very sophisticated, so we can only do so much with them. But we can at least get a start, here. Besides, it's much harder to interpret a complicated derived stat regressed against attributes, because there is so much more going on. Let's start with a super basic one: how many plays will a fielder actually get?
 
@@ -1037,7 +1038,7 @@ The fielding stats that we have in this data set aren't very sophisticated, so w
 
 </table>
 
-It seems that total balls fielded only depends on **reach**. And this is obviously quite incomplete; R^2^ of 0.5 is Not So Great.
+It seems that total balls fielded only depends on **Reach**. And this is obviously quite incomplete; R<sup>2</sup> of 0.5 is Not So Great.
 
 The next natural question to ask is, what about the fielder's rate of getting outs from balls in play (i.e, `outs/plays)`?
 
@@ -1078,9 +1079,9 @@ The next natural question to ask is, what about the fielder's rate of getting ou
 
 </table>
 
-This seems to just be related to **magnet**. This at least has more explanatory power than reach did above (I guess, if you're willing to interpret R^2^ that way, which is probably wrong in some way that I can't explain properly?).
+This seems to just be related to **Magnet**. This at least has more explanatory power than Reach did above (I guess, if you're willing to interpret R<sup>2</sup> that way, which is probably wrong in some way that I can't explain properly?).
 
-Beyond this, the stats I have here stop being very amenable to this kind of analysis. The problem is, they're mostly all the same. The more reach you have, the more plays you're involved in, so the more outs you get, but also the more "hits you give up", the more "runs you allow", etc. Having more magnet seems to increase the "good" defensive outcomes and decrease the "bad" ones. None of that adds any insight.
+Beyond this, the stats I have here stop being very amenable to this kind of analysis. The problem is, they're mostly all the same. The more Reach you have, the more plays you're involved in, so the more outs you get, but also the more "hits you give up", the more "runs you allow", etc. Having more Magnet seems to increase the "good" defensive outcomes and decrease the "bad" ones. None of that adds any insight.
 
 But there is one more thing I want to try. Let's get bold and look at double plays started for each fielder. Thanks to my buddy Nate (GraveError on discord), who saw these trends when looking at high-double-play fielders and suggested them to me.
 
@@ -1127,7 +1128,7 @@ But there is one more thing I want to try. Let's get bold and look at double pla
 
 </table>
 
-**Reflex** is the only defense attribute that contributes here. The other factor I've included, `first_dist`, is "[Manhattan distance](https://xlinux.nist.gov/dads/HTML/manhattanDistance.html) from the fielder's position to first base." Fielders with higher reflex turn more double plays, and fielders closer to first base turn *fewer*---perhaps they choose to take the out at first more often. This fit only captures \~40% of the variance, so it's sketchy, but I'm honestly impressed it even does that well. I tested the distance to every other base as well (yes, including 0th and 5th), and distance to first is by far the best predictor of the set.
+**Reflex** is the only defense attribute that contributes here. The other factor I've included, `first_dist`, is "[Manhattan distance](https://xlinux.nist.gov/dads/HTML/manhattanDistance.html) from the fielder's position to first base." Fielders with higher Reflex turn more double plays, and fielders closer to first base turn *fewer*---perhaps they choose to take the out at first more often. This fit only captures \~40% of the variance, so it's sketchy, but I'm honestly impressed it even does that well. I tested the distance to every other base as well (yes, including 0th and 5th), and distance to first is by far the best predictor of the set.
 
 By the way, I didn't find even a hint of a relationship between batter attributes and *grounding into* double plays. It's probably mostly on the defense, I guess?
 
@@ -1146,27 +1147,21 @@ Let's finish up by looking at runner advances allowed, divided by balls fielded:
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">(Intercept)</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0714 <sup>***</sup></td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0041</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>9.35e&#45;44</strong></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0561 <sup>***</sup></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0028</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>1.14e&#45;50</strong></td>
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">reflex</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">&#45;0.0500 <sup>***</sup></td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0068</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>3.27e&#45;12</strong></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">&#45;0.0197 <sup>***</sup></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0033</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>6.48e&#45;09</strong></td>
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">home dist</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">&#45;0.0065 <sup>***</sup></td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0007</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>6.15e&#45;17</strong></td>
-</tr>
-<tr>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; ">reflex × home dist</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0060 <sup>***</sup></td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0012</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>1.03e&#45;06</strong></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">&#45;0.0034 <sup>***</sup></td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  ">0.0004</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:center;  "><strong>1.83e&#45;15</strong></td>
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm; border-top:1px solid;">Observations</td>
@@ -1174,7 +1169,7 @@ Let's finish up by looking at runner advances allowed, divided by balls fielded:
 </tr>
 <tr>
 <td style=" padding:0.2cm; text-align:left; vertical-align:top; text-align:left; padding-top:0.1cm; padding-bottom:0.1cm;">R<sup>2</sup> / R<sup>2</sup> adjusted</td>
-<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.397 / 0.389</td>
+<td style=" padding:0.2cm; text-align:left; vertical-align:top; padding-top:0.1cm; padding-bottom:0.1cm; text-align:left;" colspan="3">0.328 / 0.322</td>
 </tr>
 <tr>
 <td colspan="4" style="font-style:italic; border-top:double black; text-align:right;">* p&lt;0.05&nbsp;&nbsp;&nbsp;** p&lt;0.01&nbsp;&nbsp;&nbsp;*** p&lt;0.001</td>
@@ -1182,4 +1177,15 @@ Let's finish up by looking at runner advances allowed, divided by balls fielded:
 
 </table>
 
-This is not independent of double plays, of course; if you successfully turn double plays you prevent runners from advancing. But it might also include ability to "hold the runners," though that is very speculative. I need to stress: this is probably the sketchiest fit in this entire post. Including the distance from home plate increases the R^2^ from 0.1 to 0.3, which is kind of wild given how small that coefficient is. But regardless, the *hint* of a signal here is something like this: **reflex** might be involved in handling baserunners, and infielders might have a better shot at holding runners than outfielders.
+This is not independent of double plays, of course; if you successfully turn double plays you prevent runners from advancing. But it might also include ability to "hold the runners," though that is very speculative. I need to stress: this is probably the sketchiest fit in this entire post. Including the distance from home plate increases the R<sup>2</sup> from 0.1 to 0.3, which is kind of wild given how small that coefficient is. But regardless, the *hint* of a signal here is something like this: **Reflex** might be involved in handling baserunners, and infielders might have a better shot at holding runners than outfielders.
+
+## Conclusion
+
+Well, that's about it for now. I haven't covered every possible stat you could run against attributes, but hopefully my results are useful to give you an idea of what is likely at play here. There are tons of ways to build on this sort of basic picture, many of which are already under way over in the SIBR discord (not to imply that people are building on _my work specifically_; we've been doing a lot of work in parallel). Here are few things that I'm currently interested in:
+
+- More complex regressions for certain stats: simple counting stats might be better served by using the log of the data (for reasons involving words like "heteroskedasticity"), or perhaps a Poisson regression.
+- Per-PA or per-pitch analysis: look at the data on a "does a certain outcome happen or not, yes/no" level. This requires logistic regression, which is its own can of worms, but has in the past been very successful at getting insight into the Beta simulation (and has had some work done on it for the new sim already, by KJC and others).
+- "Geography" (defender positioning and hit location) and its effects on defense: there is now an entire channel in SIBR with this name, where we have been analyzing these factors. It is clearly very important, and I have only barely touched it in this post.
+- Batter and pitcher "Zones": KJC in the SIBR discord did some fantastic work using a logistic-regression-based ML model, looking at (an indirect measure of) hit location and how it relates to the "heatmaps" that batters and pitchers all have. A few days ago I took his results and combed through them carefully, and I think I found some interesting patterns, but it is very complex and noisy right now. Two players got their Zones "maxed out" in the NEW Season 1 Election, so hopefully they have noticeable outcome differences that we can investigate at the end of NEW Season 2...
+
+If you're interested in contributing to our collective understanding of NEW Blaseball, I invite you to go to the SIBR Discord and grab the Research Access role. There are many awesome people in that section of the server who have been really helpful to me and others in getting started doing research and analysis on Blaseball! We love to see people trying to figure stuff out, even if it's "just a first attempt" or whatever.
