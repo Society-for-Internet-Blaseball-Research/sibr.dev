@@ -1,29 +1,21 @@
+---
+export interface Props {
+    rows: Array<{
+        title: string
+        data: unknown[]
+    }>
+}
+
+const props = Astro.props as Props;
+---
+
 <table>
-    <slot />
+    {props.rows.map(({title, data}) => (
+        <tr>
+            <th> {title} </th>
+            {data.map(item => (
+                <td> {item} </td>
+            ))}
+        </tr>
+    ))}
 </table>
-
-<style lang="scss">
-    table {
-		display: block;
-        overflow-x: auto;
-
-        // Copied from Page.astro with minor tweaks to deal with the
-        // lack of thead.
-        & :global(th) {
-			--th-background: var(--purble-100);
-			@media (prefers-color-scheme: dark) {
-				--th-background: var(--purble-900);
-			}
-
-			border: var(--table-border-size) solid;
-			border-left-color: var(--purble-text);
-			border-right-color: var(--purble-text);
-			border-top-color: var(--purble-text);
-			border-bottom-color: var(--purble-text);
-			padding: var(--space-xs) var(--space-s);
-			text-align: left;
-
-			background-color: var(--th-background);
-		}
-    }
-</style>

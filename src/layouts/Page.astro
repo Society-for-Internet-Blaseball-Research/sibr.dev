@@ -47,7 +47,7 @@ const {
 	// TODO: Use only margin bottom once :has() is widely supported
 
 	.prose {
-		max-width: 70ch;
+		max-width: 100%;
 
 		// select every text element
 		& :where(blockquote, dd, div, dl, dt, figcaption, figure, li, ol, p, pre, ul, hr, table) {
@@ -248,8 +248,7 @@ const {
 			}
 		}
 
-		// If this gets updated, please update Table.astro as well.
-		& thead th {
+		& th {
 			--th-background: var(--purble-100);
 			@media (prefers-color-scheme: dark) {
 				--th-background: var(--purble-900);

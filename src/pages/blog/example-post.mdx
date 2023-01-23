@@ -305,7 +305,7 @@ To support certain features, we need utility components. For example, here you h
 
 | Title | Entry |
 | ----- | ----- |
-| `name`  | $$ data^2 $$  |
+| name  | data  |
 | **bonus** | *more*  |
 
 Due to markdown limitations, we cannot represent a horizontal table. Instead, we can use a `<Table>` component...
@@ -313,94 +313,18 @@ Due to markdown limitations, we cannot represent a horizontal table. Instead, we
 ```mdx
 import Table from '@components/Table.astro';
 
-<Table>
-  <tr>
-    <th> Title </th>
-    <td> `name` </td>
-    <td> **bonus** </td>
-  </tr>
-  <tr>
-    <th> Entry </th>
-    <td> $$ data^2 $$ </td>
-    <td> *more* </td>
-  </tr>
-</Table>
+<Table rows={[
+  { title: "Title", data: ["name", "**bonus**"]},
+  { title: "Entry", data: ["data", "*more*"]},
+]}/>
 ```
 
 import Table from '@components/Table.astro';
 
-<Table>
-  <tr>
-    <th> Title </th>
-    <td> `name` </td>
-    <td> **bonus** </td>
-  </tr>
-  <tr>
-    <th> Entry </th>
-    <td> $$ data^2 $$ </td>
-    <td> *more* </td>
-  </tr>
-</Table>
-
-This is identical to using `table` - except additional styling and layout rules apply. For example, it adds scrolling functionality:
-
-<Table>
-  <tr>
-    <th> Long </th>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-    <td> Buffer </td>
-  </tr>
-</Table>
-
-Also supports more complex arrangements:
-
-```mdx
-<Table>
-  <tr>
-      <td rowspan="2"> tall </td>
-      <th colspan="2"> King Table </th>
-  </tr>
-  <tr>
-      <th> Sub1 </th>
-      <th> Sub2 </th>
-  </tr>
-  <tr>
-      <th> Entry 1 </th>
-      <td> some data </td>
-      <td> $$ \frac{1}{\alpha} $$ </td>
-  </tr>
-</Table>
-```
-
-<Table>
-  <tr>
-      <td rowspan="2"> tall </td>
-      <th colspan="2"> King Table </th>
-  </tr>
-  <tr>
-      <th> Sub1 </th>
-      <th> Sub2 </th>
-  </tr>
-  <tr>
-      <th> Entry 1 </th>
-      <td> some data </td>
-      <td> $$ \frac{1}{\alpha} $$ </td>
-  </tr>
-</Table>
+<Table rows={[
+  { title: "Title", data: ["name", "**bonus**"]},
+  { title: "Entry", data: ["data", "*more*"]},
+]}/>
 
 $$
 
