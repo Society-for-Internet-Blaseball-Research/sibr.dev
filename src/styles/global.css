@@ -4,7 +4,10 @@ html {
 }
 
 body {
-  margin: var(--space-s-l, 1.5rem);
+  max-width: 80ch;
+  width: 100%;
+  padding: var(--space-s-l, 1.5rem);
+  margin: 0 auto;
   font-size: var(--step-0);
   color: rgb(var(--purble-text));
 }
