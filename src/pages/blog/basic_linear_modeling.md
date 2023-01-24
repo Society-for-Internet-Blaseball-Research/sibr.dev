@@ -308,7 +308,7 @@ tab_model(s_ba, show.ci = FALSE, show.se = TRUE, digits=4, digits.p=2, p.style="
 
 </table>
 
-The fit quality is almost identical with just four factors, so I think we're justified dropping the others. My conclusion: Batting average is positively correlated with **Ferocity**, **Thwack**, **Stealth**, and **sSight** (in roughly that order). Stealth's presence here is weird; I expected Hustle might matter just from the plain meaning of the word, but not stealth.
+The fit quality is almost identical with just four factors, so I think we're justified dropping the others. My conclusion: Batting average is positively correlated with **Ferocity**, **Thwack**, **Stealth**, and **Sight** (in roughly that order). Stealth's presence here is weird; I expected Hustle might matter just from the plain meaning of the word, but not stealth.
 
 For the rest of this post I'll skip to the "best" fit I have, but this is in general how I do these. I am not trying to make strong claims, so I am not worrying about whether my statistical practice is optimal. I'm also skipping showing the code; it all looks pretty much identical to the previous block, just with different variables, and different formatting arguments.
 
@@ -423,7 +423,7 @@ Onward to on-base percentage and slugging percentage:
 
 </table>
 
-Wow, it's the same four attributes! For OBP, it's **Ferocity**, **Thwack**, **Stealth**, and **Sight** (Sight is a bit stronger here than for BA). For SLG, it's **Ferocity**, **Stealth**, **Thwack**, and **sSight**, with Ferocity being almost twice as strong as Stealth and Thwack, which are on par with each other. Interesting. Let's do walk rate and strikeout rate next:
+Wow, it's the same four attributes! For OBP, it's **Ferocity**, **Thwack**, **Stealth**, and **Sight** (Sight is a bit stronger here than for BA). For SLG, it's **Ferocity**, **Stealth**, **Thwack**, and **Sight**, with Ferocity being almost twice as strong as Stealth and Thwack, which are on par with each other. Interesting. Let's do walk rate and strikeout rate next:
 
 <table style="border-collapse:collapse; border:none;">
 <tr>
@@ -1185,7 +1185,7 @@ Well, that's about it for now. I haven't covered every possible stat you could r
 
 - More complex regressions for certain stats: simple counting stats might be better served by using the log of the data (for reasons involving words like "heteroskedasticity"), or perhaps a Poisson regression.
 - "Geography" (defender positioning and hit location) and its effects on defense: there is now an entire channel in SIBR with this name, where we have been analyzing these factors. It is clearly very important, and I have only barely touched it in this post.
-- Batter and pitcher "Zones": kjc9 in the SIBR discord (also `@kjc9@hachyderm.io` on mastadon) did some fantastic work using a logistic-regression-based ML model, looking at (an indirect measure of) hit location and how it relates to the "heatmaps" that batters and pitchers all have. A few days ago I took his results and combed through them carefully, and I think I found some interesting patterns, but it is very complex and noisy right now. Two players got their Zones "maxed out" in the NEW Season 1 Election, so hopefully they have noticeable outcome differences that we can investigate at the end of NEW Season 2...
+- Batter and pitcher "Zones": kjc9 in the SIBR discord (also `@kjc9@hachyderm.io` on Mastadon) did some fantastic work using a logistic-regression-based ML model, looking at (an indirect measure of) hit location and how it relates to the "heatmaps" that batters and pitchers all have. A few days ago I took his results and combed through them carefully, and I think I found some interesting patterns, but it is very complex and noisy right now. Two players got their Zones "maxed out" in the NEW Season 1 Election, so hopefully they have noticeable outcome differences that we can investigate at the end of NEW Season 2...
 - Per-PA or per-pitch analysis: look at the data on a "does a certain outcome happen or not, yes/no" level. This requires logistic regression, which is its own can of worms, but has in the past been very successful at getting insight into the Beta simulation (and has had some work done on it for the new sim already, by kjc9 and others).
 
 If you're interested in contributing to our collective understanding of NEW Blaseball, I invite you to go to the SIBR Discord and grab the Research Access role. There are many awesome people in that section of the server who have been really helpful to me and others in getting started doing research and analysis on Blaseball! We love to see people trying to figure stuff out, even if it's "just a first attempt" or whatever.
