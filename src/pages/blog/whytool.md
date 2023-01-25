@@ -55,6 +55,7 @@ This meant a conversational tone, with extensive usage of second person and foll
 It made something that could have felt like an impersonal automated help line into something that was friendly and kind, helping you to navigate the tangled webs of the fandom of this game.
 
 In retrospect, I took a lot of inspiration from *A Hindren's Guide to Qud*, by Caelyn Sandel. That no longer exists in its original form - it's now a set of mods within Caves of Qud itself, after Freehold Games hired Caelyn to write for them officially[^2] - but in either case, it was an "in-unverse" guide helping you survive in that legendarily difficult game. And since it's narrated by in-universe entities, it allowed for that conversational tone, instead of purely being a list of tips and resources. 
+
 [^2] More info on its current form, *The Qud Survival Guide*, [here on her itch.io](https://inurashii.itch.io/the-qud-survival-guide).
 
 I think it's paid off! People have called out this tone as being a big part of its appeal, and that's been lovely to see. 
@@ -64,6 +65,7 @@ I think it's paid off! People have called out this tone as being a big part of i
 The thing that's both good and bad about whichtool's unique approach is that it relies on not just project names and locations, but an understanding what each project is and what it's designed to accomplish. In Expansion, I did a reasonable job of this, partially by being willing and able to ask around SIBR for details on things I didn't understand. 
 
 But now in Coronation, I've hit an inflection point - keeping track of blaseball as a community is a really significant task, and meanwhile my own life has gone in different directions[^3]. I want to keep whichtool useful for the community, and I'd really appreciate any contributions to keep it up to date as blaseball keeps shifting and tools keep getting refined. 
+
 [^3] Notably, between Expansion and Coronation I've done a complete industry/professional swap, spurred partly by doing documentation work like whichtool; but also I've gotten into other games and fandoms, too! 
 
 I hope I've done a decent job of writing [documentation](https://github.com/kawa-kitsuragi/whichtool) for how to contribute to the tool - if you're a bit comfortable with Github I think it's pretty straightforward - and am happy to answer questions. Please let me know, and let's keep whichtool answering questions for many data witches for the eras to come.
