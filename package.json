@@ -19,6 +19,7 @@
     "remark-math": "^5.1.1"
   },
   "devDependencies": {
+    "@csstools/postcss-oklab-function": "^2.0.0",
     "sass": "^1.57.1"
   }
 }

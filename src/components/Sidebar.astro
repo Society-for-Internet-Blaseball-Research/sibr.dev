@@ -104,7 +104,7 @@ const {
     font-size: var(--step-2);
     font-weight: 100;
     font-stretch: semi-condensed;
-    color: rgb(var(--purble-text));
+    color: oklch(var(--purble-text));
   }
 
   .link.text {
@@ -118,7 +118,7 @@ const {
   .link.text a {
     text-decoration: none;
     font-weight: 100;
-    color: rgb(var(--purble-text));
+    color: oklch(var(--purble-text));
   }
 
   .link.text a:hover {
@@ -151,7 +151,7 @@ const {
 
   @media (prefers-color-scheme: dark) {
     .link.icon img {
-      filter: invert(1);
+      filter: brightness(0) saturate(100%) invert(83%) sepia(84%) saturate(2785%) hue-rotate(181deg) brightness(111%) contrast(104%);
     }
   }
 

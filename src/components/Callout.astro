@@ -47,20 +47,13 @@ const { viewBox, d } = icons[type];
 
 <style>
 	aside {
-    /* this all looks really sick and i wish i had the time right now to dig into it */
-		/* --aside-color-base: var(--color-base-purple);
-		--aside-color-lightness: 54%;
-		--aside-accent-color: hsl(var(--aside-color-base), var(--aside-color-lightness));
-		--aside-text-lightness: 20%;
-		--aside-text-accent-color: hsl(var(--aside-color-base), var(--aside-text-lightness)); */
-
 		--callout-title: var(--purble-700);
     --callout-background: var(--purble-100);
 
 		border-inline-start: var(--space-4xs) solid var(--callout-title);
 		border-radius: 6px;
 		padding: var(--space-xs) var(--space-s);
-		background-color: var(--callout-background);
+		background-color: oklch(var(--callout-background));
 		/* border-radius: var(--space-2xs); */
 		/* Indicates the aside boundaries for forced colors users, transparent is changed to a solid color */
 		/* outline: 1px solid transparent; */
@@ -90,7 +83,7 @@ const { viewBox, d } = icons[type];
 		font-family: var(--barlow);
 		font-weight: 125;
 		text-transform: uppercase;
-		color: var(--callout-title);
+		color: oklch(var(--callout-title));
 	}
 	.icon svg {
 		width: 1.5em;
@@ -104,7 +97,7 @@ const { viewBox, d } = icons[type];
 	} */
 	aside :global(p),
 	aside.content :global(ul) {
-		color: rgb(var(--purble-text));
+		color: oklch(var(--purble-text));
 	}
   /* TODO: Need to add this at some point actually */
 	/* :global(.theme-dark) aside :global(code:not([class*='language'])) {

@@ -42,8 +42,8 @@ tags.sort((a, b) => {
     border-radius: var(--space-3xs);
     padding: var(--space-3xs);
     line-height: 1;
-    background-color: var(--tag-gray-background); /*Default Tag Colour*/
-    color: var(--tag-gray-text)
+    background-color: oklch(var(--tag-neutral-background)); /*Default Tag Colour*/
+    color: oklch(var(--tag-neutral-text));
   }
 
   .tag:not(#\#) {
@@ -53,67 +53,72 @@ tags.sort((a, b) => {
   /* Tag Colours Here */
 
   .tag[x-tag=meta] {
-    background-color: var(--tag-gray-background);
-    color: var(--tag-gray-text);
+    background-color: oklch(var(--tag-mauve-background));
+    color: oklch(var(--tag-mauve-text));
   }
 
   .tag[x-tag=beta] {
-    background-color: var(--tag-gray-background);
-    color: var(--tag-gray-text);
+    background-color: oklch(var(--tag-neutral-background));
+    color: oklch(var(--tag-neutral-text));
   }
 
   .tag[x-tag=blog] {
-    background-color: var(--tag-red-background);
-    color: var(--tag-red-text);
+    background-color: oklch(var(--tag-red-background));
+    color: oklch(var(--tag-red-text));
   }
 
   .tag[x-tag=purble] {
-    background-color: var(--tag-purble-background);
-    color: var(--tag-purble-text);
+    background-color: oklch(var(--tag-purble-background));
+    color: oklch(var(--tag-purble-text));
   }
 
   .tag[x-tag=rouge] {
-    background-color: var(--tag-rouge-background);
-    color: var(--tag-rouge-text);
+    background-color: oklch(var(--tag-rouge-background));
+    color: oklch(var(--tag-rouge-text));
   }
 
   .tag[x-tag="data crimes"] {
-    background-color: var(--tag-red-background);
-    color: var(--tag-red-text);
+    background-color: oklch(var(--tag-red-background));
+    color: oklch(var(--tag-red-text));
   }
 
   .tag[x-tag=orange] {
-    background-color: var(--tag-orange-background);
-    color: var(--tag-orange-text);
+    background-color: oklch(var(--tag-orange-background));
+    color: oklch(var(--tag-orange-text));
   }
 
   .tag[x-tag=economy] {
-    background-color: var(--tag-yellow-background);
-    color: var(--tag-yellow-text);
+    background-color: oklch(var(--tag-yellow-background));
+    color: oklch(var(--tag-yellow-text));
   }
 
   .tag[x-tag=graphs] {
-    background-color: var(--tag-green-background);
-    color: var(--tag-green-text);
+    background-color: oklch(var(--tag-green-background));
+    color: oklch(var(--tag-green-text));
   }
 
-  .tag[x-tag=cyan] {
-    background-color: var(--tag-cyan-background);
-    color: var(--tag-cyan-text);
+  .tag[x-tag=mint] {
+    background-color: oklch(var(--tag-mint-background));
+    color: oklch(var(--tag-mint-text));
+  }
+
+  .tag[x-tag=aqua] {
+    background-color: oklch(var(--tag-aqua-background));
+    color: oklch(var(--tag-aqua-text));
   }
 
   .tag[x-tag=research] {
-    background-color: var(--tag-blue-background);
-    color: var(--tag-blue-text);
+    background-color: oklch(var(--tag-blue-background));
+    color: oklch(var(--tag-blue-text));
   }
 
   .tag[x-tag=project] {
-    background-color: var(--tag-indigo-background);
-    color: var(--tag-indigo-text);
+    background-color: oklch(var(--tag-purple-background));
+    color: oklch(var(--tag-purple-text));
   }
 
   .tag[x-tag=nominative-determinism] {
-    background-color: var(--tag-violet-background);
-    color: var(--tag-violet-text);
+    background-color: oklch(var(--tag-purple-background));
+    color: oklch(var(--tag-purple-text));
   }
 </style>

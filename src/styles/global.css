@@ -1,12 +1,13 @@
 html {
   font-family: var(--serif);
-  background-color: rgb(var(--purble-background));
+  background-color: oklch(var(--purble-background));
+  /* background-color: oklch(13.23% 0.064 314.63); */
 }
 
 body {
   margin: var(--space-s-l, 1.5rem);
   font-size: var(--step-0);
-  color: rgb(var(--purble-text));
+  color: oklch(var(--purble-text));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +17,7 @@ body {
 }
 
 a {
-  color: var(--purble-link);
+  color: oklch(var(--purble-link));
   text-decoration: none;
   font-weight: 600;
 }

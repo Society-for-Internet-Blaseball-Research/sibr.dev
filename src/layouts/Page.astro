@@ -182,7 +182,7 @@ const {
 			border-left: 3px solid var(--blockquote-border);
 			border-radius: 6px;
 			
-			background-color: var(--blockquote-background);
+			background-color: oklch(var(--blockquote-background));
 
 			& > *:first-child {
 				margin-top: 0;
@@ -218,7 +218,7 @@ const {
 			}
 
 			border: none;
-			border-top: var(--hr-border-size) solid var(--hr-border-color);
+			border-top: var(--hr-border-size) solid oklch(var(--hr-border-color));
 
 			margin-top: var(--space-xl-2xl);
 			margin-bottom: var(--space-xl-2xl);
@@ -253,10 +253,10 @@ const {
 			}
 
 			border: var(--table-border-size) solid;
-			border-left-color: var(--purble-text);
-			border-right-color: var(--purble-text);
-			border-top-color: var(--purble-text);
-			border-bottom-color: var(--purble-text);
+			border-left-color: oklch(var(--purble-text));
+			border-right-color: oklch(var(--purble-text));
+			border-top-color: oklch(var(--purble-text));
+			border-bottom-color: oklch(var(--purble-text));
 			padding: var(--space-xs) var(--space-s);
 			text-align: left;
 
@@ -265,10 +265,10 @@ const {
 		& tbody td,
 		& tfoot td {
 			border: var(--table-border-size) solid;
-			border-left-color: var(--purble-text);
-			border-right-color: var(--purble-text);
-			border-top-color: var(--purble-text);
-			border-bottom-color: var(--purble-text);
+			border-left-color: oklch(var(--purble-text));
+			border-right-color: oklch(var(--purble-text));
+			border-top-color: oklch(var(--purble-text));
+			border-bottom-color: oklch(var(--purble-text));
 			padding: var(--space-xs) var(--space-s);
 		}
 
